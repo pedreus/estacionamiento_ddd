@@ -10,5 +10,4 @@ import UIKit
 public class Car: Vehicle {
     
     // Atributos particulares a un carro.
-    
 }

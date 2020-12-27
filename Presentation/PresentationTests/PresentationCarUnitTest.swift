@@ -55,7 +55,7 @@ class PresentationCarUnitTest: XCTestCase {
         } catch BusinessError.VehicleAlreadyExists(let errorMessage) {
             print(errorMessage)
         } catch {
-            
+            print(BusinessError.VehicleSaveError())
         }
         
         // Assert

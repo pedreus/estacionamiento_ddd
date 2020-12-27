@@ -3,13 +3,33 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B086A4FB0F31A709B6216B7 /* Pods_DataAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C52E34E7271731E9CCB0F551 /* Pods_DataAccess.framework */; };
 		7940B3DC2566C28B00680BCE /* PersonDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7940B3DB2566C28B00680BCE /* PersonDto.swift */; };
 		7940B3E02566C29C00680BCE /* PersonRepositoryRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7940B3DF2566C29C00680BCE /* PersonRepositoryRemote.swift */; };
 		7940B3E22566C59600680BCE /* PersonTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7940B3E12566C59600680BCE /* PersonTranslator.swift */; };
+		CCC5B0BA7E6DEAD2F7383A81 /* Pods_DataAccessTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92AFA126FB6AB22E02416D62 /* Pods_DataAccessTests.framework */; };
+		E73BDA542597DC4A009E189A /* CarRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73BDA532597DC4A009E189A /* CarRealm.swift */; };
+		E73BDA5B2597DFD1009E189A /* CarEntryRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73BDA5A2597DFD1009E189A /* CarEntryRealm.swift */; };
+		E73BDA5E2597E17D009E189A /* CarRealmTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73BDA5D2597E17D009E189A /* CarRealmTranslator.swift */; };
+		E73BDA622597E240009E189A /* MotorcycleRealmTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73BDA612597E240009E189A /* MotorcycleRealmTranslator.swift */; };
+		E73BDA702597F8E6009E189A /* CarEntryRealmTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73BDA6F2597F8E6009E189A /* CarEntryRealmTranslator.swift */; };
+		E73BDA732597FBEF009E189A /* CarExitRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73BDA722597FBEF009E189A /* CarExitRealm.swift */; };
+		E73BDA762597FD04009E189A /* CarExitRealmTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73BDA752597FD04009E189A /* CarExitRealmTranslator.swift */; };
+		E73BDA792597FE96009E189A /* MotorcycleRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73BDA782597FE96009E189A /* MotorcycleRealm.swift */; };
+		E73BDA7E2597FF01009E189A /* MotorcycleEntryRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73BDA7D2597FF01009E189A /* MotorcycleEntryRealm.swift */; };
+		E73BDA822597FFE6009E189A /* MotorcyleExitRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73BDA812597FFE6009E189A /* MotorcyleExitRealm.swift */; };
+		E73BDA872598013E009E189A /* MotorcycleEntryRealmTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73BDA862598013E009E189A /* MotorcycleEntryRealmTranslator.swift */; };
+		E73BDA9125980605009E189A /* ModelToRealmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73BDA9025980605009E189A /* ModelToRealmTests.swift */; };
+		E73BDA97259820B2009E189A /* MotorcycleExitRealmTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73BDA96259820B2009E189A /* MotorcycleExitRealmTranslator.swift */; };
+		E73BDA9B25982472009E189A /* CarBillRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73BDA9A25982472009E189A /* CarBillRealm.swift */; };
+		E73BDA9E259827ED009E189A /* CarBillRealmTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73BDA9D259827ED009E189A /* CarBillRealmTranslator.swift */; };
+		E73BDAA125982A07009E189A /* MotorcycleBillRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73BDAA025982A07009E189A /* MotorcycleBillRealm.swift */; };
+		E73BDAA425982A50009E189A /* MotorcycleBillRealmTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73BDAA325982A50009E189A /* MotorcycleBillRealmTranslator.swift */; };
+		E73BDAAD25983213009E189A /* VehicleServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73BDAAC25983213009E189A /* VehicleServiceTests.swift */; };
 		E794EC222596A6B5009F444A /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E794EC212596A6B5009F444A /* Domain.framework */; };
 		E794EC232596A6B5009F444A /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E794EC212596A6B5009F444A /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E794EC272596A7E9009F444A /* Pods_DataAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E794EC262596A7E9009F444A /* Pods_DataAccess.framework */; };
@@ -18,6 +38,8 @@
 		E794EC2F2596A957009F444A /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E794EC2D2596A957009F444A /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E794EC312596A95D009F444A /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E794EC302596A95D009F444A /* RealmSwift.framework */; };
 		E794EC322596A95D009F444A /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E794EC302596A95D009F444A /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E7AE7FBA259793EF0037C1B5 /* DataAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79230B69254A229800A06B8D /* DataAccess.framework */; platformFilter = ios; };
+		E7AE7FC7259794E70037C1B5 /* DataAccessTests copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE7FC6259794E70037C1B5 /* DataAccessTests copy.swift */; };
 		E7BB38532594FA62006D35ED /* CarDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BB38522594FA62006D35ED /* CarDto.swift */; };
 		E7BB38552594FA80006D35ED /* MotorcycleDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BB38542594FA80006D35ED /* MotorcycleDto.swift */; };
 		E7BB38572594FAA4006D35ED /* EntryDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BB38562594FAA4006D35ED /* EntryDto.swift */; };
@@ -30,6 +52,16 @@
 		E7BB3867259539FE006D35ED /* CarRepositoryRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BB3866259539FE006D35ED /* CarRepositoryRealm.swift */; };
 		E7BB386925953F40006D35ED /* MotorcycleTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BB386825953F40006D35ED /* MotorcycleTranslator.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E7AE7FBB259793EF0037C1B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79230B60254A229800A06B8D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79230B68254A229800A06B8D;
+			remoteInfo = DataAccess;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		E73F4EC52593F1FA00B89E5C /* Embed Frameworks */ = {
@@ -49,17 +81,42 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0912F9D90B929901372EC4FF /* Pods-DataAccessTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataAccessTests.release.xcconfig"; path = "Target Support Files/Pods-DataAccessTests/Pods-DataAccessTests.release.xcconfig"; sourceTree = "<group>"; };
 		27FE362173496F4315282CAF /* Pods-DataAccess.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataAccess.release.xcconfig"; path = "Target Support Files/Pods-DataAccess/Pods-DataAccess.release.xcconfig"; sourceTree = "<group>"; };
 		4226F78A69F44D26FEEC2DED /* Pods-DataAccess.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataAccess.debug.xcconfig"; path = "Target Support Files/Pods-DataAccess/Pods-DataAccess.debug.xcconfig"; sourceTree = "<group>"; };
+		6C72E86FC8BDAC5AA00F6CF2 /* Pods-DataAccessTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataAccessTests.debug.xcconfig"; path = "Target Support Files/Pods-DataAccessTests/Pods-DataAccessTests.debug.xcconfig"; sourceTree = "<group>"; };
 		79230B69254A229800A06B8D /* DataAccess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DataAccess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79230B6D254A229800A06B8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7940B3DB2566C28B00680BCE /* PersonDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDto.swift; sourceTree = "<group>"; };
 		7940B3DF2566C29C00680BCE /* PersonRepositoryRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRepositoryRemote.swift; sourceTree = "<group>"; };
 		7940B3E12566C59600680BCE /* PersonTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTranslator.swift; sourceTree = "<group>"; };
+		92AFA126FB6AB22E02416D62 /* Pods_DataAccessTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DataAccessTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C52E34E7271731E9CCB0F551 /* Pods_DataAccess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DataAccess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E73BDA532597DC4A009E189A /* CarRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRealm.swift; sourceTree = "<group>"; };
+		E73BDA5A2597DFD1009E189A /* CarEntryRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarEntryRealm.swift; sourceTree = "<group>"; };
+		E73BDA5D2597E17D009E189A /* CarRealmTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRealmTranslator.swift; sourceTree = "<group>"; };
+		E73BDA612597E240009E189A /* MotorcycleRealmTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorcycleRealmTranslator.swift; sourceTree = "<group>"; };
+		E73BDA6F2597F8E6009E189A /* CarEntryRealmTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarEntryRealmTranslator.swift; sourceTree = "<group>"; };
+		E73BDA722597FBEF009E189A /* CarExitRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarExitRealm.swift; sourceTree = "<group>"; };
+		E73BDA752597FD04009E189A /* CarExitRealmTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarExitRealmTranslator.swift; sourceTree = "<group>"; };
+		E73BDA782597FE96009E189A /* MotorcycleRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorcycleRealm.swift; sourceTree = "<group>"; };
+		E73BDA7D2597FF01009E189A /* MotorcycleEntryRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorcycleEntryRealm.swift; sourceTree = "<group>"; };
+		E73BDA812597FFE6009E189A /* MotorcyleExitRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorcyleExitRealm.swift; sourceTree = "<group>"; };
+		E73BDA862598013E009E189A /* MotorcycleEntryRealmTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorcycleEntryRealmTranslator.swift; sourceTree = "<group>"; };
+		E73BDA9025980605009E189A /* ModelToRealmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelToRealmTests.swift; sourceTree = "<group>"; };
+		E73BDA96259820B2009E189A /* MotorcycleExitRealmTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorcycleExitRealmTranslator.swift; sourceTree = "<group>"; };
+		E73BDA9A25982472009E189A /* CarBillRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarBillRealm.swift; sourceTree = "<group>"; };
+		E73BDA9D259827ED009E189A /* CarBillRealmTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarBillRealmTranslator.swift; sourceTree = "<group>"; };
+		E73BDAA025982A07009E189A /* MotorcycleBillRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorcycleBillRealm.swift; sourceTree = "<group>"; };
+		E73BDAA325982A50009E189A /* MotorcycleBillRealmTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorcycleBillRealmTranslator.swift; sourceTree = "<group>"; };
+		E73BDAAC25983213009E189A /* VehicleServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleServiceTests.swift; sourceTree = "<group>"; };
 		E794EC212596A6B5009F444A /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Domain.framework; path = "../Debug-iphonesimulator/Domain.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E794EC262596A7E9009F444A /* Pods_DataAccess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Pods_DataAccess.framework; path = "../Debug-iphonesimulator/Pods_DataAccess.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E794EC2D2596A957009F444A /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Realm.framework; path = "../Debug-iphonesimulator/Realm/Realm.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E794EC302596A95D009F444A /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = RealmSwift.framework; path = "../Debug-iphonesimulator/RealmSwift/RealmSwift.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7AE7FB5259793EF0037C1B5 /* DataAccessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataAccessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7AE7FB9259793EF0037C1B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7AE7FC6259794E70037C1B5 /* DataAccessTests copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DataAccessTests copy.swift"; sourceTree = "<group>"; };
 		E7BB38522594FA62006D35ED /* CarDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDto.swift; sourceTree = "<group>"; };
 		E7BB38542594FA80006D35ED /* MotorcycleDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorcycleDto.swift; sourceTree = "<group>"; };
 		E7BB38562594FAA4006D35ED /* EntryDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDto.swift; sourceTree = "<group>"; };
@@ -82,6 +139,16 @@
 				E794EC272596A7E9009F444A /* Pods_DataAccess.framework in Frameworks */,
 				E794EC312596A95D009F444A /* RealmSwift.framework in Frameworks */,
 				E794EC222596A6B5009F444A /* Domain.framework in Frameworks */,
+				4B086A4FB0F31A709B6216B7 /* Pods_DataAccess.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7AE7FB2259793EF0037C1B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7AE7FBA259793EF0037C1B5 /* DataAccess.framework in Frameworks */,
+				CCC5B0BA7E6DEAD2F7383A81 /* Pods_DataAccessTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				79230B6B254A229800A06B8D /* DataAccess */,
+				E7AE7FB6259793EF0037C1B5 /* DataAccessTests */,
 				79230B6A254A229800A06B8D /* Products */,
 				799F212C254B31B400256C5C /* Frameworks */,
 				DDF0EFD0A02307FB94F8D8C0 /* Pods */,
@@ -102,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				79230B69254A229800A06B8D /* DataAccess.framework */,
+				E7AE7FB5259793EF0037C1B5 /* DataAccessTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,14 +179,94 @@
 			isa = PBXGroup;
 			children = (
 				7940B3D92566C20300680BCE /* Anticorruption */,
-				7940B3D82566C1AB00680BCE /* Dto */,
+				7940B3D82566C1AB00680BCE /* Data */,
 				7940B3DA2566C21100680BCE /* Repository */,
 				79230B6D254A229800A06B8D /* Info.plist */,
 			);
 			path = DataAccess;
 			sourceTree = "<group>";
 		};
-		7940B3D82566C1AB00680BCE /* Dto */ = {
+		7940B3D82566C1AB00680BCE /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E73BDA4D2597DBFB009E189A /* Dto */,
+				E73BDA512597DC0A009E189A /* Realm */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		7940B3D92566C20300680BCE /* Anticorruption */ = {
+			isa = PBXGroup;
+			children = (
+				E73BDA492597DBB9009E189A /* Dto */,
+				E73BDA482597DBB1009E189A /* Realm */,
+			);
+			path = Anticorruption;
+			sourceTree = "<group>";
+		};
+		7940B3DA2566C21100680BCE /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				E73BDA522597DC20009E189A /* Realm */,
+				E73BDAA925982F07009E189A /* Remote */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		799F212C254B31B400256C5C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E794EC302596A95D009F444A /* RealmSwift.framework */,
+				E794EC2D2596A957009F444A /* Realm.framework */,
+				E794EC262596A7E9009F444A /* Pods_DataAccess.framework */,
+				E794EC212596A6B5009F444A /* Domain.framework */,
+				C52E34E7271731E9CCB0F551 /* Pods_DataAccess.framework */,
+				92AFA126FB6AB22E02416D62 /* Pods_DataAccessTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DDF0EFD0A02307FB94F8D8C0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4226F78A69F44D26FEEC2DED /* Pods-DataAccess.debug.xcconfig */,
+				27FE362173496F4315282CAF /* Pods-DataAccess.release.xcconfig */,
+				6C72E86FC8BDAC5AA00F6CF2 /* Pods-DataAccessTests.debug.xcconfig */,
+				0912F9D90B929901372EC4FF /* Pods-DataAccessTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../Pods;
+			sourceTree = "<group>";
+		};
+		E73BDA482597DBB1009E189A /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				E73BDA5D2597E17D009E189A /* CarRealmTranslator.swift */,
+				E73BDA612597E240009E189A /* MotorcycleRealmTranslator.swift */,
+				E73BDA6F2597F8E6009E189A /* CarEntryRealmTranslator.swift */,
+				E73BDA862598013E009E189A /* MotorcycleEntryRealmTranslator.swift */,
+				E73BDA752597FD04009E189A /* CarExitRealmTranslator.swift */,
+				E73BDA96259820B2009E189A /* MotorcycleExitRealmTranslator.swift */,
+				E73BDA9D259827ED009E189A /* CarBillRealmTranslator.swift */,
+				E73BDAA325982A50009E189A /* MotorcycleBillRealmTranslator.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		E73BDA492597DBB9009E189A /* Dto */ = {
+			isa = PBXGroup;
+			children = (
+				7940B3E12566C59600680BCE /* PersonTranslator.swift */,
+				E7BB385C25953682006D35ED /* CarTranlator.swift */,
+				E7BB386825953F40006D35ED /* MotorcycleTranslator.swift */,
+				E7BB386025953798006D35ED /* EntryTranslator.swift */,
+				E7BB386225953818006D35ED /* ExitTranslator.swift */,
+				E7BB3864259538C1006D35ED /* BillTranslator.swift */,
+			);
+			path = Dto;
+			sourceTree = "<group>";
+		};
+		E73BDA4D2597DBFB009E189A /* Dto */ = {
 			isa = PBXGroup;
 			children = (
 				7940B3DB2566C28B00680BCE /* PersonDto.swift */,
@@ -130,47 +279,46 @@
 			path = Dto;
 			sourceTree = "<group>";
 		};
-		7940B3D92566C20300680BCE /* Anticorruption */ = {
+		E73BDA512597DC0A009E189A /* Realm */ = {
 			isa = PBXGroup;
 			children = (
-				7940B3E12566C59600680BCE /* PersonTranslator.swift */,
-				E7BB385C25953682006D35ED /* CarTranlator.swift */,
-				E7BB386825953F40006D35ED /* MotorcycleTranslator.swift */,
-				E7BB386025953798006D35ED /* EntryTranslator.swift */,
-				E7BB386225953818006D35ED /* ExitTranslator.swift */,
-				E7BB3864259538C1006D35ED /* BillTranslator.swift */,
+				E73BDA532597DC4A009E189A /* CarRealm.swift */,
+				E73BDA782597FE96009E189A /* MotorcycleRealm.swift */,
+				E73BDA5A2597DFD1009E189A /* CarEntryRealm.swift */,
+				E73BDA7D2597FF01009E189A /* MotorcycleEntryRealm.swift */,
+				E73BDA722597FBEF009E189A /* CarExitRealm.swift */,
+				E73BDA812597FFE6009E189A /* MotorcyleExitRealm.swift */,
+				E73BDA9A25982472009E189A /* CarBillRealm.swift */,
+				E73BDAA025982A07009E189A /* MotorcycleBillRealm.swift */,
 			);
-			path = Anticorruption;
+			path = Realm;
 			sourceTree = "<group>";
 		};
-		7940B3DA2566C21100680BCE /* Repository */ = {
+		E73BDA522597DC20009E189A /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				E7BB3866259539FE006D35ED /* CarRepositoryRealm.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		E73BDAA925982F07009E189A /* Remote */ = {
 			isa = PBXGroup;
 			children = (
 				7940B3DF2566C29C00680BCE /* PersonRepositoryRemote.swift */,
-				E7BB3866259539FE006D35ED /* CarRepositoryRealm.swift */,
 			);
-			path = Repository;
+			path = Remote;
 			sourceTree = "<group>";
 		};
-		799F212C254B31B400256C5C /* Frameworks */ = {
+		E7AE7FB6259793EF0037C1B5 /* DataAccessTests */ = {
 			isa = PBXGroup;
 			children = (
-				E794EC302596A95D009F444A /* RealmSwift.framework */,
-				E794EC2D2596A957009F444A /* Realm.framework */,
-				E794EC262596A7E9009F444A /* Pods_DataAccess.framework */,
-				E794EC212596A6B5009F444A /* Domain.framework */,
+				E73BDAAC25983213009E189A /* VehicleServiceTests.swift */,
+				E73BDA9025980605009E189A /* ModelToRealmTests.swift */,
+				E7AE7FC6259794E70037C1B5 /* DataAccessTests copy.swift */,
+				E7AE7FB9259793EF0037C1B5 /* Info.plist */,
 			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		DDF0EFD0A02307FB94F8D8C0 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				4226F78A69F44D26FEEC2DED /* Pods-DataAccess.debug.xcconfig */,
-				27FE362173496F4315282CAF /* Pods-DataAccess.release.xcconfig */,
-			);
-			name = Pods;
-			path = ../Pods;
+			path = DataAccessTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,17 +354,41 @@
 			productReference = 79230B69254A229800A06B8D /* DataAccess.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		E7AE7FB4259793EF0037C1B5 /* DataAccessTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7AE7FBD259793EF0037C1B5 /* Build configuration list for PBXNativeTarget "DataAccessTests" */;
+			buildPhases = (
+				340ACEE29DCDA4751AD8BF76 /* [CP] Check Pods Manifest.lock */,
+				E7AE7FB1259793EF0037C1B5 /* Sources */,
+				E7AE7FB2259793EF0037C1B5 /* Frameworks */,
+				E7AE7FB3259793EF0037C1B5 /* Resources */,
+				D83C36F744C161CFE9F27D78 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E7AE7FBC259793EF0037C1B5 /* PBXTargetDependency */,
+			);
+			name = DataAccessTests;
+			productName = DataAccessTests;
+			productReference = E7AE7FB5259793EF0037C1B5 /* DataAccessTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		79230B60254A229800A06B8D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
 					79230B68254A229800A06B8D = {
 						CreatedOnToolsVersion = 12.0.1;
 						LastSwiftMigration = 1220;
+					};
+					E7AE7FB4259793EF0037C1B5 = {
+						CreatedOnToolsVersion = 12.2;
 					};
 				};
 			};
@@ -234,12 +406,20 @@
 			projectRoot = "";
 			targets = (
 				79230B68254A229800A06B8D /* DataAccess */,
+				E7AE7FB4259793EF0037C1B5 /* DataAccessTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		79230B67254A229800A06B8D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7AE7FB3259793EF0037C1B5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -271,6 +451,45 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		340ACEE29DCDA4751AD8BF76 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DataAccessTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D83C36F744C161CFE9F27D78 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DataAccessTests/Pods-DataAccessTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DataAccessTests/Pods-DataAccessTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DataAccessTests/Pods-DataAccessTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -278,24 +497,59 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E73BDA702597F8E6009E189A /* CarEntryRealmTranslator.swift in Sources */,
+				E73BDA872598013E009E189A /* MotorcycleEntryRealmTranslator.swift in Sources */,
+				E73BDA97259820B2009E189A /* MotorcycleExitRealmTranslator.swift in Sources */,
 				E7BB386125953798006D35ED /* EntryTranslator.swift in Sources */,
+				E73BDA5E2597E17D009E189A /* CarRealmTranslator.swift in Sources */,
+				E73BDA792597FE96009E189A /* MotorcycleRealm.swift in Sources */,
+				E73BDA5B2597DFD1009E189A /* CarEntryRealm.swift in Sources */,
 				E7BB3865259538C1006D35ED /* BillTranslator.swift in Sources */,
 				E7BB386925953F40006D35ED /* MotorcycleTranslator.swift in Sources */,
 				E7BB38552594FA80006D35ED /* MotorcycleDto.swift in Sources */,
 				E7BB385B25953605006D35ED /* BillDto.swift in Sources */,
+				E73BDA542597DC4A009E189A /* CarRealm.swift in Sources */,
 				E7BB385D25953682006D35ED /* CarTranlator.swift in Sources */,
+				E73BDA7E2597FF01009E189A /* MotorcycleEntryRealm.swift in Sources */,
+				E73BDA762597FD04009E189A /* CarExitRealmTranslator.swift in Sources */,
+				E73BDAA125982A07009E189A /* MotorcycleBillRealm.swift in Sources */,
+				E73BDA9E259827ED009E189A /* CarBillRealmTranslator.swift in Sources */,
 				E7BB38592594FB89006D35ED /* ExitDto.swift in Sources */,
 				7940B3E02566C29C00680BCE /* PersonRepositoryRemote.swift in Sources */,
+				E73BDA732597FBEF009E189A /* CarExitRealm.swift in Sources */,
 				7940B3DC2566C28B00680BCE /* PersonDto.swift in Sources */,
+				E73BDA622597E240009E189A /* MotorcycleRealmTranslator.swift in Sources */,
 				7940B3E22566C59600680BCE /* PersonTranslator.swift in Sources */,
 				E7BB38572594FAA4006D35ED /* EntryDto.swift in Sources */,
 				E7BB38532594FA62006D35ED /* CarDto.swift in Sources */,
+				E73BDA9B25982472009E189A /* CarBillRealm.swift in Sources */,
 				E7BB3867259539FE006D35ED /* CarRepositoryRealm.swift in Sources */,
+				E73BDAA425982A50009E189A /* MotorcycleBillRealmTranslator.swift in Sources */,
 				E7BB386325953818006D35ED /* ExitTranslator.swift in Sources */,
+				E73BDA822597FFE6009E189A /* MotorcyleExitRealm.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7AE7FB1259793EF0037C1B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E73BDAAD25983213009E189A /* VehicleServiceTests.swift in Sources */,
+				E73BDA9125980605009E189A /* ModelToRealmTests.swift in Sources */,
+				E7AE7FC7259794E70037C1B5 /* DataAccessTests copy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E7AE7FBC259793EF0037C1B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = 79230B68254A229800A06B8D /* DataAccess */;
+			targetProxy = E7AE7FBB259793EF0037C1B5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		79230B6F254A229800A06B8D /* Debug */ = {
@@ -475,6 +729,44 @@
 			};
 			name = Release;
 		};
+		E7AE7FBE259793EF0037C1B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C72E86FC8BDAC5AA00F6CF2 /* Pods-DataAccessTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DataAccessTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.com.ceiba.DataAccessTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E7AE7FBF259793EF0037C1B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0912F9D90B929901372EC4FF /* Pods-DataAccessTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DataAccessTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.com.ceiba.DataAccessTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -492,6 +784,15 @@
 			buildConfigurations = (
 				79230B72254A229800A06B8D /* Debug */,
 				79230B73254A229800A06B8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7AE7FBD259793EF0037C1B5 /* Build configuration list for PBXNativeTarget "DataAccessTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7AE7FBE259793EF0037C1B5 /* Debug */,
+				E7AE7FBF259793EF0037C1B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

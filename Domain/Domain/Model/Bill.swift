@@ -13,10 +13,14 @@ public class Bill {
     private var cost: Int
     private var exit: Exit
     
-    init(billDateTime: Date, timeInHours: Int, cost: Int, exit: Exit) {
+    init(billDateTime: Date, exit: Exit) {
         self.billDateTime = billDateTime
-        self.cost = cost
+        self.cost = 0
         self.exit = exit
+    }
+    
+    internal func setCost(cost: Int) {
+        self.cost = cost
     }
     
     public func getBillDateTime() -> Date {

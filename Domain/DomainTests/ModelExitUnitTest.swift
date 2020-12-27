@@ -30,24 +30,33 @@ class ModelExitUnitTest: XCTestCase {
         }
     }
 
-    func testGetExpendedTimeInHours() {
+    func testGetExpendedTimeInDaysAndHours() {
         // Arrange
-        let today = Date()
-        
+        let string = "27/12/2020" // domingo -> 1
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yy"
+        let today = dateFormatter.date(from: string) ?? Date()
+        // Se resta un día
         let yesterday = Date(timeInterval: -86400, since: today)
-        let car = Car(cylinder: 2000, vehicleLicense: "abc123")
-        // El vehículo entró el día de ayer
-        let entry = Entry(entryDateTime: yesterday, vehicle: car)
         
-        let tomorrow = Date(timeInterval: 96400, since: today)
-        // El vehículo sale mañana
-        let exit = Exit(exitDateTime: tomorrow, entry: entry)
-        
-        // Act
-        let expendedTimeInHours = exit.getExpendedTimeInHours()
-        print("Hours: \(expendedTimeInHours)")
-        
-        // Assert
-        XCTAssert(expendedTimeInHours > -1)
+        do {
+            let car = try Car(cylinder: 2000, vehicleLicense: "xbc123")
+            // El vehículo entró el día de ayer
+            let entry = try Entry(entryDateTime: yesterday, vehicle: car)
+            // Se suman 3 horas
+            let tomorrow = Date(timeInterval: 10800, since: today)
+            // El vehículo sale mañana
+            let exit = Exit(exitDateTime: tomorrow, entry: entry)
+            
+            // Act
+            let (days, hours) = exit.getExpendedTimeInDaysAndHours()
+            print("Tupla expended time: \(days) \(hours)")
+            
+            // Assert
+            XCTAssert(days == 1 && hours == 3)
+        } catch (let errorMessage) {
+            print(errorMessage)
+            XCTAssert(false)
+        }
     }
 }

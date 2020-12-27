@@ -13,17 +13,7 @@ public class VehicleService: NSObject {
     
     public init(vehicleRepository: VehicleRepository) {
         self.vehicleRepository = vehicleRepository
-    }
-    
-    func isValidVehicleLicenseForDay(vehicleLicense: String, weekDay: Int) throws -> Bool {
-        if (weekDay < 1 || weekDay > 7) {
-            throw BusinessError.IncorrectWeekDay()
-        }
-        if (vehicleLicense.isEmpty) {
-            throw BusinessError.EmptyVehicleLicense()
-        }
-        return self.vehicleRepository.isValidVehicleLicenseForDay(vehicleLicense: vehicleLicense, weekDay: weekDay)
-    }
+    }        
     
     func isVehicleExists(vehicleLicense: String) throws -> Bool {
         if (vehicleLicense.isEmpty) {

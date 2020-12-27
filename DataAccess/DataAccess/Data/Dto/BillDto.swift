@@ -9,7 +9,8 @@ public struct BillDto {
     public var billDateTime: String?
     public var cost: Int?
     public var exitDateTime: String?
-    public var expendedTimeInHours: Double?
+    public var expendedTimeInDays: Int?
+    public var expendedTimeInHours: Int?
     public var entryDateTime: String?
     public var weekDay: Int?
     public var cylinder: Int?

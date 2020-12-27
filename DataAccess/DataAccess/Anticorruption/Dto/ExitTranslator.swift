@@ -13,7 +13,8 @@ public class ExitTranslator {
     func fromDomainToDto(exit: Exit) -> ExitDto {
         var exitDto = ExitDto()
         exitDto.exitDateTime = self.fromDateToString(date: exit.getExitDateTime())
-        exitDto.expendedTimeInHours = exit.getExpendedTimeInHours()
+        exitDto.expendedTimeInDays = exit.getExpendedTimeInDaysAndHours().0 // Tupla (day, hour)
+        exitDto.expendedTimeInHours = exit.getExpendedTimeInDaysAndHours().1 // Tupla (day, hour)
         exitDto.entryDateTime = self.fromDateToString(date: exit.getEntry().getEntryDateTime())
         exitDto.weekDay = exit.getEntry().getWeekDay()
         exitDto.cylinder = exit.getEntry().getVehicle().getCylinder()

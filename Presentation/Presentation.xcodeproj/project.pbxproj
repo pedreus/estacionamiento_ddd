@@ -24,6 +24,7 @@
 		799F2126254B319900256C5C /* DeviceHardware.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 799F2124254B319900256C5C /* DeviceHardware.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		79DF871E25681F4E00BB7EC9 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79DF871D25681F4E00BB7EC9 /* HomeViewController.xib */; };
 		79DF8769256ECC3700BB7EC9 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DF8768256ECC3700BB7EC9 /* DIContainer.swift */; };
+		C645ED947B2DE2A7D4E6C682 /* Pods_Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67DEC83A8456A98BD60C8537 /* Pods_Presentation.framework */; };
 		C9231A500B51B4ABABA00CB9 /* Pods_PresentationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBAB2960AB2C571326B7D776 /* Pods_PresentationTests.framework */; };
 		E749E96D25967D300053876E /* PresentationCarUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E749E96C25967D300053876E /* PresentationCarUnitTest.swift */; };
 /* End PBXBuildFile section */
@@ -64,6 +65,7 @@
 /* Begin PBXFileReference section */
 		1A5115ADDDFDBC00402D36A6 /* Pods-Presentation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Presentation.release.xcconfig"; path = "Target Support Files/Pods-Presentation/Pods-Presentation.release.xcconfig"; sourceTree = "<group>"; };
 		5A2CD42C1CDD6A714B540A7A /* Pods-PresentationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PresentationTests.debug.xcconfig"; path = "Target Support Files/Pods-PresentationTests/Pods-PresentationTests.debug.xcconfig"; sourceTree = "<group>"; };
+		67DEC83A8456A98BD60C8537 /* Pods_Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7852297CA5EF14F3EB3A7EBC /* Pods_Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Presentation.framework; path = "../Debug-iphonesimulator/Pods_Presentation.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79230B29254A214C00A06B8D /* Presentation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Presentation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79230B2C254A214C00A06B8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				799F211E254B318900256C5C /* Domain.framework in Frameworks */,
 				799F2125254B319900256C5C /* DeviceHardware.framework in Frameworks */,
 				625885569FCE369C29FCA054 /* Pods_Presentation.framework in Frameworks */,
+				C645ED947B2DE2A7D4E6C682 /* Pods_Presentation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +205,7 @@
 				7852297CA5EF14F3EB3A7EBC /* Pods_Presentation.framework */,
 				C4908F8B7F5606829CBAC559 /* Pods_Presentation_PresentationUITests.framework */,
 				CBAB2960AB2C571326B7D776 /* Pods_PresentationTests.framework */,
+				67DEC83A8456A98BD60C8537 /* Pods_Presentation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

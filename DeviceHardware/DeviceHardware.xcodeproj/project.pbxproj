@@ -11,6 +11,7 @@
 		79230B87254A22B900A06B8D /* DeviceHardware.h in Headers */ = {isa = PBXBuildFile; fileRef = 79230B85254A22B900A06B8D /* DeviceHardware.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		799F2129254B31AD00256C5C /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 799F2128254B31AD00256C5C /* Domain.framework */; };
 		799F212A254B31AD00256C5C /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 799F2128254B31AD00256C5C /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C103253A8BE59A7B40FDD66D /* Pods_DeviceHardware.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5D326D55F88DD052F5A776D /* Pods_DeviceHardware.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +36,7 @@
 		79230B86254A22B900A06B8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		799F2128254B31AD00256C5C /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Domain.framework; path = "../Debug-iphonesimulator/Domain.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9359E0AA6C058F5B20E333A5 /* Pods-DeviceHardware.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeviceHardware.release.xcconfig"; path = "Target Support Files/Pods-DeviceHardware/Pods-DeviceHardware.release.xcconfig"; sourceTree = "<group>"; };
+		C5D326D55F88DD052F5A776D /* Pods_DeviceHardware.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeviceHardware.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,7 @@
 			files = (
 				799F2129254B31AD00256C5C /* Domain.framework in Frameworks */,
 				038CC6FD3B3DA2DDDFDB83D2 /* Pods_DeviceHardware.framework in Frameworks */,
+				C103253A8BE59A7B40FDD66D /* Pods_DeviceHardware.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +85,7 @@
 			children = (
 				799F2128254B31AD00256C5C /* Domain.framework */,
 				15D2A59DB153E4ECF078A23B /* Pods_DeviceHardware.framework */,
+				C5D326D55F88DD052F5A776D /* Pods_DeviceHardware.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

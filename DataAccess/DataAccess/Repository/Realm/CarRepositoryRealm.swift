@@ -6,6 +6,7 @@
 //
 
 import Domain
+import RealmSwift
 
 public class CarRepositoryRealm: CarRepository {
     
@@ -15,10 +16,6 @@ public class CarRepositoryRealm: CarRepository {
     
     public func saveCar(car: Car) {
         print("Carro guardado")
-    }
-    
-    public func isValidVehicleLicenseForDay(vehicleLicense: String, weekDay: Int) -> Bool {
-        true
     }
     
     public func isVehicleExists(vehicleLicense: String) -> Bool {

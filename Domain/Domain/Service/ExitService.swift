@@ -15,7 +15,7 @@ public class ExitService: NSObject {
         self.exitRepository = exitRepository
     }
     
-    func calculateExpendedTimeInHours(startTime: Date, endTime: Date) -> Int {
-        return 0
+    func saveExit(exit: Exit) {
+        self.exitRepository.saveExit(exit: exit)
     }
 }

@@ -9,7 +9,5 @@ import Foundation
 
 public protocol BillRepository {
     
-    func calculateCarServiceCost(exit: Exit) -> Int
-    
-    func calculateMotorcycleServiceCost(exit: Exit) -> Int
+    func saveBill(bill: Bill)
 }

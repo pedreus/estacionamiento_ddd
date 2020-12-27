@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1AE5F88CA3488DC0EECFE542 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EAA85F7A6DD707330CB08FB /* Pods_Domain.framework */; };
+		506EC52705BF22B4507558C4 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE7F4ECE07D611C3DD535D8 /* Pods_Domain.framework */; };
 		79230B0B254A20F200A06B8D /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79230B01254A20F200A06B8D /* Domain.framework */; };
 		79230B10254A20F200A06B8D /* DomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79230B0F254A20F200A06B8D /* DomainTests.swift */; };
 		7940B3CA2566B76700680BCE /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7940B3C92566B76700680BCE /* Person.swift */; };
@@ -36,6 +37,14 @@
 		E7CEF58F2593846C00726B1E /* MotorcycleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CEF58E2593846C00726B1E /* MotorcycleService.swift */; };
 		E7CEF5932593871B00726B1E /* EntryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CEF5922593871B00726B1E /* EntryService.swift */; };
 		E7CEF597259387F000726B1E /* ExitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CEF596259387F000726B1E /* ExitService.swift */; };
+		E7EDA45B2598F468000198F9 /* BillService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EDA45A2598F468000198F9 /* BillService.swift */; };
+		E7EDA45F2599196D000198F9 /* CarEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EDA45E2599196D000198F9 /* CarEntry.swift */; };
+		E7EDA463259919A8000198F9 /* MotorcycleEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EDA462259919A8000198F9 /* MotorcycleEntry.swift */; };
+		E7EDA46925991AC3000198F9 /* CarExit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EDA46825991AC3000198F9 /* CarExit.swift */; };
+		E7EDA46D25991AF9000198F9 /* MotorcycleExit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EDA46C25991AF9000198F9 /* MotorcycleExit.swift */; };
+		E7EDA47325991B66000198F9 /* CarBill.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EDA47225991B66000198F9 /* CarBill.swift */; };
+		E7EDA47925991B83000198F9 /* MotorcycleBill.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EDA47825991B83000198F9 /* MotorcycleBill.swift */; };
+		E7EDA47D259921E8000198F9 /* ModelBillUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EDA47C259921E8000198F9 /* ModelBillUnitTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +75,7 @@
 		79DF8760256C2FD500BB7EC9 /* BusinessException.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessException.swift; sourceTree = "<group>"; };
 		85FFD5AFC4179D0C2D44F234 /* Pods_DomainTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DomainTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87F1E3C37E559352A24A77DE /* Pods-DomainTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DomainTests.debug.xcconfig"; path = "Target Support Files/Pods-DomainTests/Pods-DomainTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AFE7F4ECE07D611C3DD535D8 /* Pods_Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E70ED2522592EEC700DC35B3 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 		E70ED2562592EFB500DC35B3 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		E70ED25A2592EFE000DC35B3 /* Motorcycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motorcycle.swift; sourceTree = "<group>"; };
@@ -85,6 +95,16 @@
 		E7CEF58E2593846C00726B1E /* MotorcycleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorcycleService.swift; sourceTree = "<group>"; };
 		E7CEF5922593871B00726B1E /* EntryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryService.swift; sourceTree = "<group>"; };
 		E7CEF596259387F000726B1E /* ExitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitService.swift; sourceTree = "<group>"; };
+		E7EDA45A2598F468000198F9 /* BillService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillService.swift; sourceTree = "<group>"; };
+		E7EDA45E2599196D000198F9 /* CarEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarEntry.swift; sourceTree = "<group>"; };
+		E7EDA462259919A8000198F9 /* MotorcycleEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorcycleEntry.swift; sourceTree = "<group>"; };
+		E7EDA46825991AC3000198F9 /* CarExit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarExit.swift; sourceTree = "<group>"; };
+		E7EDA46C25991AF9000198F9 /* MotorcycleExit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorcycleExit.swift; sourceTree = "<group>"; };
+		E7EDA47225991B66000198F9 /* CarBill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarBill.swift; sourceTree = "<group>"; };
+		E7EDA47825991B83000198F9 /* MotorcycleBill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorcycleBill.swift; sourceTree = "<group>"; };
+		E7EDA47C259921E8000198F9 /* ModelBillUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelBillUnitTests.swift; sourceTree = "<group>"; };
+		E7F9914F2597882D004228B7 /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Realm.framework; path = "../Debug-iphonesimulator/Realm/Realm.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7F9915425978835004228B7 /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = RealmSwift.framework; path = "../Debug-iphonesimulator/RealmSwift/RealmSwift.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +113,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AE5F88CA3488DC0EECFE542 /* Pods_Domain.framework in Frameworks */,
+				506EC52705BF22B4507558C4 /* Pods_Domain.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,8 +132,11 @@
 		5987A2887574DE952244BF7B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E7F9915425978835004228B7 /* RealmSwift.framework */,
+				E7F9914F2597882D004228B7 /* Realm.framework */,
 				0EAA85F7A6DD707330CB08FB /* Pods_Domain.framework */,
 				85FFD5AFC4179D0C2D44F234 /* Pods_DomainTests.framework */,
+				AFE7F4ECE07D611C3DD535D8 /* Pods_Domain.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -152,6 +176,7 @@
 		79230B0E254A20F200A06B8D /* DomainTests */ = {
 			isa = PBXGroup;
 			children = (
+				E7EDA47C259921E8000198F9 /* ModelBillUnitTests.swift */,
 				79230B0F254A20F200A06B8D /* DomainTests.swift */,
 				E73F4ECB2593F59700B89E5C /* ModelEntryUnitTest.swift */,
 				E7BB38422594E1A3006D35ED /* ModelExitUnitTest.swift */,
@@ -169,6 +194,7 @@
 				E7CEF58E2593846C00726B1E /* MotorcycleService.swift */,
 				E7CEF5922593871B00726B1E /* EntryService.swift */,
 				E7CEF596259387F000726B1E /* ExitService.swift */,
+				E7EDA45A2598F468000198F9 /* BillService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -197,8 +223,14 @@
 				E70ED2562592EFB500DC35B3 /* Car.swift */,
 				E70ED25A2592EFE000DC35B3 /* Motorcycle.swift */,
 				E70ED25E2592F01E00DC35B3 /* Entry.swift */,
+				E7EDA45E2599196D000198F9 /* CarEntry.swift */,
+				E7EDA462259919A8000198F9 /* MotorcycleEntry.swift */,
 				E70ED2622592F21F00DC35B3 /* Exit.swift */,
+				E7EDA46825991AC3000198F9 /* CarExit.swift */,
+				E7EDA46C25991AF9000198F9 /* MotorcycleExit.swift */,
 				E70ED2662592F33300DC35B3 /* Bill.swift */,
+				E7EDA47225991B66000198F9 /* CarBill.swift */,
+				E7EDA47825991B83000198F9 /* MotorcycleBill.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -380,16 +412,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7EDA45B2598F468000198F9 /* BillService.swift in Sources */,
 				E70ED25F2592F01E00DC35B3 /* Entry.swift in Sources */,
+				E7EDA47325991B66000198F9 /* CarBill.swift in Sources */,
 				E7CEF57D2593752700726B1E /* BillRepository.swift in Sources */,
 				E7CEF58B2593811D00726B1E /* CarService.swift in Sources */,
 				E70ED2772592FA5B00DC35B3 /* MotorcycleRepository.swift in Sources */,
+				E7EDA463259919A8000198F9 /* MotorcycleEntry.swift in Sources */,
+				E7EDA46D25991AF9000198F9 /* MotorcycleExit.swift in Sources */,
 				E7CEF5932593871B00726B1E /* EntryService.swift in Sources */,
+				E7EDA47925991B83000198F9 /* MotorcycleBill.swift in Sources */,
 				E70ED2632592F21F00DC35B3 /* Exit.swift in Sources */,
 				7940B3CF2566BA1D00680BCE /* PersonRepository.swift in Sources */,
 				7940B3CA2566B76700680BCE /* Person.swift in Sources */,
 				E70ED2672592F33300DC35B3 /* Bill.swift in Sources */,
+				E7EDA45F2599196D000198F9 /* CarEntry.swift in Sources */,
 				E70ED2572592EFB500DC35B3 /* Car.swift in Sources */,
+				E7EDA46925991AC3000198F9 /* CarExit.swift in Sources */,
 				E70ED27B2592FBD700DC35B3 /* VehicleRepository.swift in Sources */,
 				E70ED2732592F99200DC35B3 /* CarRepository.swift in Sources */,
 				E7CEF587259379CA00726B1E /* VehicleService.swift in Sources */,
@@ -412,6 +451,7 @@
 			files = (
 				E73F4ECC2593F59700B89E5C /* ModelEntryUnitTest.swift in Sources */,
 				E7BB38432594E1A3006D35ED /* ModelExitUnitTest.swift in Sources */,
+				E7EDA47D259921E8000198F9 /* ModelBillUnitTests.swift in Sources */,
 				79230B10254A20F200A06B8D /* DomainTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,7 +519,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -537,7 +577,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

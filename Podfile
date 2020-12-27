@@ -29,6 +29,13 @@ target 'DataAccess' do
 
   # Pods for DataAccess
   pod 'RealmSwift'
+  
+  target 'DataAccessTests' do
+    inherit! :search_paths
+    # Pods for testing
+    pod 'RealmSwift'
+    
+  end
 
 end
 
@@ -45,10 +52,11 @@ target 'Domain' do
   project 'Domain/Domain.xcodeproj'
 
   # Pods for Domain
-
+  
   target 'DomainTests' do
     inherit! :search_paths
     # Pods for testing
+    
   end
 
 end
