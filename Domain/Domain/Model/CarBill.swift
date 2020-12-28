@@ -10,8 +10,8 @@ public class CarBill: Bill {
     
     // Atributos factura carro
     
-    override init(billDateTime: Date, exit: Exit) {
-        super.init(billDateTime: billDateTime, exit: exit)
+    init(billDateTime: Date, carExit: CarExit) {
+        super.init(billDateTime: billDateTime, exit: carExit)
         self.setCost(cost: self.calculateCostForDaysAndHoursForCars())
     }
     

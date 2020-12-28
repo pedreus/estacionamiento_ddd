@@ -42,11 +42,11 @@ class ModelExitUnitTest: XCTestCase {
         do {
             let car = try Car(cylinder: 2000, vehicleLicense: "xbc123")
             // El vehículo entró el día de ayer
-            let entry = try Entry(entryDateTime: yesterday, vehicle: car)
+            let entry = try CarEntry(entryDateTime: yesterday, car: car)
             // Se suman 3 horas
             let tomorrow = Date(timeInterval: 10800, since: today)
             // El vehículo sale mañana
-            let exit = Exit(exitDateTime: tomorrow, entry: entry)
+            let exit = CarExit(exitDateTime: tomorrow, carEntry: entry)
             
             // Act
             let (days, hours) = exit.getExpendedTimeInDaysAndHours()

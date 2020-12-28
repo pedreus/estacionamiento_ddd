@@ -40,7 +40,7 @@ class ModelEntryUnitTest: XCTestCase {
         
         do {
             let car = try Car(cylinder: 2000, vehicleLicense: "abc123")
-            let entry = try Entry(entryDateTime: actualDate, vehicle: car)
+            let entry = try CarEntry(entryDateTime: actualDate, car: car)
             
             // Act
             let weekDay = entry.getWeekDay()
@@ -63,11 +63,11 @@ class ModelEntryUnitTest: XCTestCase {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "dd/MM/yy"
             let entryDate = dateFormatter.date(from: string) ?? Date()
-            let vehicle = try Vehicle(cylinder: 3200, vehicleLicense: "abc123")
+            let car = try Car(cylinder: 3200, vehicleLicense: "abc123")
             
             
             // Act
-            let entry = try Entry(entryDateTime: entryDate, vehicle: vehicle)
+            let entry = try CarEntry(entryDateTime: entryDate, car: car)
             print(entry.getWeekDay())
             
             // Assert

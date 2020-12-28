@@ -36,5 +36,36 @@ class CarServiceRealmTests: XCTestCase {
         // Arrange
         let realmRepository = CarRepositoryRealm()
         let carService = CarService(carRepository: realmRepository)
+        
+        do {
+            // Act
+            let carExists = try carService.isVehicleExists(vehicleLicense: "abc123")
+            
+            // Assert
+            XCTAssert(carExists == false)
+        } catch (let errorMessage) {
+            print(errorMessage)
+            XCTAssert(false)
+        }
+        
+    }
+    
+    func testSaveCar() {
+        // Arrange
+        let carRepository = CarRepositoryRealm()
+        let carService = CarService(carRepository: carRepository)
+        
+        do {
+            // Arrange
+            let car = try Car(cylinder: 2500, vehicleLicense: "abc123")
+            
+            // Act
+            try carService.saveCar(car: car)
+            XCTAssert(true)
+        } catch (let errorMessage) {
+            print(errorMessage)
+            XCTAssert(false)
+        }
+        
     }
 }

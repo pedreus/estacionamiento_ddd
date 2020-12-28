@@ -22,6 +22,10 @@ public class CarRealm: Object {
         return "vehicleLicense"
     }
     
+    public override class func indexedProperties() -> [String] {
+        return ["vehicleLicense"]
+    }
+    
     convenience init(cylinder: Int, vehicleLicense: String) {
         self.init()
         self.cylinder = cylinder

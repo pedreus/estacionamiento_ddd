@@ -10,7 +10,7 @@ import Foundation
 public protocol MotorcycleRepository: VehicleRepository {
     
     // Valida si hay cupo de motocicletas en el parqueadero
-    func isValidMotorcyclesQuantity() -> Bool
+    func isValidMotorcyclesQuantity() throws -> Bool
     
-    func saveMotorcycle(motorcylce: Motorcycle)
+    func saveMotorcycle(motorcylce: Motorcycle) throws
 }

@@ -10,7 +10,7 @@ import Foundation
 public protocol CarRepository: VehicleRepository {
     
     // Valida si hay cupos de carros en el parqueadero
-    func isValidCarsQuantity() -> Bool    
+    func isValidCarsQuantity() throws -> Bool    
     
-    func saveCar(car: Car)
+    func saveCar(car: Car) throws
 }

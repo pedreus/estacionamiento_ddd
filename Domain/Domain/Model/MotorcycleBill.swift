@@ -10,8 +10,8 @@ public class MotorcycleBill: Bill {
     
     // Atributos factura motos
     
-    override init(billDateTime: Date, exit: Exit) {
-        super.init(billDateTime: billDateTime, exit: exit)
+    init (billDateTime: Date, motoExit: MotorcycleExit) {
+        super.init(billDateTime: billDateTime, exit: motoExit)
         self.setCost(cost: self.calculateCostForDaysAndHoursForMotorcycles())
     }
     

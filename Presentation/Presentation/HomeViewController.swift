@@ -10,6 +10,12 @@ import Domain
 import DataAccess
 
 class HomeViewController: UIViewController {
+    
+    @IBOutlet weak var txtVehicleLicense: UITextField!
+    @IBOutlet weak var txtVehicleCylinder: UITextField!
+    @IBOutlet weak var ctrlVehicleType: UISegmentedControl!
+    @IBOutlet weak var btnRegister: UIButton!
+    
 
     private var personService: PersonService?
     
@@ -39,6 +45,13 @@ class HomeViewController: UIViewController {
             print("Sucedió un error")
         }
     }
+    
+    @IBAction func actionCtrlVehicleType(_ sender: UISegmentedControl) {
+    }
+    
+    @IBAction func actionBtnRegister(_ sender: UIButton) {
+    }
+    
 
 }
 

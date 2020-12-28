@@ -12,7 +12,7 @@ public class MotorcycleEntryRealm: Object {
     @objc dynamic private var id: String = ""
     @objc dynamic private var entryDateTime: Date = Date()
     @objc dynamic private var weekDay: Int = 0
-    @objc dynamic private var motorcycle: MotorcycleRealm? = nil
+    @objc dynamic private var motorcycle: MotorcycleRealm?
     
     public override class func primaryKey() -> String? {
         return "id"

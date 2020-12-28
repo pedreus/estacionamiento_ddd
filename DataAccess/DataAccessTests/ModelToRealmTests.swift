@@ -55,7 +55,7 @@ class ModelToRealmTests: XCTestCase {
         do {
             // Arrange
             let car = try Car(cylinder: 2200, vehicleLicense: "abc123")
-            let entry = Entry(entryDateTime: Date(), vehicle: car)
+            let entry = try CarEntry(entryDateTime: Date(), car: car)
             let carEntryTranslator = CarEntryRealmTranslator()
             
             // Act
@@ -73,7 +73,7 @@ class ModelToRealmTests: XCTestCase {
         do {
             // Arrange
             let moto = try Motorcycle(cylinder: 1000, vehicleLicense: "abc123")
-            let entry = Entry(entryDateTime: Date(), vehicle: moto)
+            let entry = try MotorcycleEntry(entryDateTime: Date(), motorcycle: moto)
             let exit = Exit(exitDateTime: Date(), entry: entry)
             let motoExitTranslator = MotorcycleExitRealmTranslator()
             
@@ -94,9 +94,9 @@ class ModelToRealmTests: XCTestCase {
             
             // Arrange
             let car = try Car(cylinder: 2200, vehicleLicense: "abc123")
-            let entry = Entry(entryDateTime: Date(), vehicle: car)
-            let exit = Exit(exitDateTime: Date(), entry: entry)
-            let bill = Bill(billDateTime: Date(), timeInHours: 9, cost: 50500, exit: exit)
+            let entry = try CarEntry(entryDateTime: Date(), car: car)
+            let exit = CarExit(exitDateTime: Date(), carEntry: entry)
+            let bill = CarBill(billDateTime: Date(), carExit: exit)
             let carBillranslator = CarBillRealmTranslator()
             
             // Act

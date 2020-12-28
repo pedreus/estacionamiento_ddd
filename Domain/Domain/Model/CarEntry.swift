@@ -8,5 +8,9 @@ import Foundation
 
 public class CarEntry: Entry {
     
-    // Atributos del ingreso de un carro
+    // Atributos del ingreso propios de un carro
+    
+    init(entryDateTime: Date, car: Car) throws {
+        try super.init(entryDateTime: entryDateTime, vehicle: car)
+    }
 }

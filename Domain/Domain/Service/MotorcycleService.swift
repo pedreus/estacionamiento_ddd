@@ -16,14 +16,14 @@ public class MotorcycleService: VehicleService {
         super.init(vehicleRepository: self.motorcycleRepository)
     }
     
-    func isValidMotorcylcesQuantity() -> Bool {
-        return self.motorcycleRepository.isValidMotorcyclesQuantity()
+    func isValidMotorcylcesQuantity() throws -> Bool {
+        return try self.motorcycleRepository.isValidMotorcyclesQuantity()
     }
     
     func saveMotorcycle(motorcycle: Motorcycle) throws {
-        if (self.motorcycleRepository.isVehicleExists(vehicleLicense: motorcycle.getVehicleLicense())) {
+        if (try self.motorcycleRepository.isVehicleExists(vehicleLicense: motorcycle.getVehicleLicense())) {
             throw BusinessError.VehicleAlreadyExists()
         }
-        self.motorcycleRepository.saveMotorcycle(motorcylce: motorcycle)
+        try self.motorcycleRepository.saveMotorcycle(motorcylce: motorcycle)
     }
 }

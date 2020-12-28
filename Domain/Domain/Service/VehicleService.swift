@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class VehicleService: NSObject {
+public class VehicleService {
 
     var vehicleRepository: VehicleRepository
     
@@ -19,6 +19,6 @@ public class VehicleService: NSObject {
         if (vehicleLicense.isEmpty) {
             throw BusinessError.EmptyVehicleLicense()
         }
-        return self.vehicleRepository.isVehicleExists(vehicleLicense: vehicleLicense)
+        return try self.vehicleRepository.isVehicleExists(vehicleLicense: vehicleLicense)
     }
 }

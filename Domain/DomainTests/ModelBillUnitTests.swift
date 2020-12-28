@@ -41,9 +41,9 @@ class ModelBillUnitTests: XCTestCase {
             let entryDate = Date(timeInterval: -86400, since: today)
             let exitDate = Date(timeInterval: 10800, since: today)
             let car = try Car(cylinder: 1200, vehicleLicense: "vbc123")
-            let carEntry = try CarEntry(entryDateTime: entryDate, vehicle: car)
-            let carExit = CarExit(exitDateTime: exitDate, entry: carEntry)
-            let carBill = CarBill(billDateTime: exitDate, exit: carExit)
+            let carEntry = try CarEntry(entryDateTime: entryDate, car: car)
+            let carExit = CarExit(exitDateTime: exitDate, carEntry: carEntry)
+            let carBill = CarBill(billDateTime: exitDate, carExit: carExit)
             
             // Valores en consola
             print("Tiempos: \(carExit.getExpendedTimeInDaysAndHours().0) - \(carExit.getExpendedTimeInDaysAndHours().1)")
@@ -73,13 +73,13 @@ class ModelBillUnitTests: XCTestCase {
             let entryDate = Date(timeInterval: 0, since: today)
             let exitDate = Date(timeInterval: 54000, since: today)
             let moto = try Motorcycle(cylinder: 600, vehicleLicense: "bbc123")
-            let motoEntry = try MotorcycleEntry(entryDateTime: entryDate, vehicle: moto)
-            let motoExit = MotorcycleExit(exitDateTime: exitDate, entry: motoEntry)
+            let motoEntry = try MotorcycleEntry(entryDateTime: entryDate, motorcycle: moto)
+            let motoExit = MotorcycleExit(exitDateTime: exitDate, motoEntry: motoEntry)
             
             print("Tiempo: \(motoExit.getExpendedTimeInDaysAndHours().0) \(motoExit.getExpendedTimeInDaysAndHours().1)")
             
             // Act
-            let motoBill = MotorcycleBill(billDateTime: exitDate, exit: motoExit)
+            let motoBill = MotorcycleBill(billDateTime: exitDate, motoExit: motoExit)
             print("Bill: \(motoBill.getCost())")
             
             // Assert

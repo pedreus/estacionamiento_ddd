@@ -25,7 +25,6 @@ public class DIContainer {
     }
     
     func getContainer() -> Container {
-        
         return container
     }
 }

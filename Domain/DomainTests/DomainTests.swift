@@ -30,4 +30,21 @@ class DomainTests: XCTestCase {
         }
     }
 
+    func testIsVehicleLicenseValidSize() {
+        
+        // Arrange
+        let cylinder = 2500
+        let license = "abc123"
+        
+        do {
+            // Act
+            let car = try Car(cylinder: cylinder, vehicleLicense: license)
+            
+            // Assert
+            XCTAssert(car.getVehicleLicense() == "abc123")
+        } catch (let errorMessage) {
+            print(errorMessage)
+            XCTAssert(false)
+        }
+    }
 }
