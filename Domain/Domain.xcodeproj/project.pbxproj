@@ -203,8 +203,8 @@
 				E74FF2D7259A3C4F007E7506 /* CarEntryService.swift */,
 				E74FF2DD259A3E30007E7506 /* MotorcycleEntryService.swift */,
 				E74FF304259AB936007E7506 /* CarExitService.swift */,
-				E7EDA45A2598F468000198F9 /* BillService.swift */,
 				E74FF316259ACCA2007E7506 /* MotorcycleExitService.swift */,
+				E7EDA45A2598F468000198F9 /* BillService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
