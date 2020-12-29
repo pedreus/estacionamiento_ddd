@@ -31,7 +31,7 @@ class ModelEntryUnitTest: XCTestCase {
         }
     }
     
-    func testGetWeekDayFromEntryDateTime () throws {
+    func test_getWeekDay_correctDay_successfull () throws {
         // Arrange
         let string = "27/12/2020" // domingo -> 1
         let dateFormatter = DateFormatter()

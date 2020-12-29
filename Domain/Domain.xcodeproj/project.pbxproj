@@ -11,11 +11,6 @@
 		506EC52705BF22B4507558C4 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE7F4ECE07D611C3DD535D8 /* Pods_Domain.framework */; };
 		79230B0B254A20F200A06B8D /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79230B01254A20F200A06B8D /* Domain.framework */; };
 		79230B10254A20F200A06B8D /* DomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79230B0F254A20F200A06B8D /* DomainTests.swift */; };
-		7940B3CA2566B76700680BCE /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7940B3C92566B76700680BCE /* Person.swift */; };
-		7940B3CF2566BA1D00680BCE /* PersonRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7940B3CE2566BA1D00680BCE /* PersonRepository.swift */; };
-		7940B3D52566BC0A00680BCE /* PersonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7940B3D42566BC0A00680BCE /* PersonService.swift */; };
-		799F2133254B330D00256C5C /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799F2132254B330D00256C5C /* Role.swift */; };
-		799F2139254B33A300256C5C /* AuthUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799F2138254B33A300256C5C /* AuthUser.swift */; };
 		79DF8761256C2FD500BB7EC9 /* BusinessException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DF8760256C2FD500BB7EC9 /* BusinessException.swift */; };
 		98E34A0E2710B6EDCBE07EC0 /* Pods_DomainTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85FFD5AFC4179D0C2D44F234 /* Pods_DomainTests.framework */; };
 		E70ED2532592EEC700DC35B3 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70ED2522592EEC700DC35B3 /* Vehicle.swift */; };
@@ -73,11 +68,6 @@
 		79230B0A254A20F200A06B8D /* DomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79230B0F254A20F200A06B8D /* DomainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainTests.swift; sourceTree = "<group>"; };
 		79230B11254A20F200A06B8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7940B3C92566B76700680BCE /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
-		7940B3CE2566BA1D00680BCE /* PersonRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRepository.swift; sourceTree = "<group>"; };
-		7940B3D42566BC0A00680BCE /* PersonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonService.swift; sourceTree = "<group>"; };
-		799F2132254B330D00256C5C /* Role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
-		799F2138254B33A300256C5C /* AuthUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUser.swift; sourceTree = "<group>"; };
 		79DF8760256C2FD500BB7EC9 /* BusinessException.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessException.swift; sourceTree = "<group>"; };
 		85FFD5AFC4179D0C2D44F234 /* Pods_DomainTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DomainTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87F1E3C37E559352A24A77DE /* Pods-DomainTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DomainTests.debug.xcconfig"; path = "Target Support Files/Pods-DomainTests/Pods-DomainTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -200,7 +190,6 @@
 		7940B3C82566A2C200680BCE /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				7940B3D42566BC0A00680BCE /* PersonService.swift */,
 				E7CEF586259379CA00726B1E /* VehicleService.swift */,
 				E7CEF58A2593811D00726B1E /* CarService.swift */,
 				E7CEF58E2593846C00726B1E /* MotorcycleService.swift */,
@@ -217,7 +206,6 @@
 		7940B3CD2566BA0000680BCE /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				7940B3CE2566BA1D00680BCE /* PersonRepository.swift */,
 				E70ED27A2592FBD700DC35B3 /* VehicleRepository.swift */,
 				E70ED2722592F99200DC35B3 /* CarRepository.swift */,
 				E70ED2762592FA5B00DC35B3 /* MotorcycleRepository.swift */,
@@ -234,9 +222,6 @@
 		799F2131254B320A00256C5C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				799F2132254B330D00256C5C /* Role.swift */,
-				799F2138254B33A300256C5C /* AuthUser.swift */,
-				7940B3C92566B76700680BCE /* Person.swift */,
 				E70ED2522592EEC700DC35B3 /* Vehicle.swift */,
 				E70ED2562592EFB500DC35B3 /* Car.swift */,
 				E70ED25A2592EFE000DC35B3 /* Motorcycle.swift */,
@@ -442,10 +427,8 @@
 				E74FF2CC259A3B31007E7506 /* CarEntryRepository.swift in Sources */,
 				E7EDA47925991B83000198F9 /* MotorcycleBill.swift in Sources */,
 				E70ED2632592F21F00DC35B3 /* Exit.swift in Sources */,
-				7940B3CF2566BA1D00680BCE /* PersonRepository.swift in Sources */,
 				E74FF2D2259A3B68007E7506 /* MotorcycleEntryRepository.swift in Sources */,
 				E74FF2D8259A3C4F007E7506 /* CarEntryService.swift in Sources */,
-				7940B3CA2566B76700680BCE /* Person.swift in Sources */,
 				E74FF305259AB936007E7506 /* CarExitService.swift in Sources */,
 				E70ED2672592F33300DC35B3 /* Bill.swift in Sources */,
 				E7EDA45F2599196D000198F9 /* CarEntry.swift in Sources */,
@@ -456,15 +439,12 @@
 				E78BAC41259B68E800D41D36 /* MotorcycleBillRepository.swift in Sources */,
 				E70ED2732592F99200DC35B3 /* CarRepository.swift in Sources */,
 				E7CEF587259379CA00726B1E /* VehicleService.swift in Sources */,
-				799F2139254B33A300256C5C /* AuthUser.swift in Sources */,
 				E70ED25B2592EFE000DC35B3 /* Motorcycle.swift in Sources */,
 				79DF8761256C2FD500BB7EC9 /* BusinessException.swift in Sources */,
 				E74FF2DE259A3E30007E7506 /* MotorcycleEntryService.swift in Sources */,
 				E7CEF58F2593846C00726B1E /* MotorcycleService.swift in Sources */,
 				E70ED2532592EEC700DC35B3 /* Vehicle.swift in Sources */,
-				799F2133254B330D00256C5C /* Role.swift in Sources */,
 				E74FF317259ACCA2007E7506 /* MotorcycleExitService.swift in Sources */,
-				7940B3D52566BC0A00680BCE /* PersonService.swift in Sources */,
 				E78BAC47259B691E00D41D36 /* CarBillService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

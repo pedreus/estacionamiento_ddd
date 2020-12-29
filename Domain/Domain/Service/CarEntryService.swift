@@ -9,7 +9,7 @@ public class CarEntryService {
     
     var carEntryRepository: CarEntryRepository
     
-    init(carEntryRepository: CarEntryRepository) {
+    public init(carEntryRepository: CarEntryRepository) {
         self.carEntryRepository = carEntryRepository
     }
     

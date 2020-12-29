@@ -6,12 +6,9 @@
    </FileRef>
    <Group
       location = "container:"
-      name = "Infraestructure">
+      name = "Infrastructure">
       <FileRef
          location = "group:DataAccess/DataAccess.xcodeproj">
-      </FileRef>
-      <FileRef
-         location = "group:DeviceHardware/DeviceHardware.xcodeproj">
       </FileRef>
    </Group>
    <FileRef

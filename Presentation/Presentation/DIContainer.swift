@@ -19,10 +19,10 @@ public class DIContainer {
             _ in
             CarEntryRealmRepository()
         })
-        /*self.container.register(CarEntryService.self, factory: {
+        self.container.register(CarEntryService.self, factory: {
             repository in
-            CarEntryService(carEntryRepository: repository.resolve(CarEntryRepository.self))
-        })*/
+            CarEntryService(carEntryRepository: repository.resolve(CarEntryRepository.self)!)
+        })
         
     }
     

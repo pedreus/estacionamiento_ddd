@@ -40,14 +40,6 @@ target 'DataAccess' do
 
 end
 
-target 'DeviceHardware' do
-  
-  project 'DeviceHardware/DeviceHardware.xcodeproj'
-
-  # Pods for DeviceHardware
-
-end
-
 target 'Domain' do
   
   project 'Domain/Domain.xcodeproj'
