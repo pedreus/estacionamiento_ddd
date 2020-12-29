@@ -18,7 +18,7 @@ public class MotorcycleExitRealmRepository: RealmRepository, MotorcycleExitRepos
         
         try realm.write({
             realm.add(motoRealm, update: .modified)
-            print("Moto salida")
+            print("Moto salida.")
         })
     }
 }

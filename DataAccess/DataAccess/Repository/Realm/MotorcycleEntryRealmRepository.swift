@@ -12,10 +12,10 @@ public class MotorcycleEntryRealmRepository: RealmRepository, MotorcycleEntryRep
     
     public func isValidMotorcyclesQuantity(maxQuantity: Int) throws -> Bool {
         let realm = try Realm(configuration: self.realmConfiguration)
-        let motoEntries = realm.objects(MotorcycleEntryRealm.self)
+        let motoEntries = realm.objects(MotorcycleEntryRealm.self).filter(NSPredicate(format: "motoExit.@count = %d", 0))
         
         print("Cantidad: ", motoEntries.count, " Max: ", maxQuantity)
-        return (motoEntries.count < maxQuantity);
+        return (motoEntries.count <= maxQuantity);
     }
     
     public func saveMotorcycleEntry(motoEntry: MotorcycleEntry) throws {

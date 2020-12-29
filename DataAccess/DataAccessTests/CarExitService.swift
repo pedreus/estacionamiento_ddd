@@ -1,15 +1,15 @@
 //
-//  VehicleServiceTests.swift
+//  CarExitService.swift
 //  DataAccessTests
 //
-//  Created by Pedro Erazo Acosta on 26/12/20.
+//  Created by Pedro Erazo Acosta on 29/12/20.
 //
 
 import XCTest
 @testable import Domain
 @testable import DataAccess
 
-class CarServiceTests: XCTestCase {
+class CarExitServiceTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -31,38 +31,31 @@ class CarServiceTests: XCTestCase {
         }
     }
 
-    func testIsCarExists() {
+    func testSaveCarExit() {
         
         // Arrange
-        let realmRepository = CarRealmRepository(realmConfiguration: RealmConfiguration.testDataConfiguration())
-        let carService = CarService(carRepository: realmRepository)
+        let actualString = "27/12/2020" // domingo -> 1
+        let exitString = "29/12/2020" // martes -> 3
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yy"
+        let actualDate = dateFormatter.date(from: actualString) ?? Date()
+        let exitDate = dateFormatter.date(from: exitString) ?? Date()
         
-        do {
-            // Act
-            let carExists = try carService.isVehicleExists(vehicleLicense: "abc456")
-            
-            // Assert
-            XCTAssert(carExists == true)
-        } catch (let errorMessage) {
-            print(errorMessage)
-            XCTAssert(false)
-        }
-        
-    }
-    
-    func testSaveCar() {
-        // Arrange
-        let carRepository = CarRealmRepository(realmConfiguration: RealmConfiguration.testDataConfiguration())
-        let carService = CarService(carRepository: carRepository)
         
         do {
             // Arrange
-            // Cambiar la placa
-            let car = try Car(cylinder: 2500, vehicleLicense: "abc123")
+            let car = try Car(cylinder: 1200, vehicleLicense: "abc456")
+            let carEntry = try CarEntry(entryDateTime: actualDate, car: car)
+            let carExit = CarExit(exitDateTime: exitDate, carEntry: carEntry)
+            let carExitRepository = CarExitRealmRepository(realmConfiguration: RealmConfiguration.testDataConfiguration())
+            let carExitService = CarExitService(carExitRepository: carExitRepository)
             
             // Act
-            try carService.saveCar(car: car)
+            try carExitService.saveCarExitRepository(carExit: carExit)
+            
+            // Assert
             XCTAssert(true)
+            
         } catch (let errorMessage) {
             print(errorMessage)
             XCTAssert(false)

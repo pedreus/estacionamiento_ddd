@@ -13,10 +13,10 @@ public class CarEntryRealmRepository: RealmRepository, CarEntryRepository {
     public func isValidCarsQuantity(maxQuantity: Int) throws -> Bool {
         
         let realm = try Realm(configuration: self.realmConfiguration)
-        let carEntries = realm.objects(CarEntryRealm.self)
+        let carEntries = realm.objects(CarEntryRealm.self).filter(NSPredicate(format: "carExit.@count = %d", 0))
         
         print("Cantidad: ", carEntries.count, " Max: ", maxQuantity)
-        return (carEntries.count < maxQuantity);
+        return (carEntries.count <= maxQuantity);
     }
     
     public func saveCarEntry(carEntry: CarEntry) throws {
