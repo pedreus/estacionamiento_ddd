@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,35 +20,41 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Servicios Activos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHV-pN-tYm">
-                    <rect key="frame" x="20" y="64" width="374" height="21"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="21" id="pap-9E-cPd"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Gfk-Vd-cec">
                     <rect key="frame" x="20" y="93" width="374" height="761"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tb4-wb-4G1">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <textAttributes key="titleTextAttributes">
+                        <color key="textColor" name="AccentColor"/>
+                    </textAttributes>
+                    <items>
+                        <navigationItem title="Servicios Activos" id="wMr-i3-1Tb">
+                            <barButtonItem key="leftBarButtonItem" title="Item" image="arrow.left.circle.fill" catalog="system" id="5YW-kU-aqD"/>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="Gfk-Vd-cec" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="0Jk-Iv-TeJ"/>
+                <constraint firstItem="Gfk-Vd-cec" firstAttribute="top" secondItem="tb4-wb-4G1" secondAttribute="bottom" constant="5" id="0ov-cc-sBQ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Gfk-Vd-cec" secondAttribute="trailing" constant="20" id="7jy-V4-YTi"/>
-                <constraint firstItem="bHV-pN-tYm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="8vv-tc-Ah0"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bHV-pN-tYm" secondAttribute="trailing" constant="20" id="CDJ-yv-epG"/>
+                <constraint firstItem="tb4-wb-4G1" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="AP3-oL-Oq7"/>
+                <constraint firstItem="tb4-wb-4G1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Jd3-fa-iyt"/>
+                <constraint firstItem="tb4-wb-4G1" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Lf7-vm-3OL"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Gfk-Vd-cec" secondAttribute="bottom" constant="8" id="a4u-5V-AY9"/>
-                <constraint firstItem="bHV-pN-tYm" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="ci7-WS-Dud"/>
-                <constraint firstItem="Gfk-Vd-cec" firstAttribute="top" secondItem="bHV-pN-tYm" secondAttribute="bottom" constant="8" id="pve-nq-OrR"/>
             </constraints>
             <point key="canvasLocation" x="-416" y="71"/>
         </view>
     </objects>
     <resources>
+        <image name="arrow.left.circle.fill" catalog="system" width="128" height="121"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

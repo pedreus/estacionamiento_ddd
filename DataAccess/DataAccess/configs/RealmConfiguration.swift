@@ -8,7 +8,7 @@
 import Foundation
 import RealmSwift
 
-class RealmConfiguration {
+public class RealmConfiguration {
     
     // Create "default.realm" in document file
     public static var defaultDataConfiguration = Realm.Configuration.defaultConfiguration
@@ -45,7 +45,7 @@ class RealmConfiguration {
     }
     
     // Create "estacionamiento.realm"
-    static func estacionamientoDataConfiguration() -> Realm.Configuration {
+    public static func estacionamientoDataConfiguration() -> Realm.Configuration {
         self.checkDirectory()
         
         var config = Realm.Configuration()

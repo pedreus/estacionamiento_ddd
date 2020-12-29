@@ -11,6 +11,7 @@ target 'Presentation' do
 
   # Pods for Presentation
   pod 'Swinject'
+  pod 'RealmSwift'
 
   target 'PresentationTests' do
     inherit! :search_paths

@@ -8,9 +8,9 @@ import RealmSwift
 
 public class RealmRepository {
     
-    internal var realmConfiguration: Realm.Configuration
+    var realmConfiguration: Realm.Configuration
     
-    init(realmConfiguration: Realm.Configuration = RealmConfiguration.estacionamientoDataConfiguration()) {
+    public init(realmConfiguration: Realm.Configuration = RealmConfiguration.estacionamientoDataConfiguration()) {
         self.realmConfiguration = realmConfiguration
     }
 }

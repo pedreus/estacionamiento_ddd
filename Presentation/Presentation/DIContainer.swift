@@ -15,16 +15,28 @@ public class DIContainer {
     
     func registerDependencies() {
         
-        container.register(PersonRepository.self) {
-            _ in PersonRepositoryRemote()
-        }
+        self.container.register(CarEntryRepository.self, factory: {
+            _ in
+            CarEntryRealmRepository()
+        })
+        /*self.container.register(CarEntryService.self, factory: {
+            repository in
+            CarEntryService(carEntryRepository: repository.resolve(CarEntryRepository.self))
+        })*/
         
-        container.register(PersonService.self) {
-            repository in PersonService(personRepository: repository.resolve(PersonRepository.self)!)
-        }
     }
     
     func getContainer() -> Container {
         return container
     }
 }
+
+/*
+ container.register(PersonRepository.self) {
+     _ in PersonRepositoryRemote()
+ }
+ 
+ container.register(PersonService.self) {
+     repository in PersonService(personRepository: repository.resolve(PersonRepository.self)!)
+ }
+ */

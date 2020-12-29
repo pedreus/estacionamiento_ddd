@@ -16,7 +16,7 @@ public class MotorcycleBillRealmRepository: RealmRepository, MotorcycleBillRepos
         let realm = try Realm(configuration: self.realmConfiguration)
         
         try realm.write({
-            realm.add(motoRealm)
+            realm.add(motoRealm, update: .modified)
             print("Factura moto.", motoRealm.motoEntries.first?.motoExit.first?.motoBill.first?.getCost() ?? 0)
         })
     }

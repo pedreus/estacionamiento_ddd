@@ -12,10 +12,15 @@ public class Vehicle {
     private var vehicleLicense: String
     
     public init(cylinder: Int, vehicleLicense: String) throws {
-        self.cylinder = cylinder
+        self.cylinder = 0
         self.vehicleLicense = ""
         
         try self.setVehicleLicense(vehicleLicense: vehicleLicense)
+        try self.setVehicleCylinder(cylinder: cylinder)
+    }
+    
+    private func isOnlyAlphanumericString(text: String) -> Bool {
+        return (!text.isEmpty && text.range(of: "[^a-zA-Z0-9]", options: .regularExpression) == nil)
     }
     
     private func isVehicleLicenseValidSize(vehicleLicense: String) -> Bool{
@@ -24,6 +29,7 @@ public class Vehicle {
         }
         return true
     }
+    
     private func isVehicleCynlinderValidSize(cylinder: Int) -> Bool {
         let cylinderString = String(cylinder)
         if (cylinderString.count < 5 && cylinderString.count > -1){
@@ -46,6 +52,9 @@ public class Vehicle {
         }
         if(!self.isVehicleLicenseValidSize(vehicleLicense: vehicleLicense)) {
             throw BusinessError.IncorrectVehicleLicense()
+        }
+        if (!self.isOnlyAlphanumericString(text: vehicleLicense)) {
+            throw BusinessError.WrongAlphanumericTextEntry()
         }
         self.vehicleLicense = vehicleLicense
     }

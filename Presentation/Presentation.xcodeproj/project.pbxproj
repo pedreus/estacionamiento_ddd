@@ -96,6 +96,8 @@
 		D45013547D3625E68DD982D1 /* Pods-Presentation-PresentationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Presentation-PresentationUITests.release.xcconfig"; path = "Target Support Files/Pods-Presentation-PresentationUITests/Pods-Presentation-PresentationUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E6A117133498DEB401807213 /* Pods-Presentation-PresentationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Presentation-PresentationUITests.debug.xcconfig"; path = "Target Support Files/Pods-Presentation-PresentationUITests/Pods-Presentation-PresentationUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E749E96C25967D300053876E /* PresentationCarUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationCarUnitTest.swift; sourceTree = "<group>"; };
+		E78BAC5A259B968A00D41D36 /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Realm.framework; path = "../Debug-iphonesimulator/Realm/Realm.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E78BAC5F259B969000D41D36 /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = RealmSwift.framework; path = "../Debug-iphonesimulator/RealmSwift/RealmSwift.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7CBC42C259981D000860807 /* ServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewController.swift; sourceTree = "<group>"; };
 		E7CBC42D259981D000860807 /* ServicesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesViewController.xib; sourceTree = "<group>"; };
 		E7CBC434259982D100860807 /* BillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillViewController.swift; sourceTree = "<group>"; };
@@ -207,6 +209,8 @@
 		799F211C254B318900256C5C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E78BAC5F259B969000D41D36 /* RealmSwift.framework */,
+				E78BAC5A259B968A00D41D36 /* Realm.framework */,
 				799F2124254B319900256C5C /* DeviceHardware.framework */,
 				799F2121254B319200256C5C /* DataAccess.framework */,
 				799F211D254B318900256C5C /* Domain.framework */,
