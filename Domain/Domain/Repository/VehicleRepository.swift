@@ -5,10 +5,7 @@
 //  Created by Pedro Erazo Acosta on 22/12/20.
 //
 
-import Foundation
-
 public protocol VehicleRepository {
-    
     
     /**
      Valida si una placa de un vehículo ya existe

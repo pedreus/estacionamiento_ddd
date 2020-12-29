@@ -9,24 +9,30 @@ import Domain
 
 public class MotorcycleBillRealmTranslator {
     
-    func fromModelToRealm(bill: Bill) -> MotorcycleBillRealm {
+    func fromModelToRealm(motoBill: MotorcycleBill) -> MotorcycleRealm {
         let motorcycleRealm = MotorcycleRealm(
-            cylinder: bill.getExit().getEntry().getVehicle().getCylinder(),
-            vehicleLicense: bill.getExit().getEntry().getVehicle().getVehicleLicense()
+            cylinder: motoBill.getExit().getEntry().getVehicle().getCylinder(),
+            vehicleLicense: motoBill.getExit().getEntry().getVehicle().getVehicleLicense()
         )
         let motorcycleEntryRealm = MotorcycleEntryRealm(
-            entryDateTime: bill.getExit().getEntry().getEntryDateTime(),
-            weeekDay: bill.getExit().getEntry().getWeekDay(),
-            motorcycle: motorcycleRealm
+            entryDateTime: motoBill.getExit().getEntry().getEntryDateTime(),
+            weeekDay: motoBill.getExit().getEntry().getWeekDay()
         )
         let motorcycleExitRealm = MotorcycleExitRealm(
-            exitDateTime: bill.getExit().getExitDateTime(),
-            expendedTimeInDays: bill.getExit().getExpendedTimeInDaysAndHours().0, // Tupla (day, hour)
-            expendedTimeInHours: bill.getExit().getExpendedTimeInDaysAndHours().1, // Tupla (day, hour)
-            entryRealmEntity: motorcycleEntryRealm
+            exitDateTime: motoBill.getExit().getExitDateTime(),
+            expendedTimeInDays: motoBill.getExit().getExpendedTimeInDaysAndHours().0, // Tupla (day, hour)
+            expendedTimeInHours: motoBill.getExit().getExpendedTimeInDaysAndHours().1 // Tupla (day, hour)
         )
-        let motorcycleBillRealm = MotorcycleBillRealm(billDateTime: bill.getBillDateTime(), cost: bill.getCost(), exit: motorcycleExitRealm)
+        let motorcycleBillRealm = MotorcycleBillRealm(
+            billDateTime: motoBill.getBillDateTime(),
+            cost: motoBill.getCost(),
+            exit: motorcycleExitRealm
+        )
         
-        return motorcycleBillRealm
+        motorcycleExitRealm.motoBill.append(motorcycleBillRealm)
+        motorcycleEntryRealm.motoExit.append(motorcycleExitRealm)
+        motorcycleRealm.motoEntries.append(motorcycleEntryRealm)
+        
+        return motorcycleRealm
     }
 }

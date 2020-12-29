@@ -9,24 +9,25 @@ import Domain
 
 public class CarExitRealmTranslator {
     
-    func fromModelToRealmEntity(exit: Exit) -> CarExitRealm {
+    func fromModelToRealmEntity(carExit: CarExit) -> CarRealm {
         
         let carRealm = CarRealm(
-            cylinder: exit.getEntry().getVehicle().getCylinder(),
-            vehicleLicense: exit.getEntry().getVehicle().getVehicleLicense()
+            cylinder: carExit.getEntry().getVehicle().getCylinder(),
+            vehicleLicense: carExit.getEntry().getVehicle().getVehicleLicense()
         )
         let carEntryRealm = CarEntryRealm(
-            entryDateTime: exit.getEntry().getEntryDateTime(),
-            weeekDay: exit.getEntry().getWeekDay(),
-            car: carRealm
+            entryDateTime: carExit.getEntry().getEntryDateTime(),
+            weeekDay: carExit.getEntry().getWeekDay()
         )
         let carExitRealm = CarExitRealm(
-            exitDateTime: exit.getExitDateTime(),
-            expendedTimeInDays: exit.getExpendedTimeInDaysAndHours().0, // Tupla (day, hour)
-            expendedTimeInHours: exit.getExpendedTimeInDaysAndHours().1, // Tupla (day, hour)
-            entryRealmEntity: carEntryRealm
+            exitDateTime: carExit.getExitDateTime(),
+            expendedTimeInDays: carExit.getExpendedTimeInDaysAndHours().0, // Tupla (day, hour)
+            expendedTimeInHours: carExit.getExpendedTimeInDaysAndHours().1 // Tupla (day, hour)
         )
         
-        return carExitRealm
+        carEntryRealm.carExit.append(carExitRealm)
+        carRealm.carEntries.append(carEntryRealm)
+        
+        return carRealm
     }
 }

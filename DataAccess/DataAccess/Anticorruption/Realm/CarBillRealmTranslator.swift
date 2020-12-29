@@ -9,24 +9,29 @@ import Domain
 
 public class CarBillRealmTranslator {
     
-    func fromModelToRealm(bill: Bill) -> CarBillRealm {
+    func fromModelToRealm(carBill: CarBill) -> CarRealm {
         let carRealm = CarRealm(
-            cylinder: bill.getExit().getEntry().getVehicle().getCylinder(),
-            vehicleLicense: bill.getExit().getEntry().getVehicle().getVehicleLicense()
+            cylinder: carBill.getExit().getEntry().getVehicle().getCylinder(),
+            vehicleLicense: carBill.getExit().getEntry().getVehicle().getVehicleLicense()
         )
         let carEntryRealm = CarEntryRealm(
-            entryDateTime: bill.getExit().getEntry().getEntryDateTime(),
-            weeekDay: bill.getExit().getEntry().getWeekDay(),
-            car: carRealm
+            entryDateTime: carBill.getExit().getEntry().getEntryDateTime(),
+            weeekDay: carBill.getExit().getEntry().getWeekDay()
         )
         let carExitRealm = CarExitRealm(
-            exitDateTime: bill.getExit().getExitDateTime(),
-            expendedTimeInDays: bill.getExit().getExpendedTimeInDaysAndHours().0, // Tupla (day, hour)
-            expendedTimeInHours: bill.getExit().getExpendedTimeInDaysAndHours().1, // Tupla (day, hour)
-            entryRealmEntity: carEntryRealm
+            exitDateTime: carBill.getExit().getExitDateTime(),
+            expendedTimeInDays: carBill.getExit().getExpendedTimeInDaysAndHours().0, // Tupla (day, hour)
+            expendedTimeInHours: carBill.getExit().getExpendedTimeInDaysAndHours().1 // Tupla (day, hour)
         )
-        let carBillRealm = CarBillRealm(billDateTime: bill.getBillDateTime(), cost: bill.getCost(), exit: carExitRealm)
+        let carBillRealm = CarBillRealm(
+            billDateTime: carBill.getBillDateTime(),
+            cost: carBill.getCost()
+        )
         
-        return carBillRealm
+        carExitRealm.carBill.append(carBillRealm)
+        carEntryRealm.carExit.append(carExitRealm)
+        carRealm.carEntries.append(carEntryRealm)
+        
+        return carRealm
     }
 }

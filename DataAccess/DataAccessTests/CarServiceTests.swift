@@ -58,7 +58,7 @@ class CarServiceTests: XCTestCase {
         do {
             // Arrange
             // Cambiar la placa
-            let car = try Car(cylinder: 2500, vehicleLicense: "xyz123")
+            let car = try Car(cylinder: 2500, vehicleLicense: "abc123")
             
             // Act
             try carService.saveCar(car: car)

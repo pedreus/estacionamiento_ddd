@@ -9,23 +9,25 @@ import Domain
 
 public class MotorcycleExitRealmTranslator {
     
-    func fromModelToRealm(exit: Exit) -> MotorcycleExitRealm {
+    func fromModelToRealm(motoExit: MotorcycleExit) -> MotorcycleRealm {
         
         let motorcycleRealm = MotorcycleRealm(
-            cylinder: exit.getEntry().getVehicle().getCylinder(),
-            vehicleLicense: exit.getEntry().getVehicle().getVehicleLicense()
+            cylinder: motoExit.getEntry().getVehicle().getCylinder(),
+            vehicleLicense: motoExit.getEntry().getVehicle().getVehicleLicense()
         )
         let entryRealm = MotorcycleEntryRealm(
-            entryDateTime: exit.getEntry().getEntryDateTime(),
-            weeekDay: exit.getEntry().getWeekDay(),
-            motorcycle: motorcycleRealm
+            entryDateTime: motoExit.getEntry().getEntryDateTime(),
+            weeekDay: motoExit.getEntry().getWeekDay()
         )
         let exitRealm = MotorcycleExitRealm(
-            exitDateTime: exit.getExitDateTime(),
-            expendedTimeInDays: exit.getExpendedTimeInDaysAndHours().0, // Tupla (day, hour)
-            expendedTimeInHours: exit.getExpendedTimeInDaysAndHours().1, // Tupla (day, hour)
-            entryRealmEntity: entryRealm)
+            exitDateTime: motoExit.getExitDateTime(),
+            expendedTimeInDays: motoExit.getExpendedTimeInDaysAndHours().0, // Tupla (day, hour)
+            expendedTimeInHours: motoExit.getExpendedTimeInDaysAndHours().1 // Tupla (day, hour)
+        )
         
-        return exitRealm
+        entryRealm.motoExit.append(exitRealm)
+        motorcycleRealm.motoEntries.append(entryRealm)
+        
+        return motorcycleRealm
     }
 }

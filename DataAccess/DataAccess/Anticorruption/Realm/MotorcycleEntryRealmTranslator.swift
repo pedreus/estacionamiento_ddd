@@ -9,18 +9,19 @@ import Domain
 
 public class MotorcycleEntryRealmTranslator {
     
-    func fromModelToRealmEntity(entry: Entry) -> MotorcycleEntryRealm {
+    func fromModelToRealmEntity(motoEntry: MotorcycleEntry) -> MotorcycleRealm {
         
         let motorcycleRealm = MotorcycleRealm(
-            cylinder: entry.getVehicle().getCylinder(),
-            vehicleLicense: entry.getVehicle().getVehicleLicense()
+            cylinder: motoEntry.getVehicle().getCylinder(),
+            vehicleLicense: motoEntry.getVehicle().getVehicleLicense()
         )
         let motorcycleEntryRealm = MotorcycleEntryRealm(
-            entryDateTime: entry.getEntryDateTime(),
-            weeekDay: entry.getWeekDay(),
-            motorcycle: motorcycleRealm
+            entryDateTime: motoEntry.getEntryDateTime(),
+            weeekDay: motoEntry.getWeekDay()
         )
         
-        return motorcycleEntryRealm
+        motorcycleRealm.motoEntries.append(motorcycleEntryRealm)
+        
+        return motorcycleRealm
     }
 }

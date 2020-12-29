@@ -8,18 +8,19 @@ import Domain
 
 public class CarEntryRealmTranslator {
     
-    func fromModelToRealmEntity(entry: Entry) -> CarEntryRealm {
-        let carRealmEntity = CarRealm(
-            cylinder: entry.getVehicle().getCylinder(),
-            vehicleLicense: entry.getVehicle().getVehicleLicense()
+    func fromModelToRealmEntity(carEntry: CarEntry) -> CarRealm {
+        let carRealm = CarRealm(
+            cylinder: carEntry.getVehicle().getCylinder(),
+            vehicleLicense: carEntry.getVehicle().getVehicleLicense()
         )
-        let realmEntity = CarEntryRealm(
-            entryDateTime: entry.getEntryDateTime(),
-            weeekDay: entry.getWeekDay(),
-            car: carRealmEntity
+        let carEntry = CarEntryRealm(
+            entryDateTime: carEntry.getEntryDateTime(),
+            weeekDay: carEntry.getWeekDay()
         )
         
-        return realmEntity
+        carRealm.carEntries.append(carEntry)
+        
+        return carRealm
     }
     
 }

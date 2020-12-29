@@ -8,24 +8,15 @@
 import Domain
 import RealmSwift
 
-public class CarRealmRepository: CarRepository {
-    
-    private var realmConfiguration: Realm.Configuration
-    
-    init(realmConfiguration: Realm.Configuration = RealmConfiguration.estacionamientoDataConfiguration()) {
-        self.realmConfiguration = realmConfiguration
-    }
-    
-    public func isValidCarsQuantity() throws -> Bool {
-        true
-    }
+public class CarRealmRepository: RealmRepository, CarRepository {
     
     public func saveCar(car: Car) throws {
         let realm = try Realm(configuration: self.realmConfiguration)
         let carRealmTranslator = CarRealmTranslator()
         let carRealm = carRealmTranslator.fromModelToRealmEntity(car: car)
+        
         try realm.write({
-            realm.add(carRealm)
+            realm.add(carRealm, update: .modified)
             print("Carro guardado")
         })
     }

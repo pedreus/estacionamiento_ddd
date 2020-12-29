@@ -1,15 +1,15 @@
 //
-//  VehicleServiceTests.swift
+//  MotorcycleServiceRealmTests.swift
 //  DataAccessTests
 //
-//  Created by Pedro Erazo Acosta on 26/12/20.
+//  Created by Pedro Erazo Acosta on 28/12/20.
 //
 
 import XCTest
 @testable import Domain
 @testable import DataAccess
 
-class CarServiceTests: XCTestCase {
+class MotorcycleServiceTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -30,43 +30,40 @@ class CarServiceTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-
-    func testIsCarExists() {
+    
+    func testMotorcycleExists() {
         
         // Arrange
-        let realmRepository = CarRealmRepository(realmConfiguration: RealmConfiguration.testDataConfiguration())
-        let carService = CarService(carRepository: realmRepository)
+        let realmRepository = MotorcycleRealmRepository(realmConfiguration: RealmConfiguration.testDataConfiguration())
+        let motoService = MotorcycleService(motorcycleRepository: realmRepository)
         
         do {
             // Act
-            let carExists = try carService.isVehicleExists(vehicleLicense: "abc123")
+            let isMotoExists = try motoService.isVehicleExists(vehicleLicense: "abc123")
             
             // Assert
-            XCTAssert(carExists == true)
+            XCTAssert(isMotoExists == true)
         } catch (let errorMessage) {
             print(errorMessage)
             XCTAssert(false)
         }
-        
     }
     
-    func testSaveCar() {
-        // Arrange
-        let carRepository = CarRealmRepository(realmConfiguration: RealmConfiguration.testDataConfiguration())
-        let carService = CarService(carRepository: carRepository)
+    func testSaveMotorcycle() {
         
         do {
             // Arrange
-            // Cambiar la placa
-            let car = try Car(cylinder: 2500, vehicleLicense: "xyz123")
+            let motorcycle = try Motorcycle(cylinder: 1000, vehicleLicense: "abc123")
+            let realmRepository = MotorcycleRealmRepository(realmConfiguration: RealmConfiguration.testDataConfiguration())
+            let motoService = MotorcycleService(motorcycleRepository: realmRepository)
             
-            // Act
-            try carService.saveCar(car: car)
+            //Act
+            try motoService.saveMotorcycle(motorcycle: motorcycle)
             XCTAssert(true)
         } catch (let errorMessage) {
             print(errorMessage)
             XCTAssert(false)
         }
-        
     }
+
 }

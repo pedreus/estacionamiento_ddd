@@ -5,6 +5,8 @@
 //  Created by Pedro Erazo Acosta on 26/12/20.
 //
 
+// Realm Versión 0
+
 import Foundation
 import RealmSwift
 
@@ -14,19 +16,22 @@ public class CarExitRealm: Object {
     @objc dynamic private var exitDateTime: Date = Date()
     @objc dynamic private var expendedTimeInDays: Int = 0
     @objc dynamic private var expendedTimeInHours: Int = 0
-    @objc dynamic private var entryRealmEntity: CarEntryRealm?
+    @objc dynamic private var entryRealmEntity: CarEntryRealm? {
+        return LinkingObjects(fromType: CarEntryRealm.self, property: "carExit").first
+    }
+    
+    let carBill = List<CarBillRealm>()
     
     public override class func primaryKey() -> String? {
         return "id"
     }
     
-    convenience init(exitDateTime: Date, expendedTimeInDays: Int, expendedTimeInHours: Int, entryRealmEntity: CarEntryRealm) {
+    convenience init(exitDateTime: Date, expendedTimeInDays: Int, expendedTimeInHours: Int) {
         self.init()
         self.id = UUID().uuidString
         self.exitDateTime = exitDateTime
         self.expendedTimeInDays = expendedTimeInDays
         self.expendedTimeInHours = expendedTimeInHours
-        self.entryRealmEntity = entryRealmEntity
     }
     
     public func getExitDateTime() -> Date {

@@ -29,7 +29,17 @@
 		E73BDA9E259827ED009E189A /* CarBillRealmTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73BDA9D259827ED009E189A /* CarBillRealmTranslator.swift */; };
 		E73BDAA125982A07009E189A /* MotorcycleBillRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73BDAA025982A07009E189A /* MotorcycleBillRealm.swift */; };
 		E73BDAA425982A50009E189A /* MotorcycleBillRealmTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73BDAA325982A50009E189A /* MotorcycleBillRealmTranslator.swift */; };
-		E73BDAAD25983213009E189A /* CarServiceRealmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73BDAAC25983213009E189A /* CarServiceRealmTests.swift */; };
+		E73BDAAD25983213009E189A /* CarServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73BDAAC25983213009E189A /* CarServiceTests.swift */; };
+		E74FF2C4259A16F4007E7506 /* RealmConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74FF2C3259A16F4007E7506 /* RealmConfiguration.swift */; };
+		E74FF2C8259A2CF7007E7506 /* MotorcycleRealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74FF2C7259A2CF7007E7506 /* MotorcycleRealmRepository.swift */; };
+		E74FF2E2259A3EE5007E7506 /* CarEntryRealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74FF2E1259A3EE5007E7506 /* CarEntryRealmRepository.swift */; };
+		E74FF2E5259A4044007E7506 /* CarEntryServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74FF2E4259A4044007E7506 /* CarEntryServiceTests.swift */; };
+		E74FF2E8259A43FF007E7506 /* RealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74FF2E7259A43FF007E7506 /* RealmRepository.swift */; };
+		E74FF2EB259A4539007E7506 /* MotorcycleServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74FF2EA259A4539007E7506 /* MotorcycleServiceTests.swift */; };
+		E74FF2F4259AAE41007E7506 /* MotorcycleEntryRealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74FF2F3259AAE41007E7506 /* MotorcycleEntryRealmRepository.swift */; };
+		E74FF2F7259AB005007E7506 /* MotorcycleEntryServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74FF2F6259AB005007E7506 /* MotorcycleEntryServiceTests.swift */; };
+		E74FF309259AC9BE007E7506 /* CarExitRealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74FF308259AC9BE007E7506 /* CarExitRealmRepository.swift */; };
+		E74FF30E259ACB31007E7506 /* MotorcycleExitRealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74FF30D259ACB31007E7506 /* MotorcycleExitRealmRepository.swift */; };
 		E794EC222596A6B5009F444A /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E794EC212596A6B5009F444A /* Domain.framework */; };
 		E794EC232596A6B5009F444A /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E794EC212596A6B5009F444A /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E794EC272596A7E9009F444A /* Pods_DataAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E794EC262596A7E9009F444A /* Pods_DataAccess.framework */; };
@@ -49,7 +59,7 @@
 		E7BB386125953798006D35ED /* EntryTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BB386025953798006D35ED /* EntryTranslator.swift */; };
 		E7BB386325953818006D35ED /* ExitTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BB386225953818006D35ED /* ExitTranslator.swift */; };
 		E7BB3865259538C1006D35ED /* BillTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BB3864259538C1006D35ED /* BillTranslator.swift */; };
-		E7BB3867259539FE006D35ED /* CarRepositoryRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BB3866259539FE006D35ED /* CarRepositoryRealm.swift */; };
+		E7BB3867259539FE006D35ED /* CarRealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BB3866259539FE006D35ED /* CarRealmRepository.swift */; };
 		E7BB386925953F40006D35ED /* MotorcycleTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BB386825953F40006D35ED /* MotorcycleTranslator.swift */; };
 /* End PBXBuildFile section */
 
@@ -109,7 +119,17 @@
 		E73BDA9D259827ED009E189A /* CarBillRealmTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarBillRealmTranslator.swift; sourceTree = "<group>"; };
 		E73BDAA025982A07009E189A /* MotorcycleBillRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorcycleBillRealm.swift; sourceTree = "<group>"; };
 		E73BDAA325982A50009E189A /* MotorcycleBillRealmTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorcycleBillRealmTranslator.swift; sourceTree = "<group>"; };
-		E73BDAAC25983213009E189A /* CarServiceRealmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarServiceRealmTests.swift; sourceTree = "<group>"; };
+		E73BDAAC25983213009E189A /* CarServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarServiceTests.swift; sourceTree = "<group>"; };
+		E74FF2C3259A16F4007E7506 /* RealmConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmConfiguration.swift; sourceTree = "<group>"; };
+		E74FF2C7259A2CF7007E7506 /* MotorcycleRealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorcycleRealmRepository.swift; sourceTree = "<group>"; };
+		E74FF2E1259A3EE5007E7506 /* CarEntryRealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarEntryRealmRepository.swift; sourceTree = "<group>"; };
+		E74FF2E4259A4044007E7506 /* CarEntryServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarEntryServiceTests.swift; sourceTree = "<group>"; };
+		E74FF2E7259A43FF007E7506 /* RealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRepository.swift; sourceTree = "<group>"; };
+		E74FF2EA259A4539007E7506 /* MotorcycleServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorcycleServiceTests.swift; sourceTree = "<group>"; };
+		E74FF2F3259AAE41007E7506 /* MotorcycleEntryRealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorcycleEntryRealmRepository.swift; sourceTree = "<group>"; };
+		E74FF2F6259AB005007E7506 /* MotorcycleEntryServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorcycleEntryServiceTests.swift; sourceTree = "<group>"; };
+		E74FF308259AC9BE007E7506 /* CarExitRealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarExitRealmRepository.swift; sourceTree = "<group>"; };
+		E74FF30D259ACB31007E7506 /* MotorcycleExitRealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorcycleExitRealmRepository.swift; sourceTree = "<group>"; };
 		E794EC212596A6B5009F444A /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Domain.framework; path = "../Debug-iphonesimulator/Domain.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E794EC262596A7E9009F444A /* Pods_DataAccess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Pods_DataAccess.framework; path = "../Debug-iphonesimulator/Pods_DataAccess.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E794EC2D2596A957009F444A /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Realm.framework; path = "../Debug-iphonesimulator/Realm/Realm.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,7 +146,7 @@
 		E7BB386025953798006D35ED /* EntryTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryTranslator.swift; sourceTree = "<group>"; };
 		E7BB386225953818006D35ED /* ExitTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitTranslator.swift; sourceTree = "<group>"; };
 		E7BB3864259538C1006D35ED /* BillTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillTranslator.swift; sourceTree = "<group>"; };
-		E7BB3866259539FE006D35ED /* CarRepositoryRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepositoryRealm.swift; sourceTree = "<group>"; };
+		E7BB3866259539FE006D35ED /* CarRealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRealmRepository.swift; sourceTree = "<group>"; };
 		E7BB386825953F40006D35ED /* MotorcycleTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorcycleTranslator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -178,6 +198,7 @@
 		79230B6B254A229800A06B8D /* DataAccess */ = {
 			isa = PBXGroup;
 			children = (
+				E74FF2C2259A16D3007E7506 /* configs */,
 				7940B3D92566C20300680BCE /* Anticorruption */,
 				7940B3D82566C1AB00680BCE /* Data */,
 				7940B3DA2566C21100680BCE /* Repository */,
@@ -297,7 +318,13 @@
 		E73BDA522597DC20009E189A /* Realm */ = {
 			isa = PBXGroup;
 			children = (
-				E7BB3866259539FE006D35ED /* CarRepositoryRealm.swift */,
+				E74FF2E7259A43FF007E7506 /* RealmRepository.swift */,
+				E7BB3866259539FE006D35ED /* CarRealmRepository.swift */,
+				E74FF2C7259A2CF7007E7506 /* MotorcycleRealmRepository.swift */,
+				E74FF2E1259A3EE5007E7506 /* CarEntryRealmRepository.swift */,
+				E74FF2F3259AAE41007E7506 /* MotorcycleEntryRealmRepository.swift */,
+				E74FF308259AC9BE007E7506 /* CarExitRealmRepository.swift */,
+				E74FF30D259ACB31007E7506 /* MotorcycleExitRealmRepository.swift */,
 			);
 			path = Realm;
 			sourceTree = "<group>";
@@ -310,10 +337,21 @@
 			path = Remote;
 			sourceTree = "<group>";
 		};
+		E74FF2C2259A16D3007E7506 /* configs */ = {
+			isa = PBXGroup;
+			children = (
+				E74FF2C3259A16F4007E7506 /* RealmConfiguration.swift */,
+			);
+			path = configs;
+			sourceTree = "<group>";
+		};
 		E7AE7FB6259793EF0037C1B5 /* DataAccessTests */ = {
 			isa = PBXGroup;
 			children = (
-				E73BDAAC25983213009E189A /* CarServiceRealmTests.swift */,
+				E74FF2F6259AB005007E7506 /* MotorcycleEntryServiceTests.swift */,
+				E74FF2EA259A4539007E7506 /* MotorcycleServiceTests.swift */,
+				E74FF2E4259A4044007E7506 /* CarEntryServiceTests.swift */,
+				E73BDAAC25983213009E189A /* CarServiceTests.swift */,
 				E73BDA9025980605009E189A /* ModelToRealmTests.swift */,
 				E7AE7FC6259794E70037C1B5 /* DataAccessTests copy.swift */,
 				E7AE7FB9259793EF0037C1B5 /* Info.plist */,
@@ -497,7 +535,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E74FF30E259ACB31007E7506 /* MotorcycleExitRealmRepository.swift in Sources */,
 				E73BDA702597F8E6009E189A /* CarEntryRealmTranslator.swift in Sources */,
+				E74FF2C4259A16F4007E7506 /* RealmConfiguration.swift in Sources */,
 				E73BDA872598013E009E189A /* MotorcycleEntryRealmTranslator.swift in Sources */,
 				E73BDA97259820B2009E189A /* MotorcycleExitRealmTranslator.swift in Sources */,
 				E7BB386125953798006D35ED /* EntryTranslator.swift in Sources */,
@@ -505,17 +545,22 @@
 				E73BDA792597FE96009E189A /* MotorcycleRealm.swift in Sources */,
 				E73BDA5B2597DFD1009E189A /* CarEntryRealm.swift in Sources */,
 				E7BB3865259538C1006D35ED /* BillTranslator.swift in Sources */,
+				E74FF2E8259A43FF007E7506 /* RealmRepository.swift in Sources */,
 				E7BB386925953F40006D35ED /* MotorcycleTranslator.swift in Sources */,
 				E7BB38552594FA80006D35ED /* MotorcycleDto.swift in Sources */,
 				E7BB385B25953605006D35ED /* BillDto.swift in Sources */,
+				E74FF2C8259A2CF7007E7506 /* MotorcycleRealmRepository.swift in Sources */,
 				E73BDA542597DC4A009E189A /* CarRealm.swift in Sources */,
 				E7BB385D25953682006D35ED /* CarTranlator.swift in Sources */,
+				E74FF309259AC9BE007E7506 /* CarExitRealmRepository.swift in Sources */,
 				E73BDA7E2597FF01009E189A /* MotorcycleEntryRealm.swift in Sources */,
 				E73BDA762597FD04009E189A /* CarExitRealmTranslator.swift in Sources */,
+				E74FF2E2259A3EE5007E7506 /* CarEntryRealmRepository.swift in Sources */,
 				E73BDAA125982A07009E189A /* MotorcycleBillRealm.swift in Sources */,
 				E73BDA9E259827ED009E189A /* CarBillRealmTranslator.swift in Sources */,
 				E7BB38592594FB89006D35ED /* ExitDto.swift in Sources */,
 				7940B3E02566C29C00680BCE /* PersonRepositoryRemote.swift in Sources */,
+				E74FF2F4259AAE41007E7506 /* MotorcycleEntryRealmRepository.swift in Sources */,
 				E73BDA732597FBEF009E189A /* CarExitRealm.swift in Sources */,
 				7940B3DC2566C28B00680BCE /* PersonDto.swift in Sources */,
 				E73BDA622597E240009E189A /* MotorcycleRealmTranslator.swift in Sources */,
@@ -523,7 +568,7 @@
 				E7BB38572594FAA4006D35ED /* EntryDto.swift in Sources */,
 				E7BB38532594FA62006D35ED /* CarDto.swift in Sources */,
 				E73BDA9B25982472009E189A /* CarBillRealm.swift in Sources */,
-				E7BB3867259539FE006D35ED /* CarRepositoryRealm.swift in Sources */,
+				E7BB3867259539FE006D35ED /* CarRealmRepository.swift in Sources */,
 				E73BDAA425982A50009E189A /* MotorcycleBillRealmTranslator.swift in Sources */,
 				E7BB386325953818006D35ED /* ExitTranslator.swift in Sources */,
 				E73BDA822597FFE6009E189A /* MotorcyleExitRealm.swift in Sources */,
@@ -534,9 +579,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E73BDAAD25983213009E189A /* CarServiceRealmTests.swift in Sources */,
+				E73BDAAD25983213009E189A /* CarServiceTests.swift in Sources */,
+				E74FF2E5259A4044007E7506 /* CarEntryServiceTests.swift in Sources */,
 				E73BDA9125980605009E189A /* ModelToRealmTests.swift in Sources */,
+				E74FF2EB259A4539007E7506 /* MotorcycleServiceTests.swift in Sources */,
 				E7AE7FC7259794E70037C1B5 /* DataAccessTests copy.swift in Sources */,
+				E74FF2F7259AB005007E7506 /* MotorcycleEntryServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

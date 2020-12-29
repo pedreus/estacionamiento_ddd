@@ -59,10 +59,10 @@ class ModelToRealmTests: XCTestCase {
             let carEntryTranslator = CarEntryRealmTranslator()
             
             // Act
-            let realmEntry = carEntryTranslator.fromModelToRealmEntity(entry: entry)
+            let carRealm = carEntryTranslator.fromModelToRealmEntity(carEntry: entry)
             
             // Assert
-            XCTAssert(realmEntry.getCarRealm()?.getCylinder() == car.getCylinder())
+            XCTAssert(carRealm.getCylinder() == car.getCylinder())
         } catch (let errorMessage) {
             print(errorMessage)
         }
@@ -74,14 +74,14 @@ class ModelToRealmTests: XCTestCase {
             // Arrange
             let moto = try Motorcycle(cylinder: 1000, vehicleLicense: "abc123")
             let entry = try MotorcycleEntry(entryDateTime: Date(), motorcycle: moto)
-            let exit = Exit(exitDateTime: Date(), entry: entry)
+            let exit = MotorcycleExit(exitDateTime: Date(), motoEntry: entry)
             let motoExitTranslator = MotorcycleExitRealmTranslator()
             
             // Act
-            let realmExit = motoExitTranslator.fromModelToRealm(exit: exit)
+            let motoRealm = motoExitTranslator.fromModelToRealm(motoExit: exit)
             
             // Assert
-            XCTAssert(realmExit.getEntryRealmEntity()?.getMotorcycleRealm()?.getCylinder() == 1000)
+            XCTAssert(motoRealm.motoEntries.first?.motoExit.first?.getExitDateTime() == exit.getExitDateTime())
             
         } catch (let errorMessage) {
             print(errorMessage)
@@ -100,10 +100,10 @@ class ModelToRealmTests: XCTestCase {
             let carBillranslator = CarBillRealmTranslator()
             
             // Act
-            let realBill = carBillranslator.fromModelToRealm(bill: bill)
+            let carRealm = carBillranslator.fromModelToRealm(carBill: bill)
             
             // Assert
-            XCTAssert(realBill.getBillDateTime() == bill.getBillDateTime() && realBill.getCarExitRealm()?.getEntryRealmEntity()?.getCarRealm()?.getCylinder() == 2200)
+            XCTAssert(carRealm.carEntries.first?.carExit.first?.carBill.first?.getCost() == bill.getCost())
             
         } catch (let errorMessage) {
             print(errorMessage)

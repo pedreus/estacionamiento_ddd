@@ -33,7 +33,7 @@ class PresentationCarUnitTest: XCTestCase {
     
     func testIsValidCarQuantity() {
         // Arrange
-        let carService = CarService(carRepository: CarRepositoryRealm())
+        let carService = CarService(carRepository: CarRealmRepository())
         
         // Act
         let isValidCar = carService.isValidCarQuantity()
@@ -45,7 +45,7 @@ class PresentationCarUnitTest: XCTestCase {
     func testSaveCar() {
         // Arrange
         let car = Car(cylinder: 1200, vehicleLicense: "abc123")
-        let carService = CarService(carRepository: CarRepositoryRealm())
+        let carService = CarService(carRepository: CarRealmRepository())
         
         // Act
         var carSaved = false

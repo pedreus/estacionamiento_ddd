@@ -5,11 +5,7 @@
 //  Created by Pedro Erazo Acosta on 26/12/20.
 //
 
-/**
- Tipo de vehículo:
- 1: carro
- 2: moto
- */
+// Realm Versión 0
 
 import RealmSwift
 
@@ -17,6 +13,8 @@ public class CarRealm: Object {
     
     @objc dynamic private var vehicleLicense: String = ""
     @objc dynamic private var cylinder: Int = 0
+    
+    let carEntries = List<CarEntryRealm>()
     
     public override static func primaryKey() -> String? {
         return "vehicleLicense"

@@ -5,12 +5,16 @@
 //  Created by Pedro Erazo Acosta on 26/12/20.
 //
 
+// Realm Versión 0
+
 import RealmSwift
 
 public class MotorcycleRealm: Object {
     
     @objc dynamic private var vehicleLicense: String = ""
     @objc dynamic private var cylinder: Int = 0
+    
+    let motoEntries = List<MotorcycleEntryRealm>();
     
     public override static func primaryKey() -> String? {
         return "vehicleLicense"

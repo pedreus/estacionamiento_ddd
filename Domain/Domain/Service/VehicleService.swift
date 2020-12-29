@@ -5,8 +5,6 @@
 //  Created by Pedro Erazo Acosta on 23/12/20.
 //
 
-import UIKit
-
 public class VehicleService {
 
     var vehicleRepository: VehicleRepository

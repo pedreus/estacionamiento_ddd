@@ -173,18 +173,14 @@
 		79230B2B254A214C00A06B8D /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				E7CBC44325998C0C00860807 /* views */,
+				E7CBC44225998C0100860807 /* controllers */,
 				79230B2C254A214C00A06B8D /* AppDelegate.swift */,
 				79230B2E254A214C00A06B8D /* SceneDelegate.swift */,
 				79DF8768256ECC3700BB7EC9 /* DIContainer.swift */,
-				79230B30254A214C00A06B8D /* HomeViewController.swift */,
-				E7CBC42C259981D000860807 /* ServicesViewController.swift */,
-				E7CBC434259982D100860807 /* BillViewController.swift */,
-				79230B35254A215100A06B8D /* Assets.xcassets */,
 				79230B37254A215100A06B8D /* LaunchScreen.storyboard */,
+				79230B35254A215100A06B8D /* Assets.xcassets */,
 				79230B3A254A215100A06B8D /* Info.plist */,
-				79DF871D25681F4E00BB7EC9 /* HomeViewController.xib */,
-				E7CBC42D259981D000860807 /* ServicesViewController.xib */,
-				E7CBC435259982D100860807 /* BillViewController.xib */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -220,6 +216,26 @@
 				67DEC83A8456A98BD60C8537 /* Pods_Presentation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E7CBC44225998C0100860807 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				79230B30254A214C00A06B8D /* HomeViewController.swift */,
+				E7CBC42C259981D000860807 /* ServicesViewController.swift */,
+				E7CBC434259982D100860807 /* BillViewController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		E7CBC44325998C0C00860807 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				79DF871D25681F4E00BB7EC9 /* HomeViewController.xib */,
+				E7CBC42D259981D000860807 /* ServicesViewController.xib */,
+				E7CBC435259982D100860807 /* BillViewController.xib */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
