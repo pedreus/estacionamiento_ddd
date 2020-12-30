@@ -31,4 +31,20 @@ public class CarEntryRealmRepository: RealmRepository, CarEntryRepository {
         })
     }
     
+    public func getAllCarEntries() throws -> [CarEntry] {
+        var carEntries = [CarEntry]()
+        let carEntryRealmTranslator = CarEntryRealmTranslator()
+        let realm = try Realm(configuration: self.realmConfiguration)
+        let entries = realm.objects(CarRealm.self).filter(NSPredicate(format: "carEntries.carExit.@count = %d", 0))
+        
+        if (entries.count > 0) {
+            for carRealm in entries {
+                let carEntry = try carEntryRealmTranslator.fromRealmEntityToModel(realmCar: carRealm)
+                carEntries.append(carEntry)
+            }
+        }
+        
+        return carEntries
+    }
+    
 }

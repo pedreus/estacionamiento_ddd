@@ -46,6 +46,7 @@
 		E7EDA47325991B66000198F9 /* CarBill.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EDA47225991B66000198F9 /* CarBill.swift */; };
 		E7EDA47925991B83000198F9 /* MotorcycleBill.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EDA47825991B83000198F9 /* MotorcycleBill.swift */; };
 		E7EDA47D259921E8000198F9 /* ModelBillUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EDA47C259921E8000198F9 /* ModelBillUnitTests.swift */; };
+		E7EE7BDF259CAE4300A05D5C /* AlertGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EE7BDE259CAE4300A05D5C /* AlertGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		E7EDA47225991B66000198F9 /* CarBill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarBill.swift; sourceTree = "<group>"; };
 		E7EDA47825991B83000198F9 /* MotorcycleBill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorcycleBill.swift; sourceTree = "<group>"; };
 		E7EDA47C259921E8000198F9 /* ModelBillUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelBillUnitTests.swift; sourceTree = "<group>"; };
+		E7EE7BDE259CAE4300A05D5C /* AlertGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertGenerator.swift; sourceTree = "<group>"; };
 		E7F9914F2597882D004228B7 /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Realm.framework; path = "../Debug-iphonesimulator/Realm/Realm.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7F9915425978835004228B7 /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = RealmSwift.framework; path = "../Debug-iphonesimulator/RealmSwift/RealmSwift.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -166,6 +168,7 @@
 		79230B03254A20F200A06B8D /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				E7EE7BDC259CADE400A05D5C /* Helpers */,
 				79DF87592568702200BB7EC9 /* Exception */,
 				799F2131254B320A00256C5C /* Model */,
 				7940B3CD2566BA0000680BCE /* Repository */,
@@ -244,6 +247,22 @@
 				79DF8760256C2FD500BB7EC9 /* BusinessException.swift */,
 			);
 			path = Exception;
+			sourceTree = "<group>";
+		};
+		E7EE7BDC259CADE400A05D5C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E7EE7BDD259CADED00A05D5C /* Alerts */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E7EE7BDD259CADED00A05D5C /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				E7EE7BDE259CAE4300A05D5C /* AlertGenerator.swift */,
+			);
+			path = Alerts;
 			sourceTree = "<group>";
 		};
 		E9C39E52D65119A7EDD0FA36 /* Pods */ = {
@@ -429,6 +448,7 @@
 				E70ED2632592F21F00DC35B3 /* Exit.swift in Sources */,
 				E74FF2D2259A3B68007E7506 /* MotorcycleEntryRepository.swift in Sources */,
 				E74FF2D8259A3C4F007E7506 /* CarEntryService.swift in Sources */,
+				E7EE7BDF259CAE4300A05D5C /* AlertGenerator.swift in Sources */,
 				E74FF305259AB936007E7506 /* CarExitService.swift in Sources */,
 				E70ED2672592F33300DC35B3 /* Bill.swift in Sources */,
 				E7EDA45F2599196D000198F9 /* CarEntry.swift in Sources */,

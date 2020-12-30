@@ -13,14 +13,18 @@ public class CarEntryService {
         self.carEntryRepository = carEntryRepository
     }
     
-    func isValidCarQuantity(maxQuantity: Int) throws -> Bool {
+    public func isValidCarQuantity(maxQuantity: Int) throws -> Bool {
         return try self.carEntryRepository.isValidCarsQuantity(maxQuantity: maxQuantity)
     }
     
-    func saveCarEntry(carEntry: CarEntry) throws {
+    public func saveCarEntry(carEntry: CarEntry) throws {
         if (try !self.isValidCarQuantity(maxQuantity: 20)) {
             throw BusinessError.CarQuantityComplete()
         }
         try self.carEntryRepository.saveCarEntry(carEntry: carEntry)
+    }
+    
+    public func getAllCarEntries() throws -> [CarEntry] {
+        return try self.carEntryRepository.getAllCarEntries()
     }
 }

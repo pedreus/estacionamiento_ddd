@@ -11,11 +11,11 @@ public class MotorcycleExitService {
     
     var motoExitRepository: MotorcycleExitRepository
     
-    init(motoExitRepository: MotorcycleExitRepository) {
+    public init(motoExitRepository: MotorcycleExitRepository) {
         self.motoExitRepository = motoExitRepository
     }
     
-    func saveMotorcycleExit(motoExit: MotorcycleExit) throws {
+    public func saveMotorcycleExit(motoExit: MotorcycleExit) throws {
         try self.motoExitRepository.saveMotorcycleExit(motoExit: motoExit)
     }
 }

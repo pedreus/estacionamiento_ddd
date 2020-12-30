@@ -10,7 +10,7 @@ public class CarBill: Bill {
     
     // Atributos factura carro
     
-    init(billDateTime: Date, carExit: CarExit) {
+    public init(billDateTime: Date, carExit: CarExit) {
         super.init(billDateTime: billDateTime, exit: carExit)
         self.setCost(cost: self.calculateCostForDaysAndHoursForCars())
     }

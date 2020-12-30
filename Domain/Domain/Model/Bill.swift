@@ -13,7 +13,7 @@ public class Bill {
     private var cost: Int
     private var exit: Exit
     
-    init(billDateTime: Date, exit: Exit) {
+    public init(billDateTime: Date, exit: Exit) {
         self.billDateTime = billDateTime
         self.cost = 0
         self.exit = exit

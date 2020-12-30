@@ -11,11 +11,11 @@ public class CarExitService {
     
     var carExitRepository: CarExitRepository
     
-    init(carExitRepository: CarExitRepository) {
+    public init(carExitRepository: CarExitRepository) {
         self.carExitRepository = carExitRepository
     }
     
-    func saveCarExitRepository(carExit: CarExit) throws {
+    public func saveCarExitRepository(carExit: CarExit) throws {
         try self.carExitRepository.saveCarExit(carExit: carExit)
     }
 }

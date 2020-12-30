@@ -10,7 +10,7 @@ public class MotorcycleEntry: Entry {
     
     // Atributos propios para el ingreso de una motocicleta
     
-    init(entryDateTime: Date, motorcycle: Motorcycle) throws {
+    public init(entryDateTime: Date, motorcycle: Motorcycle) throws {
         try super.init(entryDateTime: entryDateTime, vehicle: motorcycle)
     }
 }

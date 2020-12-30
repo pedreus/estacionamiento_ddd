@@ -41,9 +41,6 @@ public class Entry {
         if (validWeedDay < 1 || validWeedDay > 7) {
             throw BusinessError.IncorrectWeekDay()
         }
-        if (self.vehicle.getVehicleLicense().isEmpty) {
-            throw BusinessError.EmptyVehicleLicense()
-        }
         
         let firstLicenseLetter = self.vehicle.getVehicleLicense().first?.uppercased()
         if ((firstLicenseLetter == "A" && (validWeedDay == 1 || validWeedDay == 2)) || firstLicenseLetter != "A") {

@@ -11,5 +11,7 @@ public protocol CarEntryRepository {
     func isValidCarsQuantity(maxQuantity: Int) throws -> Bool
     
     func saveCarEntry(carEntry: CarEntry) throws
+    
+    func getAllCarEntries() throws -> [CarEntry]
 
 }

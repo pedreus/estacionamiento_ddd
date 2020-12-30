@@ -14,7 +14,7 @@ public class CarService: VehicleService {
         super.init(vehicleRepository: self.carRepository)
     }
     
-    func saveCar(car: Car) throws {
+    public func saveCar(car: Car) throws {
         if (try self.isVehicleExists(vehicleLicense: car.getVehicleLicense())) {
             throw BusinessError.VehicleAlreadyExists()
         }

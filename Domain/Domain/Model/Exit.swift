@@ -13,7 +13,7 @@ public class Exit {
     private var entry: Entry
     private var expendedTimeInDaysAndHours: (Int, Int)
     
-    init(exitDateTime: Date, entry: Entry) {
+    public init(exitDateTime: Date, entry: Entry) {
         self.exitDateTime = exitDateTime
         self.entry = entry
         self.expendedTimeInDaysAndHours = (0, 0)

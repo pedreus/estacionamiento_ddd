@@ -9,11 +9,11 @@ public class CarBillService {
     
     var carBillRepository: CarBillRepository
     
-    init(carBillRepository: CarBillRepository) {
+    public init(carBillRepository: CarBillRepository) {
         self.carBillRepository = carBillRepository
     }
     
-    func saveCarBill(carBill: CarBill) throws {
+    public func saveCarBill(carBill: CarBill) throws {
         try self.carBillRepository.saveCarBill(carBill: carBill)
     }
 }

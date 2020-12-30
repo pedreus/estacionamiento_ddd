@@ -39,8 +39,19 @@ public class Vehicle {
         }
     }
     
+    private func isVehicleCylinderValidNumber(cylinder: Int) -> Bool {
+        if (cylinder > -1 && cylinder < 10000) {
+            return true
+        } else {
+            return false
+        }
+    }
+    
     private func setVehicleCylinder(cylinder: Int) throws {
         if (!self.isVehicleCynlinderValidSize(cylinder: cylinder)) {
+            throw BusinessError.IncorrectVehicleCylinder()
+        }
+        if (!self.isVehicleCylinderValidNumber(cylinder: cylinder)) {
             throw BusinessError.IncorrectVehicleCylinder()
         }
         self.cylinder = cylinder

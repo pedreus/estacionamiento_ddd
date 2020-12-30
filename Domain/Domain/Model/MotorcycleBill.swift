@@ -10,7 +10,7 @@ public class MotorcycleBill: Bill {
     
     // Atributos factura motos
     
-    init (billDateTime: Date, motoExit: MotorcycleExit) {
+    public init (billDateTime: Date, motoExit: MotorcycleExit) {
         super.init(billDateTime: billDateTime, exit: motoExit)
         self.setCost(cost: self.calculateCostForDaysAndHoursForMotorcycles())
     }

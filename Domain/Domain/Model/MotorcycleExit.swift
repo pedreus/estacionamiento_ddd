@@ -10,7 +10,7 @@ public class MotorcycleExit: Exit {
     
     // Atributos de salida de moto
     
-    init(exitDateTime: Date, motoEntry: MotorcycleEntry) {
+    public init(exitDateTime: Date, motoEntry: MotorcycleEntry) {
         super.init(exitDateTime: exitDateTime, entry: motoEntry)
     }
 }

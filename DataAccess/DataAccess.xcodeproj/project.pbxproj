@@ -186,19 +186,19 @@
 			children = (
 				E74FF2C2259A16D3007E7506 /* DBConfigurations */,
 				7940B3D92566C20300680BCE /* Anticorruption */,
-				7940B3D82566C1AB00680BCE /* Data */,
+				7940B3D82566C1AB00680BCE /* EntityData */,
 				7940B3DA2566C21100680BCE /* Repository */,
 				79230B6D254A229800A06B8D /* Info.plist */,
 			);
 			path = DataAccess;
 			sourceTree = "<group>";
 		};
-		7940B3D82566C1AB00680BCE /* Data */ = {
+		7940B3D82566C1AB00680BCE /* EntityData */ = {
 			isa = PBXGroup;
 			children = (
 				E73BDA512597DC0A009E189A /* Realm */,
 			);
-			path = Data;
+			path = EntityData;
 			sourceTree = "<group>";
 		};
 		7940B3D92566C20300680BCE /* Anticorruption */ = {

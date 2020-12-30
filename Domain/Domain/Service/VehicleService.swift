@@ -13,7 +13,7 @@ public class VehicleService {
         self.vehicleRepository = vehicleRepository
     }        
     
-    func isVehicleExists(vehicleLicense: String) throws -> Bool {
+    public func isVehicleExists(vehicleLicense: String) throws -> Bool {
         if (vehicleLicense.isEmpty) {
             throw BusinessError.EmptyVehicleLicense()
         }

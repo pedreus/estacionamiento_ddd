@@ -10,7 +10,7 @@ public class CarExit: Exit {
     
     // Atributos de la salida del carro
     
-    init(exitDateTime: Date, carEntry: CarEntry) {
+    public init(exitDateTime: Date, carEntry: CarEntry) {
         super.init(exitDateTime: exitDateTime, entry: carEntry)
     }
 }

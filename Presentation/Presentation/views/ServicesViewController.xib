@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ServicesViewController" customModule="Presentation" customModuleProvider="target">
             <connections>
+                <outlet property="tableActiveServices" destination="Gfk-Vd-cec" id="xtd-a3-q8a"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -31,7 +32,11 @@
                     </textAttributes>
                     <items>
                         <navigationItem title="Servicios Activos" id="wMr-i3-1Tb">
-                            <barButtonItem key="leftBarButtonItem" title="Item" image="arrow.left.circle.fill" catalog="system" id="5YW-kU-aqD"/>
+                            <barButtonItem key="leftBarButtonItem" title="Item" image="arrow.left.circle.fill" catalog="system" id="5YW-kU-aqD">
+                                <connections>
+                                    <action selector="actionBack:" destination="-1" id="y0v-3F-5WK"/>
+                                </connections>
+                            </barButtonItem>
                         </navigationItem>
                     </items>
                 </navigationBar>

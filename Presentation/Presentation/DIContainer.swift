@@ -24,6 +24,14 @@ public class DIContainer {
             CarEntryService(carEntryRepository: repository.resolve(CarEntryRepository.self)!)
         })
         
+        self.container.register(MotorcycleEntryRepository.self, factory: {
+            _ in
+            MotorcycleEntryRealmRepository()
+        })
+        self.container.register(MotorcycleEntryService.self, factory: {
+            repository in
+            MotorcycleEntryService(motorcycleEntryRepository: repository.resolve(MotorcycleEntryRepository.self)!)
+        })
     }
     
     func getContainer() -> Container {
