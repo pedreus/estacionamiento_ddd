@@ -10,7 +10,7 @@ public class RealmRepository {
     
     var realmConfiguration: Realm.Configuration
     
-    public init(realmConfiguration: Realm.Configuration = RealmConfiguration.estacionamientoDataConfiguration()) {
+    public init(realmConfiguration: Realm.Configuration) {
         self.realmConfiguration = realmConfiguration
     }
 }

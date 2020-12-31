@@ -40,14 +40,14 @@ class CarExitServiceTests: XCTestCase {
         dateFormatter.dateFormat = "dd/MM/yy"
         let actualDate = dateFormatter.date(from: actualString) ?? Date()
         let exitDate = dateFormatter.date(from: exitString) ?? Date()
-        
+        let testRealmConfig = TestRealmConfiguration()
         
         do {
             // Arrange
             let car = try Car(cylinder: 1200, vehicleLicense: "abc789")
             let carEntry = try CarEntry(entryDateTime: actualDate, car: car)
             let carExit = CarExit(exitDateTime: exitDate, carEntry: carEntry)
-            let carExitRepository = CarExitRealmRepository(realmConfiguration: RealmConfiguration.testDataConfiguration())
+            let carExitRepository = try CarExitRealmRepository(realmConfiguration: testRealmConfig.getTestDataConfiguration())
             let carExitService = CarExitService(carExitRepository: carExitRepository)
             
             // Act

@@ -31,16 +31,13 @@ class CarEntryServiceTests: XCTestCase {
         }
     }
     
-    func testIsValidCarQuantity() {        
-        //RealmConfiguration.deleteDatabase(configuration: RealmConfiguration.testDataConfiguration())
-        //RealmConfiguration.deleteDatabase(configuration: RealmConfiguration.estacionamientoDataConfiguration())
-        
-        
-        // Arrange
-        let carEntryRealmRepository = CarEntryRealmRepository(realmConfiguration: RealmConfiguration.testDataConfiguration())
-        let carEntryService = CarEntryService(carEntryRepository: carEntryRealmRepository)
-        
+    func testIsValidCarQuantity() {
         do {
+            // Arrange
+            let testRealmConfig = TestRealmConfiguration()
+            let carEntryRealmRepository = try CarEntryRealmRepository(realmConfiguration: testRealmConfig.getTestDataConfiguration())
+            let carEntryService = CarEntryService(carEntryRepository: carEntryRealmRepository)
+            
             // Act
             let isValidQuantity = try carEntryService.isValidCarQuantity(maxQuantity: 20)
             
@@ -59,13 +56,14 @@ class CarEntryServiceTests: XCTestCase {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/yy"
         let actualDate = dateFormatter.date(from: string) ?? Date()
+        let testRealmConfig = TestRealmConfiguration()
         
         do {
             
             // Arrange
             let car = try Car(cylinder: 2000, vehicleLicense: "abc123")
             let carEntry = try CarEntry(entryDateTime: actualDate, car: car)
-            let carEntryRealmRepository = CarEntryRealmRepository(realmConfiguration: RealmConfiguration.testDataConfiguration())
+            let carEntryRealmRepository = try CarEntryRealmRepository(realmConfiguration: testRealmConfig.getTestDataConfiguration())
             let carEntryService = CarEntryService(carEntryRepository: carEntryRealmRepository)
             
             // Act

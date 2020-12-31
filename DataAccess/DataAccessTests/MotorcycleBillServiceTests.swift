@@ -40,14 +40,14 @@ class MotorcycleBillServiceTests: XCTestCase {
         dateFormatter.dateFormat = "dd/MM/yy"
         let actualDate = dateFormatter.date(from: actualDateString) ?? Date()
         let entryDate = dateFormatter.date(from: entryDateString) ?? Date()
+        let testRealmConfig = TestRealmConfiguration()
         
         do {
-            // Arrange
             let moto = try Motorcycle(cylinder: 1000, vehicleLicense: "abc789")
             let motoEntry = try MotorcycleEntry(entryDateTime: entryDate, motorcycle: moto)
             let motoExit = MotorcycleExit(exitDateTime: actualDate, motoEntry: motoEntry)
             let motoBill = MotorcycleBill(billDateTime: actualDate, motoExit: motoExit)
-            let motoRepository = MotorcycleBillRealmRepository(realmConfiguration: RealmConfiguration.testDataConfiguration())
+            let motoRepository = try MotorcycleBillRealmRepository(realmConfiguration: testRealmConfig.getTestDataConfiguration())
             let motoService = MotorcycleBillService(motoBillRepository: motoRepository)
             
             // Act

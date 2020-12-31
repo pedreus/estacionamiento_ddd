@@ -32,12 +32,12 @@ class CarServiceTests: XCTestCase {
     }
 
     func testIsCarExists() {
-        
-        // Arrange
-        let realmRepository = CarRealmRepository(realmConfiguration: RealmConfiguration.testDataConfiguration())
-        let carService = CarService(carRepository: realmRepository)
-        
         do {
+            // Arrange
+            let testRealmConfig = TestRealmConfiguration()
+            let realmRepository = try CarRealmRepository(realmConfiguration: testRealmConfig.getTestDataConfiguration())
+            let carService = CarService(carRepository: realmRepository)
+            
             // Act
             let carExists = try carService.isVehicleExists(vehicleLicense: "abc456")
             
@@ -52,14 +52,15 @@ class CarServiceTests: XCTestCase {
     
     func testSaveCar() {
         // Arrange
-        let carRepository = CarRealmRepository(realmConfiguration: RealmConfiguration.testDataConfiguration())
-        let carService = CarService(carRepository: carRepository)
+        let testRealmConfig = TestRealmConfiguration()
         
         do {
             // Arrange
             // Cambiar la placa
             let car = try Car(cylinder: 2500, vehicleLicense: "abc123")
-            
+            let carRepository = try CarRealmRepository(realmConfiguration: testRealmConfig.getTestDataConfiguration())
+            let carService = CarService(carRepository: carRepository)
+
             // Act
             try carService.saveCar(car: car)
             XCTAssert(true)

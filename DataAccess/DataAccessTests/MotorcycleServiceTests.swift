@@ -32,12 +32,13 @@ class MotorcycleServiceTests: XCTestCase {
     }
     
     func testMotorcycleExists() {
-        
-        // Arrange
-        let realmRepository = MotorcycleRealmRepository(realmConfiguration: RealmConfiguration.testDataConfiguration())
-        let motoService = MotorcycleService(motorcycleRepository: realmRepository)
-        
+                
         do {
+            // Arrange
+            let testRealmConfig = TestRealmConfiguration()
+            let realmRepository = try MotorcycleRealmRepository(realmConfiguration: testRealmConfig.getTestDataConfiguration())
+            let motoService = MotorcycleService(motorcycleRepository: realmRepository)
+            
             // Act
             let isMotoExists = try motoService.isVehicleExists(vehicleLicense: "abc123")
             
@@ -54,7 +55,8 @@ class MotorcycleServiceTests: XCTestCase {
         do {
             // Arrange
             let motorcycle = try Motorcycle(cylinder: 1000, vehicleLicense: "abc123")
-            let realmRepository = MotorcycleRealmRepository(realmConfiguration: RealmConfiguration.testDataConfiguration())
+            let testRealmConfig = TestRealmConfiguration()
+            let realmRepository = try MotorcycleRealmRepository(realmConfiguration: testRealmConfig.getTestDataConfiguration())
             let motoService = MotorcycleService(motorcycleRepository: realmRepository)
             
             //Act

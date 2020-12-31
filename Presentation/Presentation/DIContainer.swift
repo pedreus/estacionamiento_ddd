@@ -13,11 +13,13 @@ public class DIContainer {
     
     private let container: Container = Container()
     
-    func registerDependencies() {
+    func registerDependencies() throws {
+        let realmConfiguration = ProductionRealmConfiguration()
+        let productionConfiguration = try realmConfiguration.gestProductionDataConfiguration()
         
         self.container.register(CarEntryRepository.self, factory: {
             _ in
-            CarEntryRealmRepository()
+            CarEntryRealmRepository(realmConfiguration: productionConfiguration)
         })
         self.container.register(CarEntryService.self, factory: {
             repository in
@@ -26,7 +28,7 @@ public class DIContainer {
         
         self.container.register(MotorcycleEntryRepository.self, factory: {
             _ in
-            MotorcycleEntryRealmRepository()
+            MotorcycleEntryRealmRepository(realmConfiguration: productionConfiguration)
         })
         self.container.register(MotorcycleEntryService.self, factory: {
             repository in

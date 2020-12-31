@@ -28,7 +28,7 @@
 		E73BDAA125982A07009E189A /* MotorcycleBillRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73BDAA025982A07009E189A /* MotorcycleBillRealm.swift */; };
 		E73BDAA425982A50009E189A /* MotorcycleBillRealmTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73BDAA325982A50009E189A /* MotorcycleBillRealmTranslator.swift */; };
 		E73BDAAD25983213009E189A /* CarServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73BDAAC25983213009E189A /* CarServiceTests.swift */; };
-		E74FF2C4259A16F4007E7506 /* RealmConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74FF2C3259A16F4007E7506 /* RealmConfiguration.swift */; };
+		E74FF2C4259A16F4007E7506 /* ProductionRealmConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74FF2C3259A16F4007E7506 /* ProductionRealmConfiguration.swift */; };
 		E74FF2C8259A2CF7007E7506 /* MotorcycleRealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74FF2C7259A2CF7007E7506 /* MotorcycleRealmRepository.swift */; };
 		E74FF2E2259A3EE5007E7506 /* CarEntryRealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74FF2E1259A3EE5007E7506 /* CarEntryRealmRepository.swift */; };
 		E74FF2E5259A4044007E7506 /* CarEntryServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74FF2E4259A4044007E7506 /* CarEntryServiceTests.swift */; };
@@ -54,6 +54,8 @@
 		E7AE7FBA259793EF0037C1B5 /* DataAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79230B69254A229800A06B8D /* DataAccess.framework */; platformFilter = ios; };
 		E7AE7FC7259794E70037C1B5 /* DataAccessTests copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE7FC6259794E70037C1B5 /* DataAccessTests copy.swift */; };
 		E7BB3867259539FE006D35ED /* CarRealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BB3866259539FE006D35ED /* CarRealmRepository.swift */; };
+		E7E148C1259D3AA700440262 /* TestRealmConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E148C0259D3AA700440262 /* TestRealmConfiguration.swift */; };
+		E7E148C4259D44CC00440262 /* RealmConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E148C3259D44CC00440262 /* RealmConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,7 +113,7 @@
 		E73BDAA025982A07009E189A /* MotorcycleBillRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorcycleBillRealm.swift; sourceTree = "<group>"; };
 		E73BDAA325982A50009E189A /* MotorcycleBillRealmTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorcycleBillRealmTranslator.swift; sourceTree = "<group>"; };
 		E73BDAAC25983213009E189A /* CarServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarServiceTests.swift; sourceTree = "<group>"; };
-		E74FF2C3259A16F4007E7506 /* RealmConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmConfiguration.swift; sourceTree = "<group>"; };
+		E74FF2C3259A16F4007E7506 /* ProductionRealmConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductionRealmConfiguration.swift; sourceTree = "<group>"; };
 		E74FF2C7259A2CF7007E7506 /* MotorcycleRealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorcycleRealmRepository.swift; sourceTree = "<group>"; };
 		E74FF2E1259A3EE5007E7506 /* CarEntryRealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarEntryRealmRepository.swift; sourceTree = "<group>"; };
 		E74FF2E4259A4044007E7506 /* CarEntryServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarEntryServiceTests.swift; sourceTree = "<group>"; };
@@ -134,6 +136,8 @@
 		E7AE7FB9259793EF0037C1B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7AE7FC6259794E70037C1B5 /* DataAccessTests copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DataAccessTests copy.swift"; sourceTree = "<group>"; };
 		E7BB3866259539FE006D35ED /* CarRealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRealmRepository.swift; sourceTree = "<group>"; };
+		E7E148C0259D3AA700440262 /* TestRealmConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRealmConfiguration.swift; sourceTree = "<group>"; };
+		E7E148C3259D44CC00440262 /* RealmConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,14 +246,6 @@
 			path = ../Pods;
 			sourceTree = "<group>";
 		};
-		E7121299259BD37B00E4A86B /* Realm */ = {
-			isa = PBXGroup;
-			children = (
-				E74FF2C3259A16F4007E7506 /* RealmConfiguration.swift */,
-			);
-			path = Realm;
-			sourceTree = "<group>";
-		};
 		E73BDA482597DBB1009E189A /* Realm */ = {
 			isa = PBXGroup;
 			children = (
@@ -299,7 +295,9 @@
 		E74FF2C2259A16D3007E7506 /* DBConfigurations */ = {
 			isa = PBXGroup;
 			children = (
-				E7121299259BD37B00E4A86B /* Realm */,
+				E7E148C3259D44CC00440262 /* RealmConfig.swift */,
+				E74FF2C3259A16F4007E7506 /* ProductionRealmConfiguration.swift */,
+				E7E148C0259D3AA700440262 /* TestRealmConfiguration.swift */,
 			);
 			path = DBConfigurations;
 			sourceTree = "<group>";
@@ -500,13 +498,15 @@
 			files = (
 				E74FF30E259ACB31007E7506 /* MotorcycleExitRealmRepository.swift in Sources */,
 				E73BDA702597F8E6009E189A /* CarEntryRealmTranslator.swift in Sources */,
-				E74FF2C4259A16F4007E7506 /* RealmConfiguration.swift in Sources */,
+				E74FF2C4259A16F4007E7506 /* ProductionRealmConfiguration.swift in Sources */,
 				E73BDA872598013E009E189A /* MotorcycleEntryRealmTranslator.swift in Sources */,
 				E73BDA97259820B2009E189A /* MotorcycleExitRealmTranslator.swift in Sources */,
 				E73BDA5E2597E17D009E189A /* CarRealmTranslator.swift in Sources */,
 				E78BAC55259B740500D41D36 /* MotorcycleBillRealmRepository.swift in Sources */,
+				E7E148C4259D44CC00440262 /* RealmConfig.swift in Sources */,
 				E73BDA792597FE96009E189A /* MotorcycleRealm.swift in Sources */,
 				E73BDA5B2597DFD1009E189A /* CarEntryRealm.swift in Sources */,
+				E7E148C1259D3AA700440262 /* TestRealmConfiguration.swift in Sources */,
 				E74FF2E8259A43FF007E7506 /* RealmRepository.swift in Sources */,
 				E74FF2C8259A2CF7007E7506 /* MotorcycleRealmRepository.swift in Sources */,
 				E73BDA542597DC4A009E189A /* CarRealm.swift in Sources */,

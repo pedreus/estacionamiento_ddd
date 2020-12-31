@@ -170,9 +170,18 @@
 			children = (
 				E7EE7BDC259CADE400A05D5C /* Helpers */,
 				79DF87592568702200BB7EC9 /* Exception */,
-				799F2131254B320A00256C5C /* Model */,
-				7940B3CD2566BA0000680BCE /* Repository */,
-				7940B3C82566A2C200680BCE /* Service */,
+				E7E148AC259D34E300440262 /* Vehicle */,
+				E7E148AB259D34C500440262 /* Car */,
+				E7E148AD259D34F500440262 /* Motorcycle */,
+				E7E148B0259D351D00440262 /* Entry */,
+				E7E148B1259D353200440262 /* CarEntry */,
+				E7E148B4259D354F00440262 /* MotrocycleEntry */,
+				E7E148B5259D356C00440262 /* Exit */,
+				E7E148B6259D358E00440262 /* CarExit */,
+				E7E148B7259D360A00440262 /* MotorcycleExit */,
+				E7E148B8259D362300440262 /* Bill */,
+				E7E148B9259D362D00440262 /* CarBill */,
+				E7E148BA259D364900440262 /* MotorcycleBill */,
 				79230B05254A20F200A06B8D /* Info.plist */,
 			);
 			path = Domain;
@@ -190,63 +199,126 @@
 			path = DomainTests;
 			sourceTree = "<group>";
 		};
-		7940B3C82566A2C200680BCE /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				E7CEF586259379CA00726B1E /* VehicleService.swift */,
-				E7CEF58A2593811D00726B1E /* CarService.swift */,
-				E7CEF58E2593846C00726B1E /* MotorcycleService.swift */,
-				E74FF2D7259A3C4F007E7506 /* CarEntryService.swift */,
-				E74FF2DD259A3E30007E7506 /* MotorcycleEntryService.swift */,
-				E74FF304259AB936007E7506 /* CarExitService.swift */,
-				E74FF316259ACCA2007E7506 /* MotorcycleExitService.swift */,
-				E78BAC46259B691E00D41D36 /* CarBillService.swift */,
-				E78BAC4A259B69DE00D41D36 /* MotorcycleBillService.swift */,
-			);
-			path = Service;
-			sourceTree = "<group>";
-		};
-		7940B3CD2566BA0000680BCE /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-				E70ED27A2592FBD700DC35B3 /* VehicleRepository.swift */,
-				E70ED2722592F99200DC35B3 /* CarRepository.swift */,
-				E70ED2762592FA5B00DC35B3 /* MotorcycleRepository.swift */,
-				E74FF2CB259A3B31007E7506 /* CarEntryRepository.swift */,
-				E74FF2D1259A3B68007E7506 /* MotorcycleEntryRepository.swift */,
-				E74FF2FE259AB8EA007E7506 /* CarExitRepository.swift */,
-				E74FF310259ACB7B007E7506 /* MotorocycleExitRepository.swift */,
-				E78BAC3C259B68BB00D41D36 /* CarBillRepository.swift */,
-				E78BAC40259B68E800D41D36 /* MotorcycleBillRepository.swift */,
-			);
-			path = Repository;
-			sourceTree = "<group>";
-		};
-		799F2131254B320A00256C5C /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				E70ED2522592EEC700DC35B3 /* Vehicle.swift */,
-				E70ED2562592EFB500DC35B3 /* Car.swift */,
-				E70ED25A2592EFE000DC35B3 /* Motorcycle.swift */,
-				E70ED25E2592F01E00DC35B3 /* Entry.swift */,
-				E7EDA45E2599196D000198F9 /* CarEntry.swift */,
-				E7EDA462259919A8000198F9 /* MotorcycleEntry.swift */,
-				E70ED2622592F21F00DC35B3 /* Exit.swift */,
-				E7EDA46825991AC3000198F9 /* CarExit.swift */,
-				E7EDA46C25991AF9000198F9 /* MotorcycleExit.swift */,
-				E70ED2662592F33300DC35B3 /* Bill.swift */,
-				E7EDA47225991B66000198F9 /* CarBill.swift */,
-				E7EDA47825991B83000198F9 /* MotorcycleBill.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		79DF87592568702200BB7EC9 /* Exception */ = {
 			isa = PBXGroup;
 			children = (
 				79DF8760256C2FD500BB7EC9 /* BusinessException.swift */,
 			);
 			path = Exception;
+			sourceTree = "<group>";
+		};
+		E7E148AB259D34C500440262 /* Car */ = {
+			isa = PBXGroup;
+			children = (
+				E70ED2562592EFB500DC35B3 /* Car.swift */,
+				E70ED2722592F99200DC35B3 /* CarRepository.swift */,
+				E7CEF58A2593811D00726B1E /* CarService.swift */,
+			);
+			path = Car;
+			sourceTree = "<group>";
+		};
+		E7E148AC259D34E300440262 /* Vehicle */ = {
+			isa = PBXGroup;
+			children = (
+				E7CEF586259379CA00726B1E /* VehicleService.swift */,
+				E70ED27A2592FBD700DC35B3 /* VehicleRepository.swift */,
+				E70ED2522592EEC700DC35B3 /* Vehicle.swift */,
+			);
+			path = Vehicle;
+			sourceTree = "<group>";
+		};
+		E7E148AD259D34F500440262 /* Motorcycle */ = {
+			isa = PBXGroup;
+			children = (
+				E70ED25A2592EFE000DC35B3 /* Motorcycle.swift */,
+				E70ED2762592FA5B00DC35B3 /* MotorcycleRepository.swift */,
+				E7CEF58E2593846C00726B1E /* MotorcycleService.swift */,
+			);
+			path = Motorcycle;
+			sourceTree = "<group>";
+		};
+		E7E148B0259D351D00440262 /* Entry */ = {
+			isa = PBXGroup;
+			children = (
+				E70ED25E2592F01E00DC35B3 /* Entry.swift */,
+			);
+			path = Entry;
+			sourceTree = "<group>";
+		};
+		E7E148B1259D353200440262 /* CarEntry */ = {
+			isa = PBXGroup;
+			children = (
+				E7EDA45E2599196D000198F9 /* CarEntry.swift */,
+				E74FF2CB259A3B31007E7506 /* CarEntryRepository.swift */,
+				E74FF2D7259A3C4F007E7506 /* CarEntryService.swift */,
+			);
+			path = CarEntry;
+			sourceTree = "<group>";
+		};
+		E7E148B4259D354F00440262 /* MotrocycleEntry */ = {
+			isa = PBXGroup;
+			children = (
+				E7EDA462259919A8000198F9 /* MotorcycleEntry.swift */,
+				E74FF2D1259A3B68007E7506 /* MotorcycleEntryRepository.swift */,
+				E74FF2DD259A3E30007E7506 /* MotorcycleEntryService.swift */,
+			);
+			path = MotrocycleEntry;
+			sourceTree = "<group>";
+		};
+		E7E148B5259D356C00440262 /* Exit */ = {
+			isa = PBXGroup;
+			children = (
+				E70ED2622592F21F00DC35B3 /* Exit.swift */,
+			);
+			path = Exit;
+			sourceTree = "<group>";
+		};
+		E7E148B6259D358E00440262 /* CarExit */ = {
+			isa = PBXGroup;
+			children = (
+				E7EDA46825991AC3000198F9 /* CarExit.swift */,
+				E74FF2FE259AB8EA007E7506 /* CarExitRepository.swift */,
+				E74FF304259AB936007E7506 /* CarExitService.swift */,
+			);
+			path = CarExit;
+			sourceTree = "<group>";
+		};
+		E7E148B7259D360A00440262 /* MotorcycleExit */ = {
+			isa = PBXGroup;
+			children = (
+				E7EDA46C25991AF9000198F9 /* MotorcycleExit.swift */,
+				E74FF310259ACB7B007E7506 /* MotorocycleExitRepository.swift */,
+				E74FF316259ACCA2007E7506 /* MotorcycleExitService.swift */,
+			);
+			path = MotorcycleExit;
+			sourceTree = "<group>";
+		};
+		E7E148B8259D362300440262 /* Bill */ = {
+			isa = PBXGroup;
+			children = (
+				E70ED2662592F33300DC35B3 /* Bill.swift */,
+			);
+			path = Bill;
+			sourceTree = "<group>";
+		};
+		E7E148B9259D362D00440262 /* CarBill */ = {
+			isa = PBXGroup;
+			children = (
+				E7EDA47225991B66000198F9 /* CarBill.swift */,
+				E78BAC3C259B68BB00D41D36 /* CarBillRepository.swift */,
+				E78BAC46259B691E00D41D36 /* CarBillService.swift */,
+			);
+			path = CarBill;
+			sourceTree = "<group>";
+		};
+		E7E148BA259D364900440262 /* MotorcycleBill */ = {
+			isa = PBXGroup;
+			children = (
+				E7EDA47825991B83000198F9 /* MotorcycleBill.swift */,
+				E78BAC40259B68E800D41D36 /* MotorcycleBillRepository.swift */,
+				E78BAC4A259B69DE00D41D36 /* MotorcycleBillService.swift */,
+			);
+			path = MotorcycleBill;
 			sourceTree = "<group>";
 		};
 		E7EE7BDC259CADE400A05D5C /* Helpers */ = {
