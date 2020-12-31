@@ -17,20 +17,8 @@ class ModelBillUnitTests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
     
-    func testCalculateCostForCar() {
+    func test_calculateCarServiceCost_2days3hoursService_success() {
         do {
             // Arrange
             let string = "27/12/2020" // domingo -> 1
@@ -61,7 +49,7 @@ class ModelBillUnitTests: XCTestCase {
         }
     }
     
-    func testCalculateCostForMotorcycle() {
+    func test_calculateMotorcycleServiceCost_1days6hoursService_success() {
         
         do {
             // Arrange

@@ -18,20 +18,8 @@ class MotorcycleServiceTests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
     
-    func testMotorcycleExists() {
+    func test_MotorcycleExists_licenseExists_success() {
                 
         do {
             // Arrange
@@ -50,11 +38,30 @@ class MotorcycleServiceTests: XCTestCase {
         }
     }
     
-    func testSaveMotorcycle() {
-        
+    func test_MotorcycleExists_newLicense_fail() {
+                
         do {
             // Arrange
-            let motorcycle = try Motorcycle(cylinder: 1000, vehicleLicense: "abc123")
+            let testRealmConfig = TestRealmConfiguration()
+            let realmRepository = try MotorcycleRealmRepository(realmConfiguration: testRealmConfig.getTestDataConfiguration())
+            let motoService = MotorcycleService(motorcycleRepository: realmRepository)
+            
+            // Act
+            let exists = try motoService.isVehicleExists(vehicleLicense: "abc999")
+            
+            // Assert
+            XCTAssert(exists == false)
+            
+        } catch (let errorMessage) {
+            print(errorMessage)
+            XCTAssert(false)
+        }
+    }
+    
+    func test_saveMotorcycle_newMotorcycle_success() {
+        do {
+            // Arrange
+            let motorcycle = try Motorcycle(cylinder: 1000, vehicleLicense: "abc456")
             let testRealmConfig = TestRealmConfiguration()
             let realmRepository = try MotorcycleRealmRepository(realmConfiguration: testRealmConfig.getTestDataConfiguration())
             let motoService = MotorcycleService(motorcycleRepository: realmRepository)
@@ -65,6 +72,23 @@ class MotorcycleServiceTests: XCTestCase {
         } catch (let errorMessage) {
             print(errorMessage)
             XCTAssert(false)
+        }
+    }
+    
+    func test_saveMotorcycle_newMotorcycle_fail() {
+        do {
+            // Arrange
+            let motorcycle = try Motorcycle(cylinder: 1000, vehicleLicense: "abc456")
+            let testRealmConfig = TestRealmConfiguration()
+            let realmRepository = try MotorcycleRealmRepository(realmConfiguration: testRealmConfig.getTestDataConfiguration())
+            let motoService = MotorcycleService(motorcycleRepository: realmRepository)
+            
+            //Act
+            try motoService.saveMotorcycle(motorcycle: motorcycle)
+            XCTAssert(true)
+        } catch (let errorMessage) {
+            print(errorMessage)
+            XCTAssert(true)
         }
     }
 

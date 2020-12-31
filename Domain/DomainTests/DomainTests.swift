@@ -18,19 +18,25 @@ class DomainTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func test_isCorrectVehicleLicense_licenseAlphanumericWith6Characters_success() {
+        
+        // Arrange
+        let cylinder = 2500
+        let license = "abc123"
+        
+        do {
+            // Act
+            _ = try Car(cylinder: cylinder, vehicleLicense: license)
+            
+            // Assert
+            XCTAssert(true)
+        } catch (let errorMessage) {
+            print(errorMessage)
+            XCTAssert(false)
         }
     }
-
-    func testIsValidVehicleLicense() {
+    
+    func test_isCorrectVehicleLicense_licenseAlphanumericWith6Characters_fail() {
         
         // Arrange
         let cylinder = 2500
@@ -38,17 +44,17 @@ class DomainTests: XCTestCase {
         
         do {
             // Act
-            let car = try Car(cylinder: cylinder, vehicleLicense: license)
+            let _ = try Car(cylinder: cylinder, vehicleLicense: license)
             
-            // Assert
-            XCTAssert(car.getVehicleLicense() == "abc123")
         } catch (let errorMessage) {
             print(errorMessage)
+            
+            // Assert
             XCTAssert(true)
         }
     }
     
-    func testIsVehicleCylinderValid() {
+    func test_isCorrectVehicleCylinder_cylinderLessThan10000_success() {
         // Arrange
         let cylinder = 1000
         let license = "abc123"
@@ -62,6 +68,23 @@ class DomainTests: XCTestCase {
         } catch (let errorMessage) {
             print(errorMessage)
             XCTAssert(false)
+        }
+    }
+    
+    func test_isCorrectVehicleCylinder_cylinderLessThan10000_fail() {
+        // Arrange
+        let cylinder = 10000
+        let license = "abc123"
+        
+        do {
+            // Act
+            let _ = try Car(cylinder: cylinder, vehicleLicense: license)
+            
+        } catch (let errorMessage) {
+            print(errorMessage)
+            
+            // Assert
+            XCTAssert(true)
         }
     }
 }

@@ -18,20 +18,8 @@ class ModelEntryUnitTest: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
     
-    func test_getWeekDay_correctDay_successfull () throws {
+    func test_isValidWeekDayNumberForEntryDate_SundayIsNumber1_success () throws {
         // Arrange
         let string = "27/12/2020" // domingo -> 1
         let dateFormatter = DateFormatter()
@@ -55,7 +43,7 @@ class ModelEntryUnitTest: XCTestCase {
         }
     }
     
-    func testIsValidVehicleLicenseForWeekDay() {
+    func test_authorizedVehicleLicenseForEntryWeekDay_LicenseStartsWith_A_WeekDayIs1_success() {
  
         do {
             // Arrange
@@ -77,7 +65,30 @@ class ModelEntryUnitTest: XCTestCase {
             print(errorMessage)
             XCTAssert(false)
         }
-        
+    }
+    
+    func test_authorizedVehicleLicenseForEntryWeekDay_LicenseStartsWith_A_WeekDayIs7_fail() {
+ 
+        do {
+            // Arrange
+            let string = "26/12/2020" // sábado -> 7
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd/MM/yy"
+            let entryDate = dateFormatter.date(from: string) ?? Date()
+            let car = try Car(cylinder: 3200, vehicleLicense: "abc123")
+            
+            
+            // Act
+            let entry = try CarEntry(entryDateTime: entryDate, car: car)
+            print(entry.getWeekDay())
+            
+            
+        } catch (let errorMessage) {
+            print(errorMessage)
+            
+            // Assert
+            XCTAssert(true)
+        }
     }
 
 }

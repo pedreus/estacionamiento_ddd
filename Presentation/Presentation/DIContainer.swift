@@ -40,13 +40,3 @@ public class DIContainer {
         return container
     }
 }
-
-/*
- container.register(PersonRepository.self) {
-     _ in PersonRepositoryRemote()
- }
- 
- container.register(PersonService.self) {
-     repository in PersonService(personRepository: repository.resolve(PersonRepository.self)!)
- }
- */

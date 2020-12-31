@@ -19,24 +19,10 @@ class MotorcycleEntryServiceTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
-    func testIsValidMotorcycleQuantity() {
-        
-        // Arrange
-        
+    func test_validMotorcycleQuantity_LessThan10_success() {
         
         do {
+            // Arrange
             let testRealmConfig = TestRealmConfiguration()
             let motoRepository = try MotorcycleEntryRealmRepository(realmConfiguration: testRealmConfig.getTestDataConfiguration())
             let motoService = MotorcycleEntryService(motorcycleEntryRepository: motoRepository)
@@ -52,7 +38,26 @@ class MotorcycleEntryServiceTests: XCTestCase {
         }
     }
     
-    func testSaveMotorcycleEntry() {
+    func test_validMotorcycleQuantity_LessThan1_fail() {
+        
+        do {
+            // Arrange
+            let testRealmConfig = TestRealmConfiguration()
+            let motoRepository = try MotorcycleEntryRealmRepository(realmConfiguration: testRealmConfig.getTestDataConfiguration())
+            let motoService = MotorcycleEntryService(motorcycleEntryRepository: motoRepository)
+            
+            // Act
+            let isValidQuantity = try motoService.isValidMotorcyclesQuantity(maxQuantity: 1)
+            
+            // Assert
+            XCTAssert(isValidQuantity == false)
+        } catch (let errorMessage) {
+            print(errorMessage)
+            XCTAssert(false)
+        }
+    }
+    
+    func test_saveMotorcycleEntry_success() {
         
         // Arrange
         let string = "27/12/2020" // domingo -> 1

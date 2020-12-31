@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         do {
             try diContainer.registerDependencies()
         } catch let error {
-            print("Dependencias", error)
+            print("Dependencias: ", error)
         }
         
         return true

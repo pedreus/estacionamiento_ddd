@@ -31,6 +31,18 @@
 		E74FF305259AB936007E7506 /* CarExitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74FF304259AB936007E7506 /* CarExitService.swift */; };
 		E74FF311259ACB7B007E7506 /* MotorocycleExitRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74FF310259ACB7B007E7506 /* MotorocycleExitRepository.swift */; };
 		E74FF317259ACCA2007E7506 /* MotorcycleExitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74FF316259ACCA2007E7506 /* MotorcycleExitService.swift */; };
+		E75CAC3C259E5C3B008BCDD7 /* CarEntryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75CAC3B259E5C3B008BCDD7 /* CarEntryBuilder.swift */; };
+		E75CAC42259E5DB9008BCDD7 /* CarBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75CAC41259E5DB9008BCDD7 /* CarBuilder.swift */; };
+		E75CAC48259E62AC008BCDD7 /* Motorcycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75CAC47259E62AC008BCDD7 /* Motorcycle.swift */; };
+		E75CAC4C259E62BA008BCDD7 /* VehicleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75CAC4B259E62BA008BCDD7 /* VehicleBuilder.swift */; };
+		E75CAC54259E6881008BCDD7 /* VehicleEntryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75CAC53259E6881008BCDD7 /* VehicleEntryBuilder.swift */; };
+		E75CAC5C259E6E64008BCDD7 /* MotorcycleEntryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75CAC5B259E6E64008BCDD7 /* MotorcycleEntryBuilder.swift */; };
+		E75CAC6A259E7371008BCDD7 /* VehicleExitBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75CAC69259E7371008BCDD7 /* VehicleExitBuilder.swift */; };
+		E75CAC6E259E7543008BCDD7 /* CarExitBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75CAC6D259E7543008BCDD7 /* CarExitBuilder.swift */; };
+		E75CAC76259E76EA008BCDD7 /* MotorcycleExitBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75CAC75259E76EA008BCDD7 /* MotorcycleExitBuilder.swift */; };
+		E75CAC7A259E7801008BCDD7 /* VehicleBillBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75CAC79259E7801008BCDD7 /* VehicleBillBuilder.swift */; };
+		E75CAC80259E7985008BCDD7 /* CarBillBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75CAC7F259E7985008BCDD7 /* CarBillBuilder.swift */; };
+		E75CAC84259E7AEE008BCDD7 /* MotorcycleBillBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75CAC83259E7AEE008BCDD7 /* MotorcycleBillBuilder.swift */; };
 		E78BAC3D259B68BB00D41D36 /* CarBillRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78BAC3C259B68BB00D41D36 /* CarBillRepository.swift */; };
 		E78BAC41259B68E800D41D36 /* MotorcycleBillRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78BAC40259B68E800D41D36 /* MotorcycleBillRepository.swift */; };
 		E78BAC47259B691E00D41D36 /* CarBillService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78BAC46259B691E00D41D36 /* CarBillService.swift */; };
@@ -91,6 +103,18 @@
 		E74FF304259AB936007E7506 /* CarExitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarExitService.swift; sourceTree = "<group>"; };
 		E74FF310259ACB7B007E7506 /* MotorocycleExitRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorocycleExitRepository.swift; sourceTree = "<group>"; };
 		E74FF316259ACCA2007E7506 /* MotorcycleExitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorcycleExitService.swift; sourceTree = "<group>"; };
+		E75CAC3B259E5C3B008BCDD7 /* CarEntryBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarEntryBuilder.swift; sourceTree = "<group>"; };
+		E75CAC41259E5DB9008BCDD7 /* CarBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarBuilder.swift; sourceTree = "<group>"; };
+		E75CAC47259E62AC008BCDD7 /* Motorcycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motorcycle.swift; sourceTree = "<group>"; };
+		E75CAC4B259E62BA008BCDD7 /* VehicleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleBuilder.swift; sourceTree = "<group>"; };
+		E75CAC53259E6881008BCDD7 /* VehicleEntryBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleEntryBuilder.swift; sourceTree = "<group>"; };
+		E75CAC5B259E6E64008BCDD7 /* MotorcycleEntryBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorcycleEntryBuilder.swift; sourceTree = "<group>"; };
+		E75CAC69259E7371008BCDD7 /* VehicleExitBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleExitBuilder.swift; sourceTree = "<group>"; };
+		E75CAC6D259E7543008BCDD7 /* CarExitBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarExitBuilder.swift; sourceTree = "<group>"; };
+		E75CAC75259E76EA008BCDD7 /* MotorcycleExitBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorcycleExitBuilder.swift; sourceTree = "<group>"; };
+		E75CAC79259E7801008BCDD7 /* VehicleBillBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleBillBuilder.swift; sourceTree = "<group>"; };
+		E75CAC7F259E7985008BCDD7 /* CarBillBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarBillBuilder.swift; sourceTree = "<group>"; };
+		E75CAC83259E7AEE008BCDD7 /* MotorcycleBillBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorcycleBillBuilder.swift; sourceTree = "<group>"; };
 		E78BAC3C259B68BB00D41D36 /* CarBillRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarBillRepository.swift; sourceTree = "<group>"; };
 		E78BAC40259B68E800D41D36 /* MotorcycleBillRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorcycleBillRepository.swift; sourceTree = "<group>"; };
 		E78BAC46259B691E00D41D36 /* CarBillService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarBillService.swift; sourceTree = "<group>"; };
@@ -173,15 +197,6 @@
 				E7E148AC259D34E300440262 /* Vehicle */,
 				E7E148AB259D34C500440262 /* Car */,
 				E7E148AD259D34F500440262 /* Motorcycle */,
-				E7E148B0259D351D00440262 /* Entry */,
-				E7E148B1259D353200440262 /* CarEntry */,
-				E7E148B4259D354F00440262 /* MotrocycleEntry */,
-				E7E148B5259D356C00440262 /* Exit */,
-				E7E148B6259D358E00440262 /* CarExit */,
-				E7E148B7259D360A00440262 /* MotorcycleExit */,
-				E7E148B8259D362300440262 /* Bill */,
-				E7E148B9259D362D00440262 /* CarBill */,
-				E7E148BA259D364900440262 /* MotorcycleBill */,
 				79230B05254A20F200A06B8D /* Info.plist */,
 			);
 			path = Domain;
@@ -190,6 +205,7 @@
 		79230B0E254A20F200A06B8D /* DomainTests */ = {
 			isa = PBXGroup;
 			children = (
+				E75CAC39259E5B7D008BCDD7 /* SupportingCode */,
 				E7EDA47C259921E8000198F9 /* ModelBillUnitTests.swift */,
 				79230B0F254A20F200A06B8D /* DomainTests.swift */,
 				E73F4ECB2593F59700B89E5C /* ModelEntryUnitTest.swift */,
@@ -207,7 +223,58 @@
 			path = Exception;
 			sourceTree = "<group>";
 		};
-		E7E148AB259D34C500440262 /* Car */ = {
+		E75CAC39259E5B7D008BCDD7 /* SupportingCode */ = {
+			isa = PBXGroup;
+			children = (
+				E75CAC3A259E5BAF008BCDD7 /* Builders */,
+			);
+			path = SupportingCode;
+			sourceTree = "<group>";
+		};
+		E75CAC3A259E5BAF008BCDD7 /* Builders */ = {
+			isa = PBXGroup;
+			children = (
+				E75CAC61259E6FFF008BCDD7 /* Vehicle */,
+				E75CAC62259E700C008BCDD7 /* Car */,
+				E75CAC63259E7019008BCDD7 /* Motorcycle */,
+			);
+			path = Builders;
+			sourceTree = "<group>";
+		};
+		E75CAC61259E6FFF008BCDD7 /* Vehicle */ = {
+			isa = PBXGroup;
+			children = (
+				E75CAC4B259E62BA008BCDD7 /* VehicleBuilder.swift */,
+				E75CAC53259E6881008BCDD7 /* VehicleEntryBuilder.swift */,
+				E75CAC69259E7371008BCDD7 /* VehicleExitBuilder.swift */,
+				E75CAC79259E7801008BCDD7 /* VehicleBillBuilder.swift */,
+			);
+			path = Vehicle;
+			sourceTree = "<group>";
+		};
+		E75CAC62259E700C008BCDD7 /* Car */ = {
+			isa = PBXGroup;
+			children = (
+				E75CAC41259E5DB9008BCDD7 /* CarBuilder.swift */,
+				E75CAC3B259E5C3B008BCDD7 /* CarEntryBuilder.swift */,
+				E75CAC6D259E7543008BCDD7 /* CarExitBuilder.swift */,
+				E75CAC7F259E7985008BCDD7 /* CarBillBuilder.swift */,
+			);
+			path = Car;
+			sourceTree = "<group>";
+		};
+		E75CAC63259E7019008BCDD7 /* Motorcycle */ = {
+			isa = PBXGroup;
+			children = (
+				E75CAC47259E62AC008BCDD7 /* Motorcycle.swift */,
+				E75CAC5B259E6E64008BCDD7 /* MotorcycleEntryBuilder.swift */,
+				E75CAC75259E76EA008BCDD7 /* MotorcycleExitBuilder.swift */,
+				E75CAC83259E7AEE008BCDD7 /* MotorcycleBillBuilder.swift */,
+			);
+			path = Motorcycle;
+			sourceTree = "<group>";
+		};
+		E75CAC64259E725C008BCDD7 /* Car */ = {
 			isa = PBXGroup;
 			children = (
 				E70ED2562592EFB500DC35B3 /* Car.swift */,
@@ -217,17 +284,7 @@
 			path = Car;
 			sourceTree = "<group>";
 		};
-		E7E148AC259D34E300440262 /* Vehicle */ = {
-			isa = PBXGroup;
-			children = (
-				E7CEF586259379CA00726B1E /* VehicleService.swift */,
-				E70ED27A2592FBD700DC35B3 /* VehicleRepository.swift */,
-				E70ED2522592EEC700DC35B3 /* Vehicle.swift */,
-			);
-			path = Vehicle;
-			sourceTree = "<group>";
-		};
-		E7E148AD259D34F500440262 /* Motorcycle */ = {
+		E75CAC65259E7293008BCDD7 /* Motorcycle */ = {
 			isa = PBXGroup;
 			children = (
 				E70ED25A2592EFE000DC35B3 /* Motorcycle.swift */,
@@ -237,12 +294,47 @@
 			path = Motorcycle;
 			sourceTree = "<group>";
 		};
-		E7E148B0259D351D00440262 /* Entry */ = {
+		E75CAC66259E72E3008BCDD7 /* Vehicle */ = {
 			isa = PBXGroup;
 			children = (
-				E70ED25E2592F01E00DC35B3 /* Entry.swift */,
+				E70ED2522592EEC700DC35B3 /* Vehicle.swift */,
+				E70ED27A2592FBD700DC35B3 /* VehicleRepository.swift */,
+				E7CEF586259379CA00726B1E /* VehicleService.swift */,
 			);
-			path = Entry;
+			path = Vehicle;
+			sourceTree = "<group>";
+		};
+		E7E148AB259D34C500440262 /* Car */ = {
+			isa = PBXGroup;
+			children = (
+				E75CAC64259E725C008BCDD7 /* Car */,
+				E7E148B1259D353200440262 /* CarEntry */,
+				E7E148B6259D358E00440262 /* CarExit */,
+				E7E148B9259D362D00440262 /* CarBill */,
+			);
+			path = Car;
+			sourceTree = "<group>";
+		};
+		E7E148AC259D34E300440262 /* Vehicle */ = {
+			isa = PBXGroup;
+			children = (
+				E75CAC66259E72E3008BCDD7 /* Vehicle */,
+				E70ED25E2592F01E00DC35B3 /* Entry.swift */,
+				E70ED2622592F21F00DC35B3 /* Exit.swift */,
+				E70ED2662592F33300DC35B3 /* Bill.swift */,
+			);
+			path = Vehicle;
+			sourceTree = "<group>";
+		};
+		E7E148AD259D34F500440262 /* Motorcycle */ = {
+			isa = PBXGroup;
+			children = (
+				E75CAC65259E7293008BCDD7 /* Motorcycle */,
+				E7E148B4259D354F00440262 /* MotrocycleEntry */,
+				E7E148B7259D360A00440262 /* MotorcycleExit */,
+				E7E148BA259D364900440262 /* MotorcycleBill */,
+			);
+			path = Motorcycle;
 			sourceTree = "<group>";
 		};
 		E7E148B1259D353200440262 /* CarEntry */ = {
@@ -265,14 +357,6 @@
 			path = MotrocycleEntry;
 			sourceTree = "<group>";
 		};
-		E7E148B5259D356C00440262 /* Exit */ = {
-			isa = PBXGroup;
-			children = (
-				E70ED2622592F21F00DC35B3 /* Exit.swift */,
-			);
-			path = Exit;
-			sourceTree = "<group>";
-		};
 		E7E148B6259D358E00440262 /* CarExit */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,14 +375,6 @@
 				E74FF316259ACCA2007E7506 /* MotorcycleExitService.swift */,
 			);
 			path = MotorcycleExit;
-			sourceTree = "<group>";
-		};
-		E7E148B8259D362300440262 /* Bill */ = {
-			isa = PBXGroup;
-			children = (
-				E70ED2662592F33300DC35B3 /* Bill.swift */,
-			);
-			path = Bill;
 			sourceTree = "<group>";
 		};
 		E7E148B9259D362D00440262 /* CarBill */ = {
@@ -546,9 +622,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				E73F4ECC2593F59700B89E5C /* ModelEntryUnitTest.swift in Sources */,
+				E75CAC84259E7AEE008BCDD7 /* MotorcycleBillBuilder.swift in Sources */,
+				E75CAC7A259E7801008BCDD7 /* VehicleBillBuilder.swift in Sources */,
+				E75CAC5C259E6E64008BCDD7 /* MotorcycleEntryBuilder.swift in Sources */,
 				E7BB38432594E1A3006D35ED /* ModelExitUnitTest.swift in Sources */,
+				E75CAC54259E6881008BCDD7 /* VehicleEntryBuilder.swift in Sources */,
 				E7EDA47D259921E8000198F9 /* ModelBillUnitTests.swift in Sources */,
+				E75CAC6A259E7371008BCDD7 /* VehicleExitBuilder.swift in Sources */,
+				E75CAC80259E7985008BCDD7 /* CarBillBuilder.swift in Sources */,
+				E75CAC3C259E5C3B008BCDD7 /* CarEntryBuilder.swift in Sources */,
+				E75CAC42259E5DB9008BCDD7 /* CarBuilder.swift in Sources */,
 				79230B10254A20F200A06B8D /* DomainTests.swift in Sources */,
+				E75CAC4C259E62BA008BCDD7 /* VehicleBuilder.swift in Sources */,
+				E75CAC6E259E7543008BCDD7 /* CarExitBuilder.swift in Sources */,
+				E75CAC76259E76EA008BCDD7 /* MotorcycleExitBuilder.swift in Sources */,
+				E75CAC48259E62AC008BCDD7 /* Motorcycle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
