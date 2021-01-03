@@ -12,6 +12,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BillViewController" customModule="Presentation" customModuleProvider="target">
             <connections>
+                <outlet property="lblCylinder" destination="RXp-uZ-UU2" id="DEP-In-Cma"/>
+                <outlet property="lblEntryDate" destination="fJC-Ba-Uvj" id="6zl-uH-mES"/>
+                <outlet property="lblExitDate" destination="QkR-dZ-5wL" id="Dum-fo-jAl"/>
+                <outlet property="lblExpendedTime" destination="0MV-oA-TRT" id="t4Y-ff-NBo"/>
+                <outlet property="lblLicense" destination="Dod-pE-4q9" id="OtB-Va-WIF"/>
+                <outlet property="lblServiceCosts" destination="qwN-oB-37x" id="VGB-Py-aiu"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,13 +27,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Factura" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpI-bk-bbu">
-                    <rect key="frame" x="20" y="64" width="374" height="21"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                    <nil key="textColor"/>
+                    <rect key="frame" x="20" y="64" width="374" height="24"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <color key="textColor" name="AccentColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uVM-Vl-VUp">
-                    <rect key="frame" x="0.0" y="93" width="414" height="769"/>
+                    <rect key="frame" x="0.0" y="96" width="414" height="766"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rVK-Tw-0ac">
                             <rect key="frame" x="8" y="0.0" width="398" height="552"/>
@@ -150,6 +156,9 @@
                                     <state key="normal" title="Aceptar">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <connections>
+                                        <action selector="actionBtnAccept:" destination="-1" eventType="touchUpInside" id="sBl-8P-fbt"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
