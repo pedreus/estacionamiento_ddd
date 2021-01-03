@@ -21,12 +21,11 @@ class DomainTests: XCTestCase {
     func test_isCorrectVehicleLicense_licenseAlphanumericWith6Characters_success() {
         
         // Arrange
-        let cylinder = 2500
-        let license = "abc123"
         
         do {
             // Act
-            _ = try Car(cylinder: cylinder, vehicleLicense: license)
+            _ = try CarBuilder()
+                .build()
             
             // Assert
             XCTAssert(true)
@@ -39,12 +38,13 @@ class DomainTests: XCTestCase {
     func test_isCorrectVehicleLicense_licenseAlphanumericWith6Characters_fail() {
         
         // Arrange
-        let cylinder = 2500
         let license = "abc12😃"
         
         do {
             // Act
-            let _ = try Car(cylinder: cylinder, vehicleLicense: license)
+            let _ = try CarBuilder()
+                .with(license: license)
+                .build()
             
         } catch (let errorMessage) {
             print(errorMessage)
@@ -57,11 +57,12 @@ class DomainTests: XCTestCase {
     func test_isCorrectVehicleCylinder_cylinderLessThan10000_success() {
         // Arrange
         let cylinder = 1000
-        let license = "abc123"
         
         do {
             // Act
-            let _ = try Car(cylinder: cylinder, vehicleLicense: license)
+            let _ = try CarBuilder()
+                .with(cylinder: cylinder)
+                .build()
             
             // Assert
             XCTAssert(true)
@@ -71,14 +72,15 @@ class DomainTests: XCTestCase {
         }
     }
     
-    func test_isCorrectVehicleCylinder_cylinderLessThan10000_fail() {
+    func test_isCorrectVehicleCylinder_cylinder10000_fail() {
         // Arrange
         let cylinder = 10000
-        let license = "abc123"
         
         do {
             // Act
-            let _ = try Car(cylinder: cylinder, vehicleLicense: license)
+            let _ = try CarBuilder()
+                .with(cylinder: cylinder)
+                .build()
             
         } catch (let errorMessage) {
             print(errorMessage)

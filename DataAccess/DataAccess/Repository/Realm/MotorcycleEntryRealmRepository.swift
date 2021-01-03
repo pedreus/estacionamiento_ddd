@@ -29,4 +29,19 @@ public class MotorcycleEntryRealmRepository: RealmRepository, MotorcycleEntryRep
         })
     }
     
+    public func getAllMotorcycleEntries() throws -> [MotorcycleEntry] {
+        var motoEntries = [MotorcycleEntry]()
+        let motoEntryRealmTranslator = MotorcycleEntryRealmTranslator()
+        let realm = try Realm(configuration: self.realmConfiguration)
+        let entries = realm.objects(MotorcycleRealm.self).filter(NSPredicate(format: "motoEntries.motoExit.@count = %d", 0))
+        
+        if (entries.count > 0) {
+            for motoRealm in entries {
+                let motoEntry = try motoEntryRealmTranslator.fromRealmEntityToModel(realmMoto: motoRealm)
+                motoEntries.append(motoEntry)
+            }
+        }
+        
+        return motoEntries
+    }
 }

@@ -23,4 +23,8 @@ public class MotorcycleEntryService {
         }
         try self.motorcycleEntryRepository.saveMotorcycleEntry(motoEntry: motoEntry)
     }
+    
+    public func getAllMotorcycleEntries() throws -> [MotorcycleEntry] {
+        try self.motorcycleEntryRepository.getAllMotorcycleEntries()
+    }
 }

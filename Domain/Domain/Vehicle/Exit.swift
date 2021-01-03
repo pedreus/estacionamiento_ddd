@@ -42,6 +42,8 @@ public class Exit {
     internal func checkTopNumberOfHours(hours: Int) -> (Int, Int) {
         if (hours > 9 && hours <= 24) {
             return (1, hours - 9)
+        } else if(hours == 0) {
+            return (0, 1)
         } else {
             return (0, hours)
         }

@@ -30,7 +30,7 @@ class ServicesViewController: UIViewController {
         self.tableActiveServices.delegate = self
         self.tableActiveServices.dataSource = self
         
-        self.getAllCarEntries()
+        self.getAllVehicleEntries()
     }
     
     private func getFormatterEntryDate(date: Date) -> String {
@@ -40,12 +40,32 @@ class ServicesViewController: UIViewController {
         return dateFormatter.string(from: date)
     }
     
-    private func getAllCarEntries() {
+    private func getCarEntries() throws -> [CarEntry]? {
+        return try self.carEntryService?.getAllCarEntries()
+    }
+    
+    private func getMotorcycleEntries() throws -> [MotorcycleEntry]? {
+        return try self.motorcycleEntryService?.getAllMotorcycleEntries()
+    }
+    
+    private func orderEntriesByDateAsc(){
+        if (self.entriesList.count > 0) {
+            self.entriesList.sort(by: {$0.getEntryDateTime() < $1.getEntryDateTime()})
+        }
+    }
+    
+    private func getAllVehicleEntries() {
         var alertMessage = ""
         do {
-            let carEntries = try self.carEntryService?.getAllCarEntries()
-            if (carEntries!.count > 0) {
-                self.entriesList.insert(contentsOf: carEntries!, at: 0)
+            if let carEntries = try self.getCarEntries() {
+                self.entriesList.insert(contentsOf: carEntries, at: 0)
+            }
+            if let motoEntries = try self.getMotorcycleEntries() {
+                self.entriesList.insert(contentsOf: motoEntries, at: 0)
+            }
+            //let motoEntries = try self.motorcycleEntryService.ge
+            if (self.entriesList.count > 0) {
+                self.orderEntriesByDateAsc()
                 self.tableActiveServices.reloadData()
             }
         } catch BusinessError.EmptyVehicleLicense (let message) {
@@ -73,6 +93,13 @@ class ServicesViewController: UIViewController {
         print(alertMessage)
     }
     
+    private func showExit(entry: Entry) {
+        let vc = DetailedViewController()
+        vc.entry = entry
+        vc.modalPresentationStyle = .fullScreen
+        
+        self.present(vc, animated: true, completion: nil)
+    }
     
     @IBAction func actionBack(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
@@ -92,7 +119,13 @@ extension ServicesViewController: UITableViewDelegate, UITableViewDataSource {
             cell.textLabel?.text = "Placa: \(vehicleEntry.getVehicle().getVehicleLicense()) (\(vehicleEntry.getVehicle().getCylinder().description) cc)"
             cell.detailTextLabel?.text = self.getFormatterEntryDate(date: vehicleEntry.getEntryDateTime())
         }
+        cell.selectionStyle = .none
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let entry = self.entriesList[indexPath.row]
+        
+        self.showExit(entry: entry)
+    }
 }

@@ -4,6 +4,7 @@
 //
 //  Created by Andrés David Santacoloma Isaza - Ceiba Software on 23/11/20.
 //
+import Foundation
 
 public enum BusinessError: Error {
     
@@ -12,7 +13,7 @@ public enum BusinessError: Error {
     case WrongEmail(message: String = "El email tiene un formato incorrecto.")
     case WrongPassword(message: String = "El password no tiene el formato correcto.")
     
-    case VehicleLicenseUnauthorized(message: String = "La placa no está autorizada para ingresar este día.")
+    case VehicleLicenseUnauthorized(message: String = "La placa no está autorizada para ingresar el día de hoy.")
     case IncorrectWeekDay(message: String = "El día no es un día de la semana válido")
     case EmptyVehicleLicense(message: String = "La placa no puede estar vacía")
     case EmptyVehicleCylinder(message: String = "El cilindraje no puede estar vacío")

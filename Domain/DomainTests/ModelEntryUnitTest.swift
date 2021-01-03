@@ -24,13 +24,16 @@ class ModelEntryUnitTest: XCTestCase {
         let string = "27/12/2020" // domingo -> 1
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/yy"
+        
         let actualDate = dateFormatter.date(from: string) ?? Date()
         
         do {
-            let car = try Car(cylinder: 2000, vehicleLicense: "abc123")
-            let entry = try CarEntry(entryDateTime: actualDate, car: car)
             
             // Act
+            let entry = try CarEntryBuilder()
+                .with(entryDate: actualDate)
+                .build()
+            
             let weekDay = entry.getWeekDay()
             print("WeekDay: \(weekDay)")
             
@@ -51,11 +54,13 @@ class ModelEntryUnitTest: XCTestCase {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "dd/MM/yy"
             let entryDate = dateFormatter.date(from: string) ?? Date()
-            let car = try Car(cylinder: 3200, vehicleLicense: "abc123")
             
             
             // Act
-            let entry = try CarEntry(entryDateTime: entryDate, car: car)
+            let entry = try CarEntryBuilder()
+                .with(entryDate: entryDate)
+                .build()
+            
             print(entry.getWeekDay())
             
             // Assert
@@ -75,11 +80,13 @@ class ModelEntryUnitTest: XCTestCase {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "dd/MM/yy"
             let entryDate = dateFormatter.date(from: string) ?? Date()
-            let car = try Car(cylinder: 3200, vehicleLicense: "abc123")
             
             
             // Act
-            let entry = try CarEntry(entryDateTime: entryDate, car: car)
+            let entry = try CarEntryBuilder()
+                .with(entryDate: entryDate)
+                .build()
+            
             print(entry.getWeekDay())
             
             

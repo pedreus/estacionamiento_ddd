@@ -20,7 +20,7 @@ class ModelExitUnitTest: XCTestCase {
 
     func test_getExpendedTimeInDaysAndHours_1days3hours_success() {
         // Arrange
-        let string = "27/12/2020" // domingo -> 1
+        let string = "28/12/2020" // lunes -> 2
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/yy"
         let today = dateFormatter.date(from: string) ?? Date()
@@ -30,11 +30,17 @@ class ModelExitUnitTest: XCTestCase {
         let tomorrow = Date(timeInterval: 10800, since: today)
         
         do {
-            let car = try Car(cylinder: 2000, vehicleLicense: "xbc123")
+            
             // El vehículo entró el día de ayer
-            let entry = try CarEntry(entryDateTime: yesterday, car: car)
+            let entry = try CarEntryBuilder()
+                .with(entryDate: yesterday)
+                .build() as! CarEntry
+            
             // El vehículo sale mañana
-            let exit = CarExit(exitDateTime: tomorrow, carEntry: entry)
+            let exit = try CarExitBuilder()
+                .with(carEntry: entry)
+                .with(exitDate: tomorrow)
+                .build() as! CarExit
             
             // Act
             let (days, hours) = exit.getExpendedTimeInDaysAndHours()

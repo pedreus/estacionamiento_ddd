@@ -5,6 +5,7 @@
 //  Created by Pedro Erazo Acosta on 26/12/20.
 //
 
+import  Foundation
 import Domain
 
 public class MotorcycleEntryRealmTranslator {
@@ -23,5 +24,12 @@ public class MotorcycleEntryRealmTranslator {
         motorcycleRealm.motoEntries.append(motorcycleEntryRealm)
         
         return motorcycleRealm
+    }
+    
+    func fromRealmEntityToModel(realmMoto: MotorcycleRealm) throws -> MotorcycleEntry {
+        let moto = try Motorcycle(cylinder: realmMoto.getCylinder(), vehicleLicense: realmMoto.getVehicleLicense())
+        let motoEntry = try MotorcycleEntry(entryDateTime: realmMoto.motoEntries.first?.getEntryDateTime() ?? Date(), motorcycle: moto)
+        
+        return motoEntry
     }
 }

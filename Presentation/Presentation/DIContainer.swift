@@ -17,6 +17,9 @@ public class DIContainer {
         let realmConfiguration = ProductionRealmConfiguration()
         let productionConfiguration = try realmConfiguration.gestProductionDataConfiguration()
         
+        /*
+         Inyección de dependencias para Entries
+         */
         self.container.register(CarEntryRepository.self, factory: {
             _ in
             CarEntryRealmRepository(realmConfiguration: productionConfiguration)
@@ -33,6 +36,50 @@ public class DIContainer {
         self.container.register(MotorcycleEntryService.self, factory: {
             repository in
             MotorcycleEntryService(motorcycleEntryRepository: repository.resolve(MotorcycleEntryRepository.self)!)
+        })
+        
+        /*
+         Inyección de dependencias para Exits
+         */
+        
+        self.container.register(CarExitRepository.self, factory: {
+            _ in
+            CarExitRealmRepository(realmConfiguration: productionConfiguration)
+        })
+        self.container.register(CarExitService.self, factory: {
+            repository in
+            CarExitService(carExitRepository: repository.resolve(CarExitRepository.self)!)
+        })
+        
+        self.container.register(MotorcycleExitRepository.self, factory: {
+            _ in
+            MotorcycleExitRealmRepository(realmConfiguration: productionConfiguration)
+        })
+        self.container.register(MotorcycleExitService.self, factory: {
+            repository in
+            MotorcycleExitService(motoExitRepository: repository.resolve(MotorcycleExitRepository.self)!)
+        })
+        
+        /*
+         Inyección de dependencias para Bills
+         */
+        
+        self.container.register(CarBillRepository.self, factory: {
+            _ in
+            CarBillRealmRepository(realmConfiguration: productionConfiguration)
+        })
+        self.container.register(CarBillService.self, factory: {
+            repository in
+            CarBillService(carBillRepository: repository.resolve(CarBillRepository.self)!)
+        })
+        
+        self.container.register(MotorcycleBillRepository.self, factory: {
+            _ in
+            MotorcycleBillRealmRepository(realmConfiguration: productionConfiguration)
+        })
+        self.container.register(MotorcycleBillService.self, factory: {
+            repository in
+            MotorcycleBillService(motoBillRepository: repository.resolve(MotorcycleBillRepository.self)!)
         })
     }
     

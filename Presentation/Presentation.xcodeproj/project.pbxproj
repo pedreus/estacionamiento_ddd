@@ -25,6 +25,8 @@
 		C645ED947B2DE2A7D4E6C682 /* Pods_Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67DEC83A8456A98BD60C8537 /* Pods_Presentation.framework */; };
 		C9231A500B51B4ABABA00CB9 /* Pods_PresentationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBAB2960AB2C571326B7D776 /* Pods_PresentationTests.framework */; };
 		E749E96D25967D300053876E /* PresentationCarUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E749E96C25967D300053876E /* PresentationCarUnitTest.swift */; };
+		E794A5E025A144D900339879 /* DetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E794A5DE25A144D900339879 /* DetailedViewController.swift */; };
+		E794A5E125A144D900339879 /* DetailedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E794A5DF25A144D900339879 /* DetailedViewController.xib */; };
 		E7CBC42E259981D000860807 /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CBC42C259981D000860807 /* ServicesViewController.swift */; };
 		E7CBC42F259981D000860807 /* ServicesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7CBC42D259981D000860807 /* ServicesViewController.xib */; };
 		E7CBC436259982D100860807 /* BillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CBC434259982D100860807 /* BillViewController.swift */; };
@@ -95,6 +97,8 @@
 		E749E96C25967D300053876E /* PresentationCarUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationCarUnitTest.swift; sourceTree = "<group>"; };
 		E78BAC5A259B968A00D41D36 /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Realm.framework; path = "../Debug-iphonesimulator/Realm/Realm.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E78BAC5F259B969000D41D36 /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = RealmSwift.framework; path = "../Debug-iphonesimulator/RealmSwift/RealmSwift.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E794A5DE25A144D900339879 /* DetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedViewController.swift; sourceTree = "<group>"; };
+		E794A5DF25A144D900339879 /* DetailedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailedViewController.xib; sourceTree = "<group>"; };
 		E7CBC42C259981D000860807 /* ServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewController.swift; sourceTree = "<group>"; };
 		E7CBC42D259981D000860807 /* ServicesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesViewController.xib; sourceTree = "<group>"; };
 		E7CBC434259982D100860807 /* BillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillViewController.swift; sourceTree = "<group>"; };
@@ -223,6 +227,7 @@
 			children = (
 				79230B30254A214C00A06B8D /* HomeViewController.swift */,
 				E7CBC42C259981D000860807 /* ServicesViewController.swift */,
+				E794A5DE25A144D900339879 /* DetailedViewController.swift */,
 				E7CBC434259982D100860807 /* BillViewController.swift */,
 			);
 			path = Controllers;
@@ -233,6 +238,7 @@
 			children = (
 				79DF871D25681F4E00BB7EC9 /* HomeViewController.xib */,
 				E7CBC42D259981D000860807 /* ServicesViewController.xib */,
+				E794A5DF25A144D900339879 /* DetailedViewController.xib */,
 				E7CBC435259982D100860807 /* BillViewController.xib */,
 			);
 			path = Views;
@@ -329,6 +335,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"es-419",
 			);
 			mainGroup = 79230B20254A214C00A06B8D;
 			productRefGroup = 79230B2A254A214C00A06B8D /* Products */;
@@ -348,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79230B39254A215100A06B8D /* LaunchScreen.storyboard in Resources */,
+				E794A5E125A144D900339879 /* DetailedViewController.xib in Resources */,
 				79230B36254A215100A06B8D /* Assets.xcassets in Resources */,
 				E7CBC42F259981D000860807 /* ServicesViewController.xib in Resources */,
 				79DF871E25681F4E00BB7EC9 /* HomeViewController.xib in Resources */,
@@ -485,6 +493,7 @@
 				E7CBC42E259981D000860807 /* ServicesViewController.swift in Sources */,
 				79230B2F254A214C00A06B8D /* SceneDelegate.swift in Sources */,
 				E7CBC436259982D100860807 /* BillViewController.swift in Sources */,
+				E794A5E025A144D900339879 /* DetailedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,6 +545,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -597,6 +607,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

@@ -11,4 +11,6 @@ public protocol MotorcycleEntryRepository {
     func isValidMotorcyclesQuantity(maxQuantity: Int) throws -> Bool
     
     func saveMotorcycleEntry(motoEntry: MotorcycleEntry) throws
+    
+    func getAllMotorcycleEntries() throws -> [MotorcycleEntry]
 }

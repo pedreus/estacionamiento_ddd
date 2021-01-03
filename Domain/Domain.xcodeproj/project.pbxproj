@@ -192,6 +192,7 @@
 		79230B03254A20F200A06B8D /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				E7D88656259FF6A60067F50D /* Localization */,
 				E7EE7BDC259CADE400A05D5C /* Helpers */,
 				79DF87592568702200BB7EC9 /* Exception */,
 				E7E148AC259D34E300440262 /* Vehicle */,
@@ -302,6 +303,13 @@
 				E7CEF586259379CA00726B1E /* VehicleService.swift */,
 			);
 			path = Vehicle;
+			sourceTree = "<group>";
+		};
+		E7D88656259FF6A60067F50D /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
 		E7E148AB259D34C500440262 /* Car */ = {
@@ -501,6 +509,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"es-419",
 			);
 			mainGroup = 79230AF7254A20F200A06B8D;
 			productRefGroup = 79230B02254A20F200A06B8D /* Products */;
@@ -655,6 +664,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -719,6 +729,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
