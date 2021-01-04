@@ -12,12 +12,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BillViewController" customModule="Presentation" customModuleProvider="target">
             <connections>
-                <outlet property="lblCylinder" destination="RXp-uZ-UU2" id="DEP-In-Cma"/>
-                <outlet property="lblEntryDate" destination="fJC-Ba-Uvj" id="6zl-uH-mES"/>
-                <outlet property="lblExitDate" destination="QkR-dZ-5wL" id="Dum-fo-jAl"/>
-                <outlet property="lblExpendedTime" destination="0MV-oA-TRT" id="t4Y-ff-NBo"/>
-                <outlet property="lblLicense" destination="Dod-pE-4q9" id="OtB-Va-WIF"/>
-                <outlet property="lblServiceCosts" destination="qwN-oB-37x" id="VGB-Py-aiu"/>
+                <outlet property="lblCylinder" destination="RXp-uZ-UU2" id="M9q-jh-Zsm"/>
+                <outlet property="lblEntryDate" destination="fJC-Ba-Uvj" id="N2T-Mw-J4S"/>
+                <outlet property="lblExitDate" destination="QkR-dZ-5wL" id="0Mz-9v-Sg0"/>
+                <outlet property="lblExpendedTime" destination="0MV-oA-TRT" id="LeE-Mc-rxV"/>
+                <outlet property="lblLicense" destination="Dod-pE-4q9" id="YEo-r0-tMp"/>
+                <outlet property="lblServiceCosts" destination="qwN-oB-37x" id="OpJ-fc-Vhd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -157,7 +157,7 @@
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                     <connections>
-                                        <action selector="actionBtnAccept:" destination="-1" eventType="touchUpInside" id="sBl-8P-fbt"/>
+                                        <action selector="actionBtnAccept:" destination="-1" eventType="touchUpInside" id="OPE-vx-he4"/>
                                     </connections>
                                 </button>
                             </subviews>

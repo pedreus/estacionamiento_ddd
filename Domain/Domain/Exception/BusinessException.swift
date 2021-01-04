@@ -25,4 +25,5 @@ public enum BusinessError: Error {
     case VehicleSaveError(message: String = "Error al guardar el vehículo")
     case WrongNumericTextEntry(message: String = "No se permiten caracteres diferentes a números.")
     case WrongAlphanumericTextEntry(message: String = "No se permiten caracteres diferentes a números y letras.")
+    case WrongVehicleType(message: String = "El tipo de vehículo no está permitido")
 }
