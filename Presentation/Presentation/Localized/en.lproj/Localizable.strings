@@ -1,0 +1,26 @@
+/* 
+  Localized.strings
+  Presentation
+
+  Created by Pedro Erazo Acosta on 4/01/21.
+  
+*/
+
+// HomeViewController
+"btn_registrar" = "Register";
+"title_ingreso_carro_exito" = "Successfull Car Entry !!";
+"message_ingreso_carro_exito" = "The car entry has been registered successfully."
+"title_ingreso_moto_exito" = "Successfull Motorcycle Entry !!";
+"message_ingreso_moto_exito" = "The motorcycle entry has been registered successfully."
+"title_ingreso_fallo" = "Vehicle Entry";
+"message_ingreso_fallo" = "It was not possible to register the vehicle at this time."
+
+// ServicesViewController
+"placa" = "Vehicle License";
+
+// DetailedViewController
+"navbar_titulo_moto" = "Motorcycle Service";
+"navbar_titulo_carro" = "Car Service";
+
+// BillViewController
+"factura" = "Bill";

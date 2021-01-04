@@ -39,7 +39,7 @@ class BillViewController: UIViewController {
         do {
             try self.generateBill()
         } catch let error {
-            let alert = AlertGenerator.createSimpleInformationAlert(title: "Factura", message: error.localizedDescription)
+            let alert = AlertGenerator.createSimpleInformationAlert(title: NSLocalizedString("factura", comment: ""), message: error.localizedDescription)
             
             self.present(alert, animated: true, completion: nil)
         }
@@ -76,7 +76,7 @@ class BillViewController: UIViewController {
         self.lblCylinder.text = self.entry.getVehicle().getCylinder().description
         self.lblEntryDate.text = self.getFormatterEntryDate(date: self.entry.getEntryDateTime())
         self.lblExitDate.text = self.getFormatterEntryDate(date: self.exit!.getExitDateTime())
-        self.lblExpendedTime.text = "\(days) días - \(hours) horas"
+        self.lblExpendedTime.text = "\(days)D - \(hours)H"
         self.lblServiceCosts.text = "$ \(self.bill!.getCost().description)"
     }
     

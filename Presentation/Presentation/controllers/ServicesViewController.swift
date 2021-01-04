@@ -116,7 +116,7 @@ extension ServicesViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
         if (self.entriesList.count > 0) {
             let vehicleEntry = self.entriesList[indexPath.row]
-            cell.textLabel?.text = "Placa: \(vehicleEntry.getVehicle().getVehicleLicense()) (\(vehicleEntry.getVehicle().getCylinder().description) cc)"
+            cell.textLabel?.text = "\(NSLocalizedString("placa", comment: "")): \(vehicleEntry.getVehicle().getVehicleLicense()) (\(vehicleEntry.getVehicle().getCylinder().description) cc)"
             cell.detailTextLabel?.text = self.getFormatterEntryDate(date: vehicleEntry.getEntryDateTime())
         }
         cell.selectionStyle = .none

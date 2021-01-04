@@ -79,48 +79,48 @@ class HomeViewController: UIViewController {
             switch self.ctrlVehicleType.selectedSegmentIndex {
             case 0:
                 try self.saveCarEntry(vehicle: vehicle)
-                alertTitle = "Ingreso del carro exitoso"
-                alertMessage = "Se ha registrado el ingreso del carro exitosamente."
+                alertTitle = NSLocalizedString("title_ingreso_carro_exito", comment: "")
+                alertMessage = NSLocalizedString("message_ingreso_carro_exito", comment: "")
                 self.eraseTextFieldData()
             case 1:
                 try self.saveMotorcycleEntry(vehicle: vehicle)
-                alertTitle = "Ingreso de la moto exitoso"
-                alertMessage = "Se ha registrado el ingreso de la motocicleta exitosamente."
+                alertTitle = NSLocalizedString("title_ingreso_moto_exito", comment: "")
+                alertMessage = NSLocalizedString("message_ingreso_moto_exito", comment: "")
                 self.eraseTextFieldData()
             default:
-                alertTitle = "Ingreso fallido"
-                alertMessage = "No se ha podido registrar el ingreso del vehículo."
+                alertTitle = NSLocalizedString("title_ingreso_fallo", comment: "")
+                alertMessage = NSLocalizedString("message_ingreso_fallo", comment: "")
             }
         } catch BusinessError.EmptyVehicleLicense (let message) {
-            alertTitle = "Ingreso fallido"
+            alertTitle = NSLocalizedString("title_ingreso_fallo", comment: "")
             alertMessage = message
         } catch BusinessError.EmptyVehicleCylinder (let message) {
-            alertTitle = "Ingreso fallido"
+            alertTitle = NSLocalizedString("title_ingreso_fallo", comment: "")
             alertMessage = message
         } catch BusinessError.IncorrectVehicleLicense (let message) {
-            alertTitle = "Ingreso fallido"
+            alertTitle = NSLocalizedString("title_ingreso_fallo", comment: "")
             alertMessage = message
         } catch BusinessError.IncorrectVehicleCylinder (let message) {
-            alertTitle = "Ingreso fallido"
+            alertTitle = NSLocalizedString("title_ingreso_fallo", comment: "")
             alertMessage = message
         } catch BusinessError.WrongAlphanumericTextEntry (let message) {
-            alertTitle = "Ingreso fallido"
+            alertTitle = NSLocalizedString("title_ingreso_fallo", comment: "")
             alertMessage = message
         } catch BusinessError.VehicleLicenseUnauthorized (let message) {
-            alertTitle = "Ingreso fallido"
+            alertTitle = NSLocalizedString("title_ingreso_fallo", comment: "")
             alertMessage = message
         } catch BusinessError.IncorrectWeekDay (let message) {
-            alertTitle = "Ingreso fallido"
+            alertTitle = NSLocalizedString("title_ingreso_fallo", comment: "")
             alertMessage = message
         } catch BusinessError.CarQuantityComplete (let message) {
-            alertTitle = "Ingreso fallido"
+            alertTitle = NSLocalizedString("title_ingreso_fallo", comment: "")
             alertMessage = message
         } catch BusinessError.MotorcycleQuantityComplete (let message) {
-            alertTitle = "Ingreso fallido"
+            alertTitle = NSLocalizedString("title_ingreso_fallo", comment: "")
             alertMessage = message
         } catch {
-            alertTitle = "Ingreso fallido"
-            alertMessage = "No fue posible registrar el ingreso del vehículo."
+            alertTitle = NSLocalizedString("title_ingreso_fallo", comment: "")
+            alertMessage = NSLocalizedString("message_ingreso_fallo", comment: "")
         }
         
         let alert = AlertGenerator.createSimpleInformationAlert(title: alertTitle, message: alertMessage)

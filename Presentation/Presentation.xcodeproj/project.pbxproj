@@ -24,6 +24,7 @@
 		79DF8769256ECC3700BB7EC9 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DF8768256ECC3700BB7EC9 /* DIContainer.swift */; };
 		C645ED947B2DE2A7D4E6C682 /* Pods_Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67DEC83A8456A98BD60C8537 /* Pods_Presentation.framework */; };
 		C9231A500B51B4ABABA00CB9 /* Pods_PresentationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBAB2960AB2C571326B7D776 /* Pods_PresentationTests.framework */; };
+		E73A92E025A34A5B00FE7BB7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E73A92E225A34A5B00FE7BB7 /* Localizable.strings */; };
 		E749E96D25967D300053876E /* PresentationCarUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E749E96C25967D300053876E /* PresentationCarUnitTest.swift */; };
 		E794A5E025A144D900339879 /* DetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E794A5DE25A144D900339879 /* DetailedViewController.swift */; };
 		E794A5E125A144D900339879 /* DetailedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E794A5DF25A144D900339879 /* DetailedViewController.xib */; };
@@ -94,6 +95,8 @@
 		CBAB2960AB2C571326B7D776 /* Pods_PresentationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PresentationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D45013547D3625E68DD982D1 /* Pods-Presentation-PresentationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Presentation-PresentationUITests.release.xcconfig"; path = "Target Support Files/Pods-Presentation-PresentationUITests/Pods-Presentation-PresentationUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E6A117133498DEB401807213 /* Pods-Presentation-PresentationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Presentation-PresentationUITests.debug.xcconfig"; path = "Target Support Files/Pods-Presentation-PresentationUITests/Pods-Presentation-PresentationUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E73A92E125A34A5B00FE7BB7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E73A92E525A34A6000FE7BB7 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		E749E96C25967D300053876E /* PresentationCarUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationCarUnitTest.swift; sourceTree = "<group>"; };
 		E78BAC5A259B968A00D41D36 /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Realm.framework; path = "../Debug-iphonesimulator/Realm/Realm.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E78BAC5F259B969000D41D36 /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = RealmSwift.framework; path = "../Debug-iphonesimulator/RealmSwift/RealmSwift.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +178,7 @@
 		79230B2B254A214C00A06B8D /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				E73A92D925A34A4100FE7BB7 /* Localized */,
 				E7CBC44325998C0C00860807 /* Views */,
 				E7CBC44225998C0100860807 /* Controllers */,
 				79230B2C254A214C00A06B8D /* AppDelegate.swift */,
@@ -220,6 +224,14 @@
 				67DEC83A8456A98BD60C8537 /* Pods_Presentation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E73A92D925A34A4100FE7BB7 /* Localized */ = {
+			isa = PBXGroup;
+			children = (
+				E73A92E225A34A5B00FE7BB7 /* Localizable.strings */,
+			);
+			path = Localized;
 			sourceTree = "<group>";
 		};
 		E7CBC44225998C0100860807 /* Controllers */ = {
@@ -358,6 +370,7 @@
 				E794A5E125A144D900339879 /* DetailedViewController.xib in Resources */,
 				79230B36254A215100A06B8D /* Assets.xcassets in Resources */,
 				E7CBC42F259981D000860807 /* ServicesViewController.xib in Resources */,
+				E73A92E025A34A5B00FE7BB7 /* Localizable.strings in Resources */,
 				79DF871E25681F4E00BB7EC9 /* HomeViewController.xib in Resources */,
 				E7CBC437259982D100860807 /* BillViewController.xib in Resources */,
 			);
@@ -536,6 +549,15 @@
 				79230B38254A215100A06B8D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E73A92E225A34A5B00FE7BB7 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E73A92E125A34A5B00FE7BB7 /* en */,
+				E73A92E525A34A6000FE7BB7 /* es-419 */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
