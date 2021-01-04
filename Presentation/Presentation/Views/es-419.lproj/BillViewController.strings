@@ -1,0 +1,42 @@
+
+/* Class = "UILabel"; text = "----"; ObjectID = "0MV-oA-TRT"; */
+"0MV-oA-TRT.text" = "----";
+
+/* Class = "UILabel"; text = "Cilindraje:"; ObjectID = "2x5-W7-vMu"; */
+"2x5-W7-vMu.text" = "Cilindraje:";
+
+/* Class = "UIButton"; normalTitle = "Aceptar"; ObjectID = "3nN-Zx-Zc1"; */
+"3nN-Zx-Zc1.normalTitle" = "Aceptar";
+
+/* Class = "UILabel"; text = "----"; ObjectID = "Dod-pE-4q9"; */
+"Dod-pE-4q9.text" = "----";
+
+/* Class = "UILabel"; text = "----"; ObjectID = "QkR-dZ-5wL"; */
+"QkR-dZ-5wL.text" = "----";
+
+/* Class = "UILabel"; text = "----"; ObjectID = "RXp-uZ-UU2"; */
+"RXp-uZ-UU2.text" = "----";
+
+/* Class = "UILabel"; text = "Fecha y hora de ingreso:"; ObjectID = "U75-ZX-AVw"; */
+"U75-ZX-AVw.text" = "Fecha y hora de ingreso:";
+
+/* Class = "UILabel"; text = "Valor del servicio:"; ObjectID = "d5l-aS-SdU"; */
+"d5l-aS-SdU.text" = "Valor del servicio:";
+
+/* Class = "UILabel"; text = "----"; ObjectID = "fJC-Ba-Uvj"; */
+"fJC-Ba-Uvj.text" = "----";
+
+/* Class = "UILabel"; text = "Fecha y hora de salida:"; ObjectID = "iDg-bg-anw"; */
+"iDg-bg-anw.text" = "Fecha y hora de salida:";
+
+/* Class = "UILabel"; text = "Factura"; ObjectID = "mpI-bk-bbu"; */
+"mpI-bk-bbu.text" = "Factura";
+
+/* Class = "UILabel"; text = "Tiempo total:"; ObjectID = "nCy-hC-po7"; */
+"nCy-hC-po7.text" = "Tiempo total:";
+
+/* Class = "UILabel"; text = "----"; ObjectID = "qwN-oB-37x"; */
+"qwN-oB-37x.text" = "----";
+
+/* Class = "UILabel"; text = "Placa:"; ObjectID = "s52-Kb-q4m"; */
+"s52-Kb-q4m.text" = "Placa:";

@@ -1,0 +1,45 @@
+
+/* Class = "UILabel"; text = "0"; ObjectID = "47l-hf-Jfa"; */
+"47l-hf-Jfa.text" = "0";
+
+/* Class = "UILabel"; text = "Cilindraje:"; ObjectID = "4G4-wy-LB9"; */
+"4G4-wy-LB9.text" = "Cilindraje:";
+
+/* Class = "UILabel"; text = "----"; ObjectID = "Igo-1N-me2"; */
+"Igo-1N-me2.text" = "----";
+
+/* Class = "UILabel"; text = "Salida:"; ObjectID = "N5b-Pa-lv2"; */
+"N5b-Pa-lv2.text" = "Salida:";
+
+/* Class = "UILabel"; text = "Ingreso:"; ObjectID = "PvH-Y2-uZb"; */
+"PvH-Y2-uZb.text" = "Ingreso:";
+
+/* Class = "UILabel"; text = "Horas:"; ObjectID = "TRc-5h-2AV"; */
+"TRc-5h-2AV.text" = "Horas:";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "Uhr-ef-Ca2"; */
+"Uhr-ef-Ca2.title" = "Item";
+
+/* Class = "UILabel"; text = "----"; ObjectID = "bQS-8C-qzs"; */
+"bQS-8C-qzs.text" = "----";
+
+/* Class = "UILabel"; text = "Días:"; ObjectID = "h51-QN-Zea"; */
+"h51-QN-Zea.text" = "Días:";
+
+/* Class = "UILabel"; text = "----"; ObjectID = "jXu-55-1Su"; */
+"jXu-55-1Su.text" = "----";
+
+/* Class = "UINavigationItem"; title = "----"; ObjectID = "lhh-lN-mvc"; */
+"lhh-lN-mvc.title" = "----";
+
+/* Class = "UIButton"; normalTitle = "Generar Factura"; ObjectID = "lkz-uC-IqN"; */
+"lkz-uC-IqN.normalTitle" = "Generar Factura";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "pmb-eI-Ov8"; */
+"pmb-eI-Ov8.text" = "0";
+
+/* Class = "UILabel"; text = "Placa:"; ObjectID = "wuy-ik-nfa"; */
+"wuy-ik-nfa.text" = "Placa:";
+
+/* Class = "UILabel"; text = "----"; ObjectID = "zC4-FB-s3o"; */
+"zC4-FB-s3o.text" = "----";

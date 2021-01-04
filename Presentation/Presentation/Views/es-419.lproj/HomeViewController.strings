@@ -1,0 +1,24 @@
+
+/* Class = "UILabel"; text = "Cilindraje:"; ObjectID = "6ic-Aj-aax"; */
+"6ic-Aj-aax.text" = "Cilindraje:";
+
+/* Class = "UILabel"; text = "Tipo de vehículo:"; ObjectID = "7a8-Pk-al6"; */
+"7a8-Pk-al6.text" = "Tipo de vehículo:";
+
+/* Class = "UILabel"; text = "Ingreso de vehículos"; ObjectID = "Uge-1j-wNs"; */
+"Uge-1j-wNs.text" = "Ingreso de vehículos";
+
+/* Class = "UISegmentedControl"; XCM-Pu-FQf.segmentTitles[0] = "Carro"; ObjectID = "XCM-Pu-FQf"; */
+"XCM-Pu-FQf.segmentTitles[0]" = "Carro";
+
+/* Class = "UISegmentedControl"; XCM-Pu-FQf.segmentTitles[1] = "Motocicleta"; ObjectID = "XCM-Pu-FQf"; */
+"XCM-Pu-FQf.segmentTitles[1]" = "Motocicleta";
+
+/* Class = "UIButton"; normalTitle = "Servicios Activos"; ObjectID = "YDC-ju-KYQ"; */
+"YDC-ju-KYQ.normalTitle" = "Servicios Activos";
+
+/* Class = "UILabel"; text = "Placa:"; ObjectID = "ndm-qW-FBV"; */
+"ndm-qW-FBV.text" = "Placa:";
+
+/* Class = "UIButton"; normalTitle = "Registrar"; ObjectID = "uTO-EM-tDk"; */
+"uTO-EM-tDk.normalTitle" = "Registrar";
