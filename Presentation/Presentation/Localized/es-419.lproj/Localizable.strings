@@ -7,13 +7,17 @@
 */
 
 // HomeViewController
-"btn_registrar" = "Registrar";
+// Code Strings
 "title_ingreso_carro_exito" = "Ingreso exitoso del carro !!";
-"message_ingreso_carro_exito" = "Se ha registrado el ingreso del carro exitosamente."
+"message_ingreso_carro_exito" = "Se ha registrado el ingreso del carro exitosamente.";
 "title_ingreso_moto_exito" = "Ingreso exitoso de la motocicleta !!";
-"message_ingreso_moto_exito" = "Se ha registrado el ingreso de la motocicleta exitosamente."
+"message_ingreso_moto_exito" = "Se ha registrado el ingreso de la motocicleta exitosamente.";
 "title_ingreso_fallo" = "Ingreso del vehículo";
-"message_ingreso_fallo" = "No fue posible registrar el ingreso del vehículo en este momento."
+"message_ingreso_fallo" = "No fue posible registrar el ingreso del vehículo en este momento.";
+
+// View Strings
+"carro" = "Carro";
+"btn_registrar" = "Registrar";
 
 // ServicesViewController
 "placa" = "Placa";

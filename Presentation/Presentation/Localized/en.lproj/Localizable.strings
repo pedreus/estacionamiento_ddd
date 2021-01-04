@@ -7,13 +7,17 @@
 */
 
 // HomeViewController
-"btn_registrar" = "Register";
+// Code Strings
 "title_ingreso_carro_exito" = "Successfull Car Entry !!";
-"message_ingreso_carro_exito" = "The car entry has been registered successfully."
+"message_ingreso_carro_exito" = "The car entry has been registered successfully.";
 "title_ingreso_moto_exito" = "Successfull Motorcycle Entry !!";
-"message_ingreso_moto_exito" = "The motorcycle entry has been registered successfully."
+"message_ingreso_moto_exito" = "The motorcycle entry has been registered successfully.";
 "title_ingreso_fallo" = "Vehicle Entry";
-"message_ingreso_fallo" = "It was not possible to register the vehicle at this time."
+"message_ingreso_fallo" = "It was not possible to register the vehicle at this time.";
+
+// View Strings
+"carro" = "Car";
+"uTO-EM-tDk.normalTitle" = "Register";
 
 // ServicesViewController
 "placa" = "Vehicle License";

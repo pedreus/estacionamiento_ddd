@@ -93,6 +93,9 @@
                                         <segment title="Motocicleta"/>
                                     </segments>
                                     <color key="selectedSegmentTintColor" name="AccentColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="stbLocKey" value="" localized="YES"/>
+                                    </userDefinedRuntimeAttributes>
                                     <connections>
                                         <action selector="actionCtrlVehicleType:" destination="-1" eventType="valueChanged" id="sOS-jI-rT2"/>
                                     </connections>

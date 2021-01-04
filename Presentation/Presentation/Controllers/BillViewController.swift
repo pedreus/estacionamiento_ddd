@@ -14,99 +14,85 @@ class BillViewController: UIViewController {
     @IBOutlet weak var lblCylinder: UILabel!
     @IBOutlet weak var lblEntryDate: UILabel!
     @IBOutlet weak var lblExitDate: UILabel!
-    @IBOutlet weak var lblServiceCosts: UILabel!
     @IBOutlet weak var lblExpendedTime: UILabel!
-    
-    var carExitService: CarExitService?
-    var motoExitService: MotorcycleExitService?
-    var carBillService: CarBillService?
-    var motoBillService: MotorcycleBillService?
+    @IBOutlet weak var lblServiceCosts: UILabel!
     
     var entry: Entry!
     private var exit: Exit?
     private var bill: Bill?
-
+    
+    private var carExitService: CarExitService?
+    private var carBillService: CarBillService?
+    private var motoExitService: MotorcycleExitService?
+    private var motoBillService: MotorcycleBillService?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
         self.carExitService = appDelegate.diContainer.getContainer().resolve(CarExitService.self)!
-        self.motoExitService = appDelegate.diContainer.getContainer().resolve(MotorcycleExitService.self)!
         self.carBillService = appDelegate.diContainer.getContainer().resolve(CarBillService.self)!
+        self.motoExitService = appDelegate.diContainer.getContainer().resolve(MotorcycleExitService.self)!
         self.motoBillService = appDelegate.diContainer.getContainer().resolve(MotorcycleBillService.self)!
         
-        self.generateBill()
-    }
-    
-    private func createCarExit() {
-        self.exit = CarExit(exitDateTime: Date(), carEntry: self.entry as! CarEntry)
-    }
-    
-    private func createMotorcycleExit() {
-        self.exit = MotorcycleExit(exitDateTime: Date(), motoEntry: self.entry as! MotorcycleEntry)
-    }
-    
-    private func createCarBill() {
-        self.bill = CarBill(billDateTime: Date(), carExit: self.exit as! CarExit)
-    }
-    
-    private func createMotorcycleBill() {
-        self.bill = MotorcycleBill(billDateTime: Date(), motoExit: self.exit as! MotorcycleExit)
+        do {
+            try self.generateBill()
+        } catch let error {
+            let alert = AlertGenerator.createSimpleInformationAlert(title: NSLocalizedString("factura", comment: ""), message: error.localizedDescription)
+            
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     private func saveCarExit() throws {
+        self.exit = CarExit(exitDateTime: Date(), carEntry: self.entry as! CarEntry)
+        
         try self.carExitService?.saveCarExitRepository(carExit: self.exit as! CarExit)
     }
     
     private func saveCarBill() throws {
+        self.bill = CarBill(billDateTime: Date(), carExit: self.exit as! CarExit)
+        
         try self.carBillService?.saveCarBill(carBill: self.bill as! CarBill)
     }
     
     private func saveMotorcycleExit() throws {
+        self.exit = MotorcycleExit(exitDateTime: Date(), motoEntry: self.entry as! MotorcycleEntry)
+        
         try self.motoExitService?.saveMotorcycleExit(motoExit: self.exit as! MotorcycleExit)
     }
     
     private func saveMotorcycleBill() throws {
+        self.bill = MotorcycleBill(billDateTime: Date(), motoExit: self.exit as! MotorcycleExit)
+        
         try self.motoBillService?.saveMotorcycleBill(motoBill: self.bill as! MotorcycleBill)
     }
     
-    private func printBillInformation() {
+    private func showBillInformation() {
+        let (days, hours) = self.exit!.getExpendedTimeInDaysAndHours()
+        
         self.lblLicense.text = self.entry.getVehicle().getVehicleLicense()
         self.lblCylinder.text = self.entry.getVehicle().getCylinder().description
         self.lblEntryDate.text = self.getFormatterEntryDate(date: self.entry.getEntryDateTime())
         self.lblExitDate.text = self.getFormatterEntryDate(date: self.exit!.getExitDateTime())
-        self.lblExpendedTime.text = "\(self.exit?.getExpendedTimeInDaysAndHours().0 ?? 0) días y \(self.exit?.getExpendedTimeInDaysAndHours().1 ?? 0) horas"
-        self.lblServiceCosts.text = "$ \(self.bill?.getCost() ?? 0)"
+        self.lblExpendedTime.text = "\(days)D - \(hours)H"
+        self.lblServiceCosts.text = "$ \(self.bill!.getCost().description)"
     }
-
-    private func generateBill() {
+    
+    private func generateBill() throws {
         switch type(of: self.entry!) {
         case is CarEntry.Type:
-            self.createCarExit()
-            self.createCarBill()
-            do {
-                try self.saveCarExit()
-                try self.saveCarBill()
-            } catch let error {
-                print("Save Car: ", error)
-            }
+            try self.saveCarExit()
+            try self.saveCarBill()
         case is MotorcycleEntry.Type:
-            self.createMotorcycleExit()
-            self.createMotorcycleBill()
-            do {
-                try self.saveMotorcycleExit()
-                try self.saveMotorcycleBill()
-            } catch let error {
-                print("Save Moto: ", error)
-            }
+            try self.saveMotorcycleExit()
+            try self.saveMotorcycleBill()
         default:
-            self.exit = nil
-            self.bill = nil
+            throw BusinessError.WrongVehicleType()
         }
         
-        if let _ = self.exit, let _ = self.bill {
-            self.printBillInformation()
-        }
+        self.showBillInformation()
     }
     
     private func getFormatterEntryDate(date: Date) -> String {
@@ -115,7 +101,7 @@ class BillViewController: UIViewController {
         
         return dateFormatter.string(from: date)
     }
-
+    
     @IBAction func actionBtnAccept(_ sender: UIButton) {
         let vc = HomeViewController()
         vc.modalPresentationStyle = .fullScreen
